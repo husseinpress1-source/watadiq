@@ -1,0 +1,67 @@
+@use '../styles/global.scss' as *;
+
+.highlights {
+  background: #fafafa;
+  padding: 48px 0 64px;
+  overflow: hidden;
+
+  &__inner {
+    @include container-wide;
+  }
+
+  h2 {
+    font-family: $font-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+}
+
+.highlight-card {
+  display: block;
+  width: min(160px, 48vw);
+
+  @media (min-width: 768px) {
+    width: 180px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 200px;
+  }
+
+  &__image-wrap {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #eee;
+    margin-bottom: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 2px;
+  }
+
+  p {
+    font-size: 13px;
+    color: $met-gray;
+  }
+}
+
+@media (max-width: 767px) {
+  .highlights {
+    padding: 32px 0 40px;
+  }
+}

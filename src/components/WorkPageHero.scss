@@ -1,0 +1,121 @@
+@use '../styles/global.scss' as *;
+
+.work-hero {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid $met-light-gray;
+
+  &__inner {
+    @include container-wide;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(24px, 4vw, 48px);
+    padding: 112px 32px 48px;
+  }
+
+  &__copy {
+    text-align: start;
+    max-width: 520px;
+  }
+
+  &__eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: $font-serif;
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    color: $met-black;
+  }
+
+  &__intro {
+    font-size: clamp(15px, 1.8vw, 18px);
+    line-height: 1.65;
+    color: #555;
+    margin: 0 0 24px;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: 1px solid $met-black;
+    background: $met-black;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+      color: #fff;
+    }
+  }
+
+  &__showcase {
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+html[dir='rtl'] {
+  .work-hero__eyebrow {
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .work-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 84px 12px 28px;
+  }
+
+  .work-hero__copy {
+    max-width: none;
+    padding-inline: 8px;
+  }
+
+  .work-hero__showcase {
+    width: 100%;
+    padding-inline: 4px;
+  }
+}
+
+@media (max-width: 640px) {
+  .work-hero__inner {
+    padding: 76px 8px 24px;
+    gap: 18px;
+  }
+
+  .work-hero__cta {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .work-hero__intro {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+}

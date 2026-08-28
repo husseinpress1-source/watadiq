@@ -1,0 +1,57 @@
+@use '../styles/global.scss' as *;
+
+.collection-page {
+  min-height: 100vh;
+  padding-top: 92px;
+
+  @media (max-width: 1024px) {
+    padding-top: 56px;
+  }
+
+  &__content {
+    @include container-wide;
+    padding: 40px 32px 0;
+  }
+}
+
+.intro {
+  max-width: 720px;
+  margin-bottom: 56px;
+
+  h1 {
+    font-family: $font-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  &__meta {
+    margin-top: 12px;
+    font-size: 13px;
+    color: $met-gray;
+  }
+}
+
+@media (min-width: 1025px) {
+  .collection-page__content {
+    max-width: 880px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .intro {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 28px;
+  }
+}

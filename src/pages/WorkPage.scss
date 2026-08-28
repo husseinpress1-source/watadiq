@@ -1,0 +1,23 @@
+@use '../styles/global.scss' as *;
+
+.work-page {
+  min-height: 100vh;
+  background: #fff;
+
+  &__main {
+    @include container-wide;
+    padding: 32px 32px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-page__main {
+    padding: 24px 16px 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-page__main {
+    padding: 20px 12px 48px;
+  }
+}

@@ -1,0 +1,175 @@
+$met-red: #e4002b;
+$met-black: #1a1a1a;
+$met-gray: #666;
+$met-light-gray: #e5e5e5;
+$font-geist: 'Geist Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-en-sans: $font-geist;
+$font-en-serif: $font-geist;
+
+:root {
+  --watad-font-sans: #{$font-en-sans};
+  --watad-font-serif: #{$font-en-serif};
+  --watad-font: var(--watad-font-sans);
+  --header-h: 104px;
+
+  --watad-bg: #ffffff;
+  --watad-bg-soft: #f5f5f5;
+  --watad-bg-elevated: #ffffff;
+  --watad-footer-wave: #{$met-black};
+  --watad-footer-text: rgba(255, 255, 255, 0.74);
+  --watad-footer-text-muted: rgba(255, 255, 255, 0.58);
+  --watad-text: #{$met-black};
+  --watad-text-muted: #{$met-gray};
+  --watad-text-faint: #888888;
+  --watad-border: #{$met-light-gray};
+  --watad-border-strong: #d9d9d9;
+  --watad-brand: #{$met-red};
+  --watad-shadow: rgba(0, 0, 0, 0.08);
+
+  --pricing-card-bg: #101010;
+  --pricing-card-text: #ffffff;
+  --pricing-card-muted: #ececec;
+  --pricing-card-border: rgba(255, 255, 255, 0.24);
+  --pricing-cta-bg: #ffffff;
+  --pricing-cta-text: #0a0a0a;
+  --pricing-tab-bg: #ffffff;
+  --pricing-tab-text: #{$met-black};
+  --pricing-tab-active-bg: #101010;
+  --pricing-tab-active-text: #ffffff;
+}
+
+$font-stack: var(--watad-font);
+$font-times: var(--watad-font-serif);
+$font-serif: var(--watad-font-serif);
+$font-sans: var(--watad-font-sans);
+$max-width: 1200px;
+$max-width-wide: 1440px;
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+@mixin container-wide {
+  max-width: $max-width-wide;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--watad-font);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html[dir='ltr'] {
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[dir='ltr'] h1,
+html[dir='ltr'] h2,
+html[dir='ltr'] h3,
+html[dir='ltr'] h4,
+html[dir='ltr'] h5,
+html[dir='ltr'] h6 {
+  font-family: var(--watad-font-sans);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+html[dir='rtl'] {
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[dir='rtl'] h1,
+html[dir='rtl'] h2,
+html[dir='rtl'] h3,
+html[dir='rtl'] h4,
+html[dir='rtl'] h5,
+html[dir='rtl'] h6 {
+  font-family: var(--watad-font-sans);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+body {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--watad-text);
+  background: var(--watad-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.met-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &--outline {
+    color: #fff;
+    border: 1.5px solid #fff;
+  }
+
+  &--solid {
+    background: #fff;
+    color: $met-black;
+  }
+}

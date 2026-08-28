@@ -1,0 +1,152 @@
+@use '../styles/global.scss' as *;
+
+.locations {
+  padding: 48px 0 64px;
+  background: #fff;
+
+  &__inner {
+    @include container-wide;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    font-family: $font-sans;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: $met-black;
+    width: 100%;
+    max-width: 640px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 640px;
+  }
+}
+
+.location-card {
+  display: block;
+  background: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  &__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px 8px;
+    background: transparent;
+  }
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    background: transparent;
+  }
+
+  &__body {
+    padding: 12px 18px 20px;
+
+    h3 {
+      font-family: $font-sans;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: $met-black;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.55;
+      color: #333;
+      margin-bottom: 6px;
+
+      strong {
+        font-weight: 700;
+        color: $met-black;
+      }
+    }
+  }
+
+  &__note {
+    margin-top: 10px !important;
+    font-size: 13px !important;
+    color: $met-gray !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .locations {
+    padding: 40px 0 48px;
+
+    &__inner {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      max-width: 420px;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      max-width: 420px;
+    }
+
+    .location-card__icon {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+.locations--page {
+  padding: 8px 0 64px;
+  background: #fff;
+
+  .locations__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  h2 {
+    text-align: center;
+    max-width: 640px;
+    margin-inline: auto;
+    margin-bottom: 24px;
+  }
+
+  .locations__grid {
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  .location-card:hover {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .locations--page {
+    padding-bottom: 48px;
+
+    .locations__inner {
+      padding: 0 20px;
+    }
+  }
+}

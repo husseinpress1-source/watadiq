@@ -1,0 +1,358 @@
+@use '../styles/global.scss' as *;
+
+.portfolio-showcase {
+  &__eyebrow {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 0 0 24px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(16px, 2.5vw, 28px);
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+
+  &__card {
+    background: #fff;
+    border: 1px solid $met-light-gray;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: portfolio-card-in 0.7s ease forwards;
+  }
+
+  &__media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #f5f5f5;
+    border-bottom: 1px solid $met-light-gray;
+  }
+
+  &__shot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+
+  &__body {
+    padding: 18px 18px 20px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  &__logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fafafa;
+    border: 1px solid $met-light-gray;
+    padding: 5px;
+    flex-shrink: 0;
+  }
+
+  &__category {
+    margin: 0 0 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+  }
+
+  h3 {
+    font-size: clamp(17px, 2vw, 21px);
+    font-weight: 700;
+    margin: 0;
+    color: $met-black;
+    line-height: 1.25;
+  }
+
+  &__summary {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+    flex: 1;
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid $met-black;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    color: $met-black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      background: $met-black;
+      color: #fff;
+    }
+
+    &--primary {
+      background: $met-black;
+      color: #fff;
+
+      &:hover {
+        background: #333;
+        border-color: #333;
+        color: #fff;
+      }
+    }
+
+    &--secondary {
+      background: #fff;
+      color: $met-black;
+    }
+  }
+
+  &__dots {
+    display: none;
+  }
+
+  &__modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+  }
+
+  &__dialog {
+    position: relative;
+    width: 100%;
+    max-height: 92vh;
+    overflow: auto;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    border-top: 1px solid $met-light-gray;
+  }
+
+  &__close {
+    position: sticky;
+    top: 12px;
+    float: inline-end;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    margin: 12px 12px 0;
+    border: 1px solid $met-light-gray;
+    border-radius: 50%;
+    background: #fff;
+    color: $met-black;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  &__dialog-media {
+    clear: both;
+    background: #f5f5f5;
+    border-bottom: 1px solid $met-light-gray;
+  }
+
+  &__dialog-shot {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+
+  &__dialog-body {
+    padding: 20px 20px 28px;
+    text-align: start;
+  }
+
+  &__dialog-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__dialog-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #fafafa;
+    border: 1px solid $met-light-gray;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+
+  &__dialog-category {
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+  }
+
+  &__dialog-body h2 {
+    margin: 0;
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 700;
+  }
+
+  &__dialog-text {
+    margin: 0 0 16px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  &__features {
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+
+    li {
+      position: relative;
+      padding-inline-start: 16px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: #333;
+
+      &::before {
+        content: '—';
+        position: absolute;
+        inset-inline-start: 0;
+        color: #aaa;
+      }
+    }
+  }
+
+  &__dialog-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__dialog-cta {
+    width: 100%;
+  }
+}
+
+@keyframes portfolio-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html[dir='rtl'] {
+  .portfolio-showcase__eyebrow {
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .portfolio-showcase__modal {
+    align-items: center;
+    padding: 24px;
+  }
+
+  .portfolio-showcase__dialog {
+    width: min(720px, 100%);
+    max-height: min(88vh, 820px);
+    border-radius: 12px;
+    border: 1px solid $met-light-gray;
+  }
+
+  .portfolio-showcase__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    float: none;
+    margin: 0;
+  }
+
+  html[dir='rtl'] .portfolio-showcase__close {
+    right: auto;
+    left: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-showcase__eyebrow {
+    text-align: start;
+    margin-bottom: 18px;
+  }
+
+  .portfolio-showcase__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 560px;
+  }
+
+  .portfolio-showcase__body {
+    padding: 16px 16px 18px;
+  }
+
+  .portfolio-showcase__actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-showcase__media {
+    aspect-ratio: 16 / 11;
+  }
+
+  .portfolio-showcase__actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-showcase__card {
+    animation: none;
+    opacity: 1;
+  }
+}
