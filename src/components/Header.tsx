@@ -15,8 +15,7 @@ export default function Header() {
   const { t } = useTranslation();
   const location = useLocation();
   const [atTop, setAtTop] = useState(true);
-  const isLive = location.pathname === '/live' || location.pathname.startsWith('/live/');
-  const hideHeader = !isLive && atTop;
+  const hideHeader = atTop;
   const passActive = location.pathname.startsWith('/pass');
 
   useEffect(() => {

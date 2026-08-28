@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
@@ -14,15 +13,6 @@ export default function MobileMenu() {
   const { t } = useTranslation();
   const location = useLocation();
   const reduceMotion = useReducedMotion() ?? false;
-
-  useEffect(() => {
-    if (!menuOpen) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [menuOpen]);
 
   const links = [...navHrefs, { key: passNavTab.key, href: passNavTab.href }];
 

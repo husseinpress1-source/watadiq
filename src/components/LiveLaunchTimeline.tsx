@@ -77,13 +77,11 @@ function LaunchStepCard({
           opacity: 0,
           y: 36,
           scale: 0.96,
-          filter: 'blur(6px)',
         },
         show: {
           opacity: 1,
           y: 0,
           scale: 1,
-          filter: 'blur(0px)',
           transition: {
             duration: 0.65,
             ease,
