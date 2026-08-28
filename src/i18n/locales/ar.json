@@ -48,10 +48,8 @@
     "contact": "تواصل",
     "pricing": "الأسعار",
     "getQuote": "اطلب عرض سعر",
-    "search": "بحث",
     "openMenu": "فتح القائمة",
     "closeMenu": "إغلاق القائمة",
-    "closeSearch": "إغلاق البحث",
     "subscribe": "اشتراك",
     "viewAll": "عرض الكل",
     "hours": "الساعات:",
@@ -223,12 +221,6 @@
         "cta": "شاهد الأسعار"
       }
     ]
-  },
-  "search": {
-    "label": "بحث",
-    "art": "بحث في الأعمال",
-    "website": "بحث في الموقع",
-    "placeholder": "ماذا تريد أن تجد؟"
   },
   "footer": {
     "bannerLabel": "وتد للبرمجيات",

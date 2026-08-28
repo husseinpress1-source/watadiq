@@ -3,13 +3,9 @@ import { useLocation } from 'react-router-dom';
 
 interface LayoutContextValue {
   menuOpen: boolean;
-  searchOpen: boolean;
   openMenu: () => void;
   closeMenu: () => void;
   toggleMenu: () => void;
-  openSearch: () => void;
-  closeSearch: () => void;
-  toggleSearch: () => void;
 }
 
 const LayoutContext = createContext<LayoutContextValue | null>(null);
@@ -21,7 +17,6 @@ const unlockBodyScroll = () => {
 
 export function LayoutProvider({ children }: { children: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -30,12 +25,10 @@ export function LayoutProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMenuOpen(false);
-    setSearchOpen(false);
     unlockBodyScroll();
   }, [location.pathname]);
 
   const openMenu = useCallback(() => {
-    setSearchOpen(false);
     setMenuOpen(true);
     document.body.style.overflow = 'hidden';
   }, []);
@@ -50,26 +43,8 @@ export function LayoutProvider({ children }: { children: ReactNode }) {
     else openMenu();
   }, [menuOpen, openMenu, closeMenu]);
 
-  const openSearch = useCallback(() => {
-    setMenuOpen(false);
-    setSearchOpen(true);
-    document.body.style.overflow = 'hidden';
-  }, []);
-
-  const closeSearch = useCallback(() => {
-    setSearchOpen(false);
-    unlockBodyScroll();
-  }, []);
-
-  const toggleSearch = useCallback(() => {
-    if (searchOpen) closeSearch();
-    else openSearch();
-  }, [searchOpen, openSearch, closeSearch]);
-
   return (
-    <LayoutContext.Provider
-      value={{ menuOpen, searchOpen, openMenu, closeMenu, toggleMenu, openSearch, closeSearch, toggleSearch }}
-    >
+    <LayoutContext.Provider value={{ menuOpen, openMenu, closeMenu, toggleMenu }}>
       {children}
     </LayoutContext.Provider>
   );

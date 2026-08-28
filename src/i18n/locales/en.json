@@ -48,10 +48,8 @@
     "contact": "Contact",
     "pricing": "Pricing",
     "getQuote": "Get Quote",
-    "search": "Search",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "closeSearch": "Close search",
     "subscribe": "Subscribe",
     "viewAll": "View all",
     "hours": "Hours:",
@@ -223,12 +221,6 @@
         "cta": "See pricing"
       }
     ]
-  },
-  "search": {
-    "label": "Search",
-    "art": "Search art",
-    "website": "Search the website",
-    "placeholder": "What would you like to find?"
   },
   "footer": {
     "bannerLabel": "WATAD Software",

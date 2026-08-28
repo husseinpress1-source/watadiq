@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { useLayout } from '../context/LayoutContext';
 import { navHrefs } from '../data/homepage';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
-import SearchOverlay from './SearchOverlay';
 import MobileMenu from './MobileMenu';
 import './Header.scss';
 
@@ -15,7 +14,7 @@ function isNavActive(pathname: string, href: string) {
 }
 
 export default function Header() {
-  const { toggleMenu, openSearch } = useLayout();
+  const { toggleMenu } = useLayout();
   const { t } = useTranslation();
   const location = useLocation();
   const [atTop, setAtTop] = useState(true);
@@ -64,12 +63,6 @@ export default function Header() {
               </div>
 
               <div className="met-header__mobile-actions">
-                <button type="button" className="met-header__icon-btn" onClick={openSearch} aria-label={t('common.search')}>
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
-                    <path d="M20 20L16 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </button>
                 <button type="button" className="met-header__icon-btn" onClick={toggleMenu} aria-label={t('common.openMenu')}>
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M4 6h16M4 12h16M4 18h16" />
@@ -81,7 +74,6 @@ export default function Header() {
         </div>
       </header>
 
-      <SearchOverlay />
       <MobileMenu />
     </>
   );
