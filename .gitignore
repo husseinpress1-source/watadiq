@@ -36,3 +36,5 @@ tools/.tmp-*.png
 
 .vercel
 .env*
+
+.vercel

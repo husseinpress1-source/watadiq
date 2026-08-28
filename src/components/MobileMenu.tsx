@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useLayout } from '../context/LayoutContext';
-import { navHrefs, passNavTab } from '../data/homepage';
+import { navHrefs } from '../data/homepage';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
 import './MobileMenu.scss';
 
@@ -13,8 +13,6 @@ export default function MobileMenu() {
   const { t } = useTranslation();
   const location = useLocation();
   const reduceMotion = useReducedMotion() ?? false;
-
-  const links = [...navHrefs, { key: passNavTab.key, href: passNavTab.href }];
 
   const overlay = reduceMotion
     ? { hidden: { opacity: 0 }, show: { opacity: 1 }, exit: { opacity: 0 } }
@@ -74,11 +72,9 @@ export default function MobileMenu() {
 
             <nav className="mobile-menu__nav" aria-label="Main navigation">
               <motion.ul variants={list} initial="hidden" animate="show" exit="hidden">
-                {links.map((link) => {
+                {navHrefs.map((link) => {
                   const active =
-                    link.href === '/'
-                      ? location.pathname === '/'
-                      : location.pathname === link.href || location.pathname.startsWith(`${link.href}/`);
+                    location.pathname === link.href || location.pathname.startsWith(`${link.href}/`);
 
                   return (
                     <motion.li key={link.key} variants={item}>

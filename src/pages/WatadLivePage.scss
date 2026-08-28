@@ -48,11 +48,11 @@
     pointer-events: none;
     background: linear-gradient(
       180deg,
-      rgba(10, 10, 10, 0.88) 0%,
-      rgba(10, 10, 10, 0.72) 22%,
-      rgba(10, 10, 10, 0.28) 48%,
-      rgba(10, 10, 10, 0.08) 72%,
-      rgba(10, 10, 10, 0.45) 100%
+      rgba(10, 10, 10, 0.1) 0%,
+      rgba(10, 10, 10, 0.12) 35%,
+      rgba(10, 10, 10, 0.4) 62%,
+      rgba(10, 10, 10, 0.82) 82%,
+      rgba(10, 10, 10, 0.95) 100%
     );
   }
 
@@ -73,6 +73,19 @@
       clamp(40px, 5vw, 64px);
   }
 
+  &__lead-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    max-width: 26rem;
+  }
+
+  &__title-wrap {
+    width: 100%;
+  }
+
   &__copy {
     display: flex;
     flex-direction: column;
@@ -82,13 +95,48 @@
     max-width: 26rem;
   }
 
-  h1 {
+  h1,
+  &__title {
     margin: 0 0 14px;
     font-family: $font-sans;
     font-size: clamp(2rem, 4.2vw, 3rem);
     font-weight: 600;
     letter-spacing: -0.04em;
     line-height: 1.05;
+  }
+
+  &__title-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.35em;
+  }
+
+  &__title-brand {
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  &__title-rotate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 5.5ch;
+    padding: 0.08em 0.42em 0.12em;
+    border-radius: 0.35em;
+    color: #fff;
+    background: $met-red;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__title-rotate-split {
+    overflow: hidden;
+  }
+
+  &__title-rotate-char {
+    will-change: transform;
   }
 
   &__tagline {
@@ -196,13 +244,41 @@
         clamp(56px, 6vw, 88px);
     }
 
-    &__copy {
+    &__title-wrap {
+      position: absolute;
+      top: calc(var(--header-h) + 28px);
+      left: 40px;
+      right: auto;
+      z-index: 3;
+      width: auto;
+      max-width: min(42rem, 55vw);
+      margin: 0;
+      text-align: start;
+    }
+
+    &__title-row {
+      justify-content: flex-start;
+    }
+
+    &__lead-block {
       grid-column: 1;
       grid-row: 1;
       align-self: end;
       align-items: flex-start;
       max-width: 36rem;
       width: auto;
+    }
+
+    &__copy {
+      align-items: flex-start;
+      max-width: none;
+      width: 100%;
+    }
+
+    h1,
+    &__title {
+      margin-bottom: 0;
+      font-size: clamp(2.35rem, 3.2vw, 3.25rem);
     }
 
     &__actions {
@@ -243,6 +319,20 @@
       text-align: end;
     }
 
+    &__title-wrap {
+      left: auto;
+      right: 40px;
+      text-align: end;
+    }
+
+    &__title-row {
+      justify-content: flex-end;
+    }
+
+    &__lead-block {
+      align-items: flex-end;
+    }
+
     &__copy {
       align-items: flex-end;
     }
@@ -265,11 +355,11 @@ html[dir='rtl'] .live-hero {
   &__scrim {
     background: linear-gradient(
       180deg,
-      rgba(10, 10, 10, 0.88) 0%,
-      rgba(10, 10, 10, 0.72) 22%,
-      rgba(10, 10, 10, 0.28) 48%,
-      rgba(10, 10, 10, 0.08) 72%,
-      rgba(10, 10, 10, 0.45) 100%
+      rgba(10, 10, 10, 0.1) 0%,
+      rgba(10, 10, 10, 0.12) 35%,
+      rgba(10, 10, 10, 0.4) 62%,
+      rgba(10, 10, 10, 0.82) 82%,
+      rgba(10, 10, 10, 0.95) 100%
     );
   }
 
@@ -716,15 +806,44 @@ html[dir='rtl'] .live-hero {
   .live-hero {
     min-height: max(520px, calc(100svh - var(--header-h)));
 
+    &__scrim {
+      background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0) 0%,
+        rgba(10, 10, 10, 0.08) 32%,
+        rgba(10, 10, 10, 0.45) 58%,
+        rgba(10, 10, 10, 0.88) 78%,
+        rgba(10, 10, 10, 0.97) 100%
+      );
+    }
+
     &__inner {
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-items: center;
-      gap: 20px;
+      gap: 0;
       min-height: max(520px, calc(100svh - var(--header-h)));
       padding:
-        calc(var(--header-h) + 8px)
+        calc(var(--header-h) + 10px)
         16px
         40px;
+    }
+
+    &__lead-block {
+      display: contents;
+    }
+
+    &__title-wrap {
+      position: static;
+      left: auto;
+      right: auto;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: none;
+      margin-bottom: auto;
+      padding-bottom: 12px;
+      text-align: center;
+      text-shadow: 0 2px 28px rgba(0, 0, 0, 0.55);
     }
 
     &__copy {
@@ -732,11 +851,15 @@ html[dir='rtl'] .live-hero {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      max-width: none;
+      width: 100%;
+      max-width: 26rem;
+      margin-top: auto;
     }
 
-    h1 {
-      font-size: clamp(1.85rem, 7.5vw, 2.35rem);
+    h1,
+    &__title {
+      font-size: clamp(2rem, 8vw, 2.5rem);
+      margin-bottom: 0;
     }
 
     &__tagline {
@@ -756,7 +879,8 @@ html[dir='rtl'] .live-hero {
 
     &__actions {
       align-items: center;
-      margin-top: 4px;
+      margin-top: 20px;
+      flex-shrink: 0;
     }
 
     &__buttons {

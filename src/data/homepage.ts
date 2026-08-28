@@ -40,9 +40,6 @@ export const navHrefs = [
   { key: 'contact', href: '/contact' },
 ] as const;
 
-/** Dedicated product tab — rendered separately in Header (not a plain nav link). */
-export const passNavTab = { key: 'pass' as const, href: '/pass', loginHref: '/pass/login' };
-
 export const mobileNavStructure = [
   {
     key: 'about',
@@ -63,7 +60,6 @@ export const mobileNavStructure = [
   },
   { key: 'work', href: '/work' },
   { key: 'live', href: '/live' },
-  { key: 'pass', href: '/pass' },
   {
     key: 'pricing',
     children: [

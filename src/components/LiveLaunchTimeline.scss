@@ -1,118 +1,64 @@
 @use '../styles/global.scss' as *;
 
 .live-launch {
-  position: relative;
-  overflow: hidden;
   color: #fff;
   background: #0a0a0a;
   border-top: 1px solid #1a1a1a;
 
-  &__bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-  }
-
-  &__grid {
-    position: absolute;
-    inset: 0;
-    opacity: 0.35;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-    background-size: 48px 48px;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, transparent 88%);
-  }
-
   &__inner {
-    position: relative;
-    z-index: 1;
     @include container-wide;
-    padding: clamp(80px, 10vw, 120px) 32px;
+    padding: clamp(72px, 9vw, 108px) 32px;
   }
 
   &__head {
-    max-width: 640px;
-    margin: 0 auto 56px;
+    max-width: 560px;
+    margin: 0 auto 40px;
     text-align: center;
   }
 
   &__eyebrow {
-    margin: 0 0 12px;
+    margin: 0 0 10px;
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.42);
   }
 
   h2 {
-    margin: 0 0 14px;
+    margin: 0 0 12px;
     font-family: $font-sans;
-    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    font-size: clamp(1.75rem, 3.5vw, 2.35rem);
     font-weight: 600;
-    letter-spacing: -0.04em;
-    line-height: 1.08;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
   }
 
   &__intro {
     margin: 0 auto;
-    max-width: 36rem;
+    max-width: 34rem;
     font-size: 1rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.58);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.55);
   }
 
-  &__meter {
-    max-width: min(100%, 960px);
-    margin: 0 auto 48px;
+  &__track {
+    max-width: min(100%, 720px);
+    margin: 0 auto 36px;
   }
 
-  &__meter-track {
-    position: relative;
-    height: 3px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.1);
+  &__track-line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
     overflow: hidden;
   }
 
-  &__meter-fill {
+  &__track-fill {
     display: block;
     width: 100%;
     height: 100%;
     transform-origin: left center;
-    border-radius: inherit;
-    background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.55) 100%);
-    will-change: transform, opacity;
-  }
-
-  &__meter-labels {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 14px;
-  }
-
-  &__meter-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: rgba(255, 255, 255, 0.28);
-    font-variant-numeric: tabular-nums;
-    text-align: center;
-
-    &--done {
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    &--active {
-      color: #fff;
-    }
-
-    &--upcoming {
-      color: rgba(255, 255, 255, 0.32);
-    }
+    background: rgba(255, 255, 255, 0.72);
   }
 
   &__steps {
@@ -121,8 +67,8 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    max-width: min(100%, 1040px);
+    gap: 16px;
+    max-width: min(100%, 960px);
     margin-inline: auto;
   }
 
@@ -134,107 +80,63 @@
     min-width: 0;
   }
 
-  &__step-rail {
-    position: relative;
-    width: 100%;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
+  &__marker {
+    margin-bottom: 14px;
   }
 
-  &__step-node {
-    position: relative;
-    z-index: 2;
-    width: 44px;
-    height: 44px;
+  &__node {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 36px;
+    height: 36px;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     background: #111;
   }
 
-  &__step-ring {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 44px;
-    height: 44px;
-    margin: -22px 0 0 -22px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    pointer-events: none;
-  }
-
-  &__step-connector {
-    position: absolute;
-    top: 50%;
-    inset-inline-start: calc(50% + 24px);
-    width: calc(100% - 48px);
-    height: 2px;
-    margin-top: -1px;
-    transform-origin: left center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.08) 100%);
-    pointer-events: none;
-  }
-
   &__icon {
-    display: block;
-
     &--done {
-      color: #fff;
+      color: #0a0a0a;
     }
 
     &--active {
-      position: relative;
-      width: 14px;
-      height: 14px;
-    }
-
-    &--upcoming {
       width: 10px;
       height: 10px;
       border-radius: 999px;
-      border: 2px solid rgba(255, 255, 255, 0.35);
+      background: #fff;
+    }
+
+    &--upcoming {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
       background: transparent;
     }
   }
 
-  &__icon-core {
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 999px;
-    background: #fff;
-  }
-
   &__card {
-    position: relative;
     width: 100%;
-    padding: 26px 22px 28px;
-    border-radius: 16px;
+    padding: 22px 20px 24px;
+    border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.02);
     text-align: center;
-    overflow: hidden;
-    backdrop-filter: blur(8px);
 
     h3 {
-      margin: 0 0 10px;
-      font-size: 1.08rem;
+      margin: 0 0 8px;
+      font-size: 1.05rem;
       font-weight: 600;
       letter-spacing: -0.02em;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     p {
       margin: 0;
-      font-size: 0.92rem;
-      line-height: 1.65;
-      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.52);
     }
   }
 
@@ -243,42 +145,33 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    margin-bottom: 16px;
-    padding-bottom: 14px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  &__card-bar {
-    position: absolute;
-    top: 0;
-    inset-inline: 0;
-    height: 2px;
-    transform-origin: left center;
-    background: #fff;
-  }
-
   &__index {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.08em;
-    color: rgba(255, 255, 255, 0.38);
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.35);
     font-variant-numeric: tabular-nums;
   }
 
   &__badge {
     display: inline-flex;
     align-items: center;
-    min-height: 24px;
-    padding: 0 10px;
+    min-height: 22px;
+    padding: 0 8px;
     border-radius: 999px;
     font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
 
     &--done {
-      color: rgba(255, 255, 255, 0.65);
-      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.62);
+      background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -289,34 +182,27 @@
     }
 
     &--upcoming {
-      color: rgba(255, 255, 255, 0.72);
+      color: rgba(255, 255, 255, 0.55);
       background: transparent;
-      border: 1px dashed rgba(255, 255, 255, 0.22);
-      animation: live-launch-badge-breathe 3s ease-in-out infinite;
+      border: 1px solid rgba(255, 255, 255, 0.16);
     }
   }
 
   &__step--done {
-    .live-launch__step-node {
+    .live-launch__node {
       background: #fff;
       border-color: #fff;
-      color: #0a0a0a;
-    }
-
-    .live-launch__card {
-      border-color: rgba(255, 255, 255, 0.14);
     }
   }
 
   &__step--active {
-    .live-launch__step-node {
-      border-color: rgba(255, 255, 255, 0.55);
-      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.06);
+    .live-launch__node {
+      border-color: rgba(255, 255, 255, 0.45);
     }
 
     .live-launch__card {
-      border-color: rgba(255, 255, 255, 0.22);
-      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.04);
     }
 
     h3 {
@@ -327,22 +213,17 @@
   &__step--upcoming {
     .live-launch__card {
       border-style: dashed;
-      border-color: rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.015);
+      border-color: rgba(255, 255, 255, 0.1);
     }
 
     h3,
     p {
-      color: rgba(255, 255, 255, 0.42);
+      color: rgba(255, 255, 255, 0.4);
     }
   }
 
   &__foot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 48px;
+    margin-top: 40px;
     text-align: center;
 
     p {
@@ -352,64 +233,22 @@
       color: rgba(255, 255, 255, 0.38);
     }
   }
-
-  &__foot-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 999px;
-    background: #fff;
-    animation: live-launch-foot-pulse 2.4s ease-in-out infinite;
-  }
 }
 
 html[dir='rtl'] .live-launch {
-  &__meter-fill,
-  &__card-bar,
-  &__step-connector {
+  &__track-fill {
     transform-origin: right center;
   }
 
-  &__eyebrow {
-    letter-spacing: 0;
-    text-transform: none;
-  }
-
-  h2 {
-    letter-spacing: -0.02em;
-  }
-
+  &__eyebrow,
   &__badge {
     letter-spacing: 0;
     text-transform: none;
     font-size: 11px;
   }
 
-  &__step-connector {
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.08) 100%);
-  }
-}
-
-@keyframes live-launch-badge-breathe {
-  0%,
-  100% {
-    opacity: 0.72;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes live-launch-foot-pulse {
-  0%,
-  100% {
-    opacity: 0.35;
-    transform: scale(0.92);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1);
+  h2 {
+    letter-spacing: -0.02em;
   }
 }
 
@@ -420,7 +259,7 @@ html[dir='rtl'] .live-launch {
     }
 
     &__head {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       text-align: start;
     }
 
@@ -428,66 +267,53 @@ html[dir='rtl'] .live-launch {
       margin-inline: 0;
     }
 
-    &__meter-labels {
-      display: none;
+    &__track {
+      margin-bottom: 28px;
     }
 
     &__steps {
       grid-template-columns: 1fr;
       gap: 0;
-      max-width: 440px;
+      max-width: 420px;
     }
 
     &__step {
       flex-direction: row;
       align-items: flex-start;
-      gap: 16px;
-      padding-bottom: 32px;
+      gap: 14px;
+      padding-bottom: 24px;
 
       &:not(:last-child)::before {
         content: '';
         position: absolute;
-        top: 52px;
+        top: 40px;
         bottom: 0;
-        inset-inline-start: 21px;
-        width: 2px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.06) 100%);
+        inset-inline-start: 17px;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.14);
       }
     }
 
-    &__step-rail {
-      width: 44px;
-      height: auto;
+    &__marker {
       margin: 0;
       flex-shrink: 0;
-    }
-
-    &__step-connector {
-      display: none;
-    }
-
-    &__step-ring {
-      display: none;
     }
 
     &__card {
       flex: 1;
       text-align: start;
-      padding: 20px 18px 22px;
+      padding: 18px 16px 20px;
     }
 
     &__foot {
-      justify-content: flex-start;
+      text-align: start;
       margin-top: 8px;
     }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .live-launch {
-    &__badge--upcoming,
-    &__foot-dot {
-      animation: none;
-    }
+  .live-launch__track-fill {
+    transition: none;
   }
 }

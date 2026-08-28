@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "WATAD Software, وتد | مواقع، تطبيقات وأمن سيبراني",
-    "description": "WATAD Software (وتد) وكالة عراقية رسمية لتطوير المواقع والتطبيقات والأمن السيبراني ومنصة WATAD ONE للهوية الرقمية.",
-    "keywords": "وتد, WATAD Software, تطوير مواقع العراق, تطبيقات جوال, أمن سيبراني, WATAD ONE, وكالة رقمية",
+    "description": "WATAD Software (وتد) وكالة عراقية رسمية لتطوير المواقع والتطبيقات والأمن السيبراني.",
+    "keywords": "وتد, WATAD Software, تطوير مواقع العراق, تطبيقات جوال, أمن سيبراني, وكالة رقمية",
     "pages": {
       "home": {
         "title": "WATAD Software, وتد | مواقع، تطبيقات وأمن سيبراني",
@@ -34,11 +34,7 @@
       },
       "privacy": {
         "title": "سياسة الخصوصية, WATAD Software",
-        "description": "كيف تجمع WATAD Software (وتد) وWATAD ONE بياناتك الشخصية والكوكيز ومعلومات الهوية وتحميها."
-      },
-      "pass": {
-        "title": "WATAD ONE, منصة الهوية",
-        "description": "WATAD ONE منصة الهوية الرقمية, Passkeys وOAuth وتسجيل دخول WATAD لتطبيقاتك."
+        "description": "كيف تجمع WATAD Software (وتد) بياناتك الشخصية والكوكيز وتحميها."
       },
       "live": {
         "title": "WATAD Live, تطبيق الأفلام والمسلسلات",
@@ -102,7 +98,6 @@
     "expertise": "خبراتنا",
     "work": "أعمالنا",
     "live": "WATAD Live",
-    "pass": "WATAD ONE",
     "domains": "الدومينات",
     "account": "حسابي",
     "team": "الفريق",
@@ -118,7 +113,6 @@
     "allServices": "جميع الخدمات",
     "work": "أعمالنا",
     "live": "WATAD Live",
-    "pass": "WATAD ONE",
     "domains": "الدومينات",
     "account": "حسابي",
     "webDev": "تطوير المواقع",
@@ -269,6 +263,21 @@
     "securityOwasp": "OWASP, معايير أمان تطبيقات الويب",
     "watadSslSeal": "ختم SSL Secured, وتد للبرمجيات"
   },
+  "pricingUi": {
+    "title": "الباقات",
+    "description": "باقات واضحة للمواقع والتطبيقات والأمن السيبراني.\nمصممة للعلامات العراقية، بالأسعار بالدينار.",
+    "fullPaymentLabel": "دفع كامل",
+    "splitPaymentLabel": "تقسيم 50-50",
+    "splitBadge": "(دفعتان)",
+    "billedFullLabel": "رسوم المشروع الكاملة",
+    "billedSplitLabel": "لكل دفعة (50%)",
+    "splitTotalLabel": "الإجمالي",
+    "popularLabel": "الأكثر طلباً",
+    "currencyLabel": "د.ع",
+    "perProjectLabel": "لكل مشروع",
+    "toggleHint": "تقسيم 50-50: ادفع 50% للبدء و50% قبل الإطلاق. نفس السعر الإجمالي.",
+    "toggleAriaLabel": "اختر طريقة الدفع"
+  },
   "cookies": {
     "ariaLabel": "إشعار ملفات تعريف الارتباط",
     "title": "نستخدم ملفات تعريف الارتباط (Cookies)",
@@ -302,7 +311,7 @@
   },
   "privacyPage": {
     "title": "سياسة الخصوصية",
-    "lead": "توضّح هذه السياسة كيف تجمع WATAD Software («وتد»، «نحن») بياناتك الشخصية وتستخدمها وتخزّنها وتحميها عند زيارة watadiq.com أو استخدام WATAD ONE أو التعامل معنا كعميل.",
+    "lead": "توضّح هذه السياسة كيف تجمع WATAD Software («وتد»، «نحن») بياناتك الشخصية وتستخدمها وتخزّنها وتحميها عند زيارة watadiq.com أو التعامل معنا كعميل.",
     "lastUpdated": "آخر تحديث: يوليو 2026",
     "tocTitle": "محتويات السياسة",
     "cookieColType": "الفئة",
@@ -314,7 +323,7 @@
     "cookieRows": [
       {
         "type": "ضرورية",
-        "purpose": "أمان الموقع، اللغة، الجلسة، تسجيل WATAD ONE، حفظ موافقة Cookies.",
+        "purpose": "أمان الموقع، اللغة، الجلسة، حفظ موافقة Cookies.",
         "duration": "جلسة إلى 12 شهراً"
       },
       {
@@ -332,7 +341,7 @@
       "intro": {
         "title": "مقدمة",
         "paragraphs": [
-          "نحترم خصوصيتك ونلتزم بالشفافية حول البيانات التي نعالجها. تنطبق هذه السياسة على watadiq.com وخدمات هوية WATAD ONE والمنتجات المرتبطة التي تشغّلها WATAD Software.",
+          "نحترم خصوصيتك ونلتزم بالشفافية حول البيانات التي نعالجها. تنطبق هذه السياسة على watadiq.com والمنتجات المرتبطة التي تشغّلها WATAD Software.",
           "باستخدام موقعنا أو خدماتنا، فإنك تقر بقراءة هذه السياسة. حيث يتطلب القانون موافقتك (مثل cookies غير الضرورية)، نطلب إذنك قبل تفعيلها."
         ]
       },
@@ -346,9 +355,6 @@
       "collect": {
         "title": "المعلومات التي نجمعها",
         "bullets": [
-          "بيانات الحساب: البريد، الاسم المعروض، حقول الملف عند إنشاء حساب WATAD ONE.",
-          "بيانات المصادقة: بيانات Passkey، معرفات الجلسة، أسماء الأجهزة، أوقات الدخول.",
-          "بيانات المطورين: اسم المنظمة، التطبيقات، Client ID، Redirect URIs، دعوات الفريق.",
           "بيانات الاستخدام: الصفحات، نوع المتصفح، عنوان IP (مختصر حيث أمكن)، مصدر الزيارة.",
           "بيانات التواصل: الرسائل عبر نموذج التواصل أو البريد.",
           "تفضيلات Cookies: اختياراتك المحفوظة محلياً على جهازك."
@@ -360,14 +366,6 @@
         "paragraphs": [
           "cookies الضرورية مفعّلة دائماً لأن الموقع لا يعمل بدونها. تتحكم بالفئات الاختيارية من شريط Cookies أو الزر في أسفل هذه الصفحة."
         ]
-      },
-      "watadOne": {
-        "title": "منصة WATAD ONE للهوية",
-        "paragraphs": [
-          "يوفر WATAD ONE تسجيل الدخول عبر WATAD (OAuth 2.0 / OpenID Connect) للتطبيقات الخارجية. عند الموافقة، نشارك فقط الصلاحيات التي تختارها (مثل البريد أو الملف).",
-          "المطورون يسجّلون التطبيقات من لوحة المطور. تُعالج التوكنات وسجلات التدقيق على api.watadiq.com بضوابط أمنية معيارية."
-        ],
-        "note": "يمكنك إلغاء وصول أي تطبيق من حساب WATAD ONE التطبيقات المتصلة."
       },
       "legal": {
         "title": "الأساس القانوني للمعالجة",
@@ -381,9 +379,7 @@
       "use": {
         "title": "كيف نستخدم معلوماتك",
         "bullets": [
-          "تشغيل watadiq.com وWATAD ONE وصيانتهما.",
-          "مصادقة المستخدمين وحماية الحسابات (Passkeys، رموز بريد، جلسات).",
-          "تشغيل ميزات المطور: التطبيقات، Webhooks، سجل التدقيق، صلاحيات الفريق.",
+          "تشغيل watadiq.com وصيانته.",
           "الرد على الاستفسارات وطلبات الدعم.",
           "تحليل الاستخدام المجمّع لتحسين الأداء (مع الموافقة حيث يلزم).",
           "الامتثال للقانون وفرض الشروط."
@@ -392,23 +388,20 @@
       "sharing": {
         "title": "المشاركة والمعالجون",
         "paragraphs": [
-          "لا نبيع بياناتك الشخصية. نشاركها فقط مع معالجين موثوقين يساعدوننا في التشغيل (استضافة، بريد، أمان/CDN) بعقود تفرض ضمانات مناسبة.",
-          "التطبيقات التي تفوّضها تحصل على البيانات حسب الصلاحيات الظاهرة في شاشة الموافقة."
+          "لا نبيع بياناتك الشخصية. نشاركها فقط مع معالجين موثوقين يساعدوننا في التشغيل (استضافة، بريد، أمان/CDN) بعقود تفرض ضمانات مناسبة."
         ]
       },
       "retention": {
         "title": "مدة الاحتفاظ",
         "bullets": [
-          "بيانات الحساب: طوال نشاط الحساب وفترة معقولة بعد الحذف لأغراض أمنية وقانونية.",
-          "سجلات الجلسات والمصادقة: عادة 90 يوماً إلى 24 شهراً حسب الحاجة الأمنية.",
-          "سجلات تدقيق المطورين: للمراجعة الأمنية والامتثال.",
+          "سجلات التواصل: نحتفظ بها حسب الحاجة للرد على الاستفسارات.",
           "موافقة Cookies: محلياً حتى تمسح التخزين أو تغيّر التفضيلات."
         ]
       },
       "security": {
         "title": "الأمان",
         "paragraphs": [
-          "نستخدم HTTPS/TLS، cookies جلسة HttpOnly لـ WATAD ONE، PKCE لتطبيقات OAuth العامة، تحديد معدل الطلبات، سجل تدقيق، وحماية بنية (WAF/CDN). لا توجد طريقة آمنة 100%؛ نحسّن الضوابط باستمرار."
+          "نستخدم HTTPS/TLS، تحديد معدل الطلبات، وحماية بنية (WAF/CDN). لا توجد طريقة آمنة 100%؛ نحسّن الضوابط باستمرار."
         ]
       },
       "rights": {
@@ -416,7 +409,6 @@
         "bullets": [
           "الوصول أو التصحيح أو الحذف حيث ينطبق القانون.",
           "سحب الموافقة على cookies أو تسويق اختياري.",
-          "إلغاء وصول التطبيقات من لوحة WATAD ONE.",
           "الاعتراض أو تقييد بعض المعالجة وفق القانون المعمول به.",
           "تقديم شكوى لجهة رقابية في بلدك."
         ],
@@ -437,7 +429,7 @@
       "contact": {
         "title": "تواصل معنا",
         "paragraphs": [
-          "أسئلة حول الخصوصية أو Cookies أو معالجة بيانات WATAD ONE:"
+          "أسئلة حول الخصوصية أو Cookies:"
         ]
       }
     }
@@ -600,8 +592,8 @@
             {
               "name": "Launch",
               "price": "300,000",
-              "currency": "IQD",
-              "period": "/ مشروع",
+              "currency": "د.ع",
+              "period": "مشروع",
               "description": "موقعك الاحترافي الأول, سريع ومتجاوب وجاهز للإطلاق.",
               "features": [
                 "موقع صفحة واحدة متجاوب",
@@ -618,8 +610,8 @@
             {
               "name": "Business",
               "price": "600,000",
-              "currency": "IQD",
-              "period": "/ مشروع",
+              "currency": "د.ع",
+              "period": "مشروع",
               "description": "موقع متعدد الصفحات للعلامات العراقية النامية.",
               "features": [
                 "حتى 8 صفحات + لوحة CMS",
@@ -636,8 +628,8 @@
             {
               "name": "Scale",
               "price": "1,000,000",
-              "currency": "IQD",
-              "period": "/ مشروع",
+              "currency": "د.ع",
+              "period": "مشروع",
               "description": "بيع أونلاين مع تجارة إلكترونية ودعم ثنائي اللغة وأمن مدمج.",
               "featured": true,
               "badge": "عرض خاص!",
@@ -657,8 +649,8 @@
             {
               "name": "Enterprise",
               "price": "2,500,000+",
-              "currency": "IQD",
-              "period": "/ مشروع",
+              "currency": "د.ع",
+              "period": "مشروع",
               "description": "منصة ويب وجوال مخصصة للمؤسسات الطموحة.",
               "features": [
                 "ويب + تطبيق جوال",
@@ -938,587 +930,12 @@
       "generic": "حدث خطأ. حاول مجدداً"
     }
   },
-  "pass": {
-    "navCta": "تسجيل الدخول عبر WATAD",
-    "tabBadge": "جديد",
-    "platformNavLabel": "منصة WATAD ONE",
-    "platformTabs": {
-      "overview": "نظرة عامة",
-      "login": "تسجيل الدخول",
-      "account": "لوحة التحكم",
-      "console": "لوحة المطور",
-      "developers": "للمطورين"
-    },
-    "integratedBadge": "مدمج في watadiq.com، ليس موقعاً منفصلاً",
-    "eyebrow": "WATAD ONE، الهوية الرقمية",
-    "heroTitle": "دخول واحد، وصول لكل شيء بدون كلمات مرور",
-    "heroLead": "WATAD ONE منصة الهوية على هذا الموقع: Passkeys، OAuth، لوحة المطور، وحساب واحد لأي تطبيق يضيف Sign in with WATAD.",
-    "ctaLogin": "الدخول عبر WATAD",
-    "ctaDevelopers": "لوحة المطور",
-    "ctaStart": "ابدأ مجاناً",
-    "featuresTitle": "لماذا WATAD ONE",
-    "features": [
-      {
-        "title": "Passkeys والبصمة",
-        "text": "بصمة أو وجه أو PIN الجهاز. لا كلمات مرور تُسرق أو تُنسى."
-      },
-      {
-        "title": "حساب واحد",
-        "text": "هوية WATAD واحدة لكل تطبيق وخدمة تثق بـ WATAD ONE."
-      },
-      {
-        "title": "أمان مؤسسي",
-        "text": "OAuth 2.0 + PKCE، توكنات موقّعة، سجل تدقيق، وعزل المستأجرين."
-      }
-    ],
-    "stepsTitle": "كيف يعمل",
-    "steps": [
-      {
-        "title": "أنشئ حسابك",
-        "text": "سجّل برمز البريد أو Passkey هنا على watadiq.com."
-      },
-      {
-        "title": "المطورون يسجلون التطبيقات",
-        "text": "استخدم تبويب لوحة المطور لإنشاء تطبيق والحصول على client ID."
-      },
-      {
-        "title": "المستخدمون يتصلون ويدخلون",
-        "text": "أضف Sign in with WATAD لموقعك. المستخدم يمنح الموافقة مرة واحدة."
-      }
-    ],
-    "bandTitle": "جاهز للتجربة؟",
-    "bandText": "أنشئ حسابك في أقل من دقيقة بدون كلمة مرور.",
-    "homeStripTitle": "هوية واحدة لكل تطبيق",
-    "homeStripText": "Passkeys وOAuth ولوحة مطور مدمجة في watadiq.com، مدعومة بخادم Go للهوية.",
-    "homeStripLearn": "افتح المنصة",
-    "loginTitle": "الدخول إلى WATAD ONE",
-    "loginIntro": "استخدم رمز البريد أو Passkey, نفس هوية WATAD ONE التي تضيفها الشركات مثل تسجيل Google.",
-    "accountPicker": {
-      "title": "الدخول عبر WATAD ONE",
-      "continueTo": "لمتابعة الدخول إلى {{site}}",
-      "chooseAccount": "اختر حساباً",
-      "useAnother": "استخدام حساب آخر",
-      "enterEmail": "سجّل الدخول ببريدك",
-      "backToAccounts": "العودة لقائمة الحسابات",
-      "passkeyForAccount": "الدخول بـ Passkey لهذا الحساب",
-      "confirmAccount": "تأكيد أنك أنت",
-      "sendCodeInstead": "إرسال رمز للبريد بدلاً من ذلك",
-      "footer": "تسجيل آمن عبر WATAD ONE"
-    },
-    "signInModal": {
-      "title": "الدخول عبر WATAD ONE",
-      "lead": "هوية واحدة آمنة لـ watadiq.com ولأي تطبيق يضيف Sign in with WATAD.",
-      "footer": "الشركات يمكنها إضافة WATAD ONE كزر تسجيل, نفس التدفق ونفس الثقة.",
-      "profileTitle": "ملفك في WATAD ONE",
-      "profileLead": "أضف اسمك وصورتك. التطبيقات الأخرى تراهما عند تسجيل الدخول عبر WATAD.",
-      "displayName": "الاسم الظاهر",
-      "changePhoto": "تغيير الصورة",
-      "saveProfile": "حفظ الملف",
-      "profileSaved": "تم تحديث الملف.",
-      "avatarTooLarge": "اختر صورة أصغر من 180 ك.ب.",
-      "editProfile": "تعديل الملف",
-      "forDevelopers": "للمطورين"
-    },
-    "email": "البريد الإلكتروني",
-    "code": "رمز من 6 أرقام",
-    "sendCode": "إرسال رمز الدخول",
-    "verify": "تحقق ومتابعة",
-    "codeSent": "أرسلنا رمزاً إلى بريدك. أدخله أدناه (تحقق من البريد المزعج إن لزم).",
-    "changeEmail": "استخدام بريد آخر",
-    "or": "أو",
-    "withBiometricPasskey": "الدخول بالوجه / البصمة",
-    "withPasskey": "الدخول بـ Passkey",
-    "wait": "لحظة…",
-    "noAccount": "جديد هنا؟",
-    "signUpHint": "أدخل بريدك، ننشئ حسابك عند أول دخول.",
-    "backToProduct": "العودة إلى WATAD ONE",
-    "backHome": "الرئيسية",
-    "backAccount": "حسابي",
-    "accountEyebrow": "WATAD ONE، هويتك",
-    "welcome": "مسجّل الدخول: {{email}}",
-    "accountIntro": "أدر التطبيقات المتصلة وPasskeys وافتح لوحة المطور.",
-    "linkedAppsTitle": "التطبيقات المتصلة",
-    "linkedAppsHint": "تطبيقات استخدمت فيها Sign in with WATAD. يمكنك إلغاء الوصول في أي وقت.",
-    "noLinkedApps": "لا تطبيقات متصلة بعد.",
-    "revokeApp": "إلغاء الوصول",
-    "confirmRevokeApp": "إزالة Sign in with WATAD من {{name}}؟",
-    "appRevoked": "تم إلغاء وصول التطبيق.",
-    "passkeysTitle": "Passkeys الخاصة بك",
-    "passkeysHint": "سجّل هذا الجهاز للدخول بدون رمز بريد.",
-    "addBiometricPasskey": "إضافة Passkey (وجه / بصمة)",
-    "passkeysBiometricHint": "استخدم بصمة الوجه أو الإصبع أو PIN الجهاز للدخول بدون كلمة مرور.",
-    "passkeyDefaultLabel": "هذا الجهاز",
-    "passkeyBackedUp": "متزامن مع السحابة",
-    "passkeyLocal": "هذا الجهاز فقط",
-    "devicesTitle": "الأجهزة المعروفة",
-    "devicesHint": "المتصفحات والأجهزة التي سجّلت الدخول منها.",
-    "noDevices": "لا أجهزة مسجّلة بعد.",
-    "dashboard": {
-      "title": "لوحة التحكم",
-      "linkedApps": "تطبيقات متصلة",
-      "passkeys": "Passkeys",
-      "devices": "أجهزة",
-      "orgs": "منظمات",
-      "colDevice": "الجهاز",
-      "colStatus": "الحالة",
-      "colPlatform": "النظام",
-      "colDate": "التاريخ",
-      "colAction": "إجراء",
-      "colApp": "التطبيق",
-      "colScopes": "الصلاحيات"
-    },
-    "recovery": {
-      "title": "رموز الاسترداد",
-      "hint": "رموز احتياطية لمرة واحدة إذا فقدت البريد وPasskeys.",
-      "generate": "إنشاء رموز جديدة",
-      "remaining": "{{count}} رمز متبقٍ",
-      "generated": "تم إنشاء رموز استرداد جديدة.",
-      "confirmGenerate": "إنشاء رموز جديدة يلغي القديمة. متابعة؟",
-      "saveOnce": "احفظ هذه الرموز في مكان آمن. لن تُعرض مجدداً.",
-      "allCodes": "كل رموز الاسترداد"
-    },
-    "copy": {
-      "copy": "نسخ",
-      "done": "تم النسخ!"
-    },
-    "addPasskey": "إضافة Passkey",
-    "noPasskeys": "لا Passkeys بعد. أضف واحداً لدخول أسرع وأأمن.",
-    "passkeyAdded": "تم تسجيل Passkey بنجاح.",
-    "confirmRevokePasskey": "إزالة هذا Passkey؟ يمكنك إضافته لاحقاً.",
-    "remove": "إزالة",
-    "devPanelTitle": "ابنِ مع WATAD ONE",
-    "devPanelHint": "أنشئ منظمات وتطبيقات ليتمكن الآخرون من إضافة Sign in with WATAD.",
-    "openConsole": "فتح لوحة المطور",
-    "logout": "تسجيل الخروج",
-    "devEyebrow": "WATAD ONE للمطورين",
-    "devTitle": "أضف Sign in with WATAD لتطبيقك",
-    "devIntro": "OpenID Connect وOAuth 2.0 مع PKCE ولوحة على هذا الموقع. تكامل في ساعات.",
-    "devItems": [
-      {
-        "title": "OAuth / OIDC",
-        "text": "Authorization code + PKCE، ID tokens، تدوير refresh، JWKS."
-      },
-      {
-        "title": "نفس الموقع",
-        "text": "الدخول والموافقة والحساب ولوحة المطور تحت watadiq.com/pass."
-      },
-      {
-        "title": "خادم Go للهوية",
-        "text": "API الإنتاج على api.watadiq.com: passkeys، جلسات، webhooks، تدقيق."
-      }
-    ],
-    "devStepsTitle": "خطوات التكامل",
-    "devSteps": [
-      {
-        "title": "سجّل الدخول وأنشئ منظمة",
-        "text": "افتح تبويب لوحة المطور وسجّل منظمتك."
-      },
-      {
-        "title": "سجّل تطبيقك",
-        "text": "احصل على client ID، أضف redirect URIs، انسخ snippet التكامل."
-      },
-      {
-        "title": "وجّه المستخدمين",
-        "text": "أرسلهم إلى OAuth authorize مع PKCE. يعودون بالتوكنات."
-      }
-    ],
-    "devCtaTitle": "ابدأ التطوير",
-    "devCtaText": "كل شيء يعمل على watadiq.com بدون نطاق منتج منفصل.",
-    "devFeaturesTitle": "ما الذي تحصل عليه",
-    "devEndpointsTitle": "نقاط API الأساسية",
-    "devColStep": "الخطوة",
-    "devColTitle": "العنوان",
-    "devColDetail": "التفاصيل",
-    "devColEndpoint": "النقطة",
-    "devColUrl": "الرابط",
-    "devEndpointIssuer": "Issuer",
-    "devEndpointAuthorize": "Authorize",
-    "devEndpointToken": "Token",
-    "devEndpointJwks": "JWKS",
-    "devQuickLinksTitle": "ابدأ من هنا",
-    "devQuickLinks": [
-      {
-        "title": "دليل التكامل الكامل",
-        "text": "شرح خطوة بخطوة لربط موقعك أو تطبيقك مع PKCE وOAuth.",
-        "href": "/pass/developers/guide"
-      },
-      {
-        "title": "لوحة المطور",
-        "text": "أنشئ منظمة، سجّل تطبيقاً، واحصل على Client ID.",
-        "href": "/pass/console"
-      },
-      {
-        "title": "Redirect URIs",
-        "text": "أضف رابط العودة بعد تسجيل الدخول, يجب أن يطابق تماماً.",
-        "href": "/pass/developers/guide#redirects"
-      }
-    ],
-    "devGuide": {
-      "eyebrow": "دليل متقدم",
-      "promoTitle": "ربط موقعك أو تطبيقك بـ WATAD ONE",
-      "promoText": "دليل شامل من التسجيل في لوحة المطور حتى استلام التوكنات, مع أمثلة جاهزة للنسخ.",
-      "openGuide": "فتح دليل التكامل",
-      "title": "دليل التكامل مع WATAD ONE",
-      "lead": "هذا الدليل يشرح بالتفصيل كيف تضيف Sign in with WATAD لموقعك أو تطبيقك باستخدام OAuth 2.0 وOpenID Connect مع PKCE.",
-      "backToDevelopers": "العودة للمطورين",
-      "tocTitle": "محتويات الدليل",
-      "toc": {
-        "overview": "نظرة عامة",
-        "prerequisites": "المتطلبات",
-        "console": "لوحة المطور",
-        "redirects": "Redirect URIs",
-        "flow": "مسار OAuth",
-        "spa": "تطبيق ويب (SPA)",
-        "server": "تطبيق خادم",
-        "tokens": "Authorize URL",
-        "scopes": "الصلاحيات (Scopes)",
-        "consent": "شاشة الموافقة",
-        "test": "اختبار التكامل",
-        "troubleshoot": "حل المشاكل"
-      },
-      "hero": {
-        "api": "API الإنتاج",
-        "discovery": "OpenID Discovery",
-        "console": "لوحة المطور"
-      },
-      "scopeCol": "Scope",
-      "scopeDescCol": "ماذا يمنح",
-      "ctaTitle": "جاهز للبدء؟",
-      "ctaHint": "افتح لوحة المطور، أنشئ تطبيقاً، ثم اتبع الخطوات في هذا الدليل.",
-      "code": {
-        "spaTitle": "مثال SPA, JavaScript",
-        "serverTitle": "مثال تطبيق خادم, Token exchange",
-        "authorizeTitle": "قالب Authorize URL"
-      },
-      "flowSteps": [
-        {
-          "num": "1",
-          "title": "توجيه المستخدم",
-          "text": "أرسل المستخدم إلى /oauth/authorize مع client_id وredirect_uri وPKCE challenge."
-        },
-        {
-          "num": "2",
-          "title": "تسجيل الدخول",
-          "text": "إذا لم يكن مسجلاً، يدخل عبر WATAD ONE (Passkey أو رمز بريد)."
-        },
-        {
-          "num": "3",
-          "title": "شاشة الموافقة",
-          "text": "يرى المستخدم اسم تطبيقك والصلاحيات المطلوبة, يسمح أو يرفض."
-        },
-        {
-          "num": "4",
-          "title": "Callback",
-          "text": "بعد الموافقة يُعاد المستخدم إلى redirect_uri مع authorization code."
-        },
-        {
-          "num": "5",
-          "title": "Token exchange",
-          "text": "تطبيقك يرسل code + code_verifier إلى /oauth/token ويستلم access token و ID token."
-        }
-      ],
-      "redirectRules": [
-        "يجب أن يطابق Redirect URI حرفياً ما سجّلته في لوحة المطور, بما في ذلك https ومسار /callback.",
-        "للتطوير المحلي: http://localhost:3000/callback أو http://127.0.0.1:5173/callback مسموح.",
-        "لا تستخدم wildcards, سجّل كل بيئة (تطوير / إنتاج) على حدة.",
-        "بعد إضافة URI جديد، انتظر ثوانٍ ثم جرّب تسجيل الدخول من تطبيقك."
-      ],
-      "scopeRows": [
-        {
-          "scope": "openid",
-          "desc": "مطلوب, يفعّل OpenID Connect ويُرجع ID token."
-        },
-        {
-          "scope": "profile",
-          "desc": "الاسم المعروض ومعلومات الملف الأساسية."
-        },
-        {
-          "scope": "email",
-          "desc": "عنوان البريد الإلكتروني الم verified."
-        },
-        {
-          "scope": "offline_access",
-          "desc": "Refresh token للجلسات الطويلة (اختياري)."
-        }
-      ],
-      "faq": [
-        {
-          "q": "redirect_uri mismatch, ماذا أفعل؟",
-          "a": "تأكد أن الرابط في طلب OAuth يطابق تماماً URI المسجّل في لوحة المطور. راجع قسم Redirect URIs في هذا الدليل."
-        },
-        {
-          "q": "invalid_client, Client ID خاطئ؟",
-          "a": "انسخ Client ID من صفحة التطبيق في لوحة المطور. تأكد أن التطبيق مفعّل (enabled)."
-        },
-        {
-          "q": "PKCE verification failed",
-          "a": "احفظ code_verifier قبل التوجيه إلى authorize واستخدم نفس القيمة عند استبدال code في /oauth/token."
-        },
-        {
-          "q": "CORS error من المتصفح",
-          "a": "استبدال code بالتوكن يجب أن يتم من خادمك أو من نفس origin المسجّل, لا تضع client_secret في SPA عامة."
-        }
-      ],
-      "sections": {
-        "overview": {
-          "title": "نظرة عامة",
-          "lead": "WATAD ONE هو مزود هوية (Identity Provider) يعمل على api.watadiq.com ويتكامل مع أي موقع أو تطبيق عبر معايير OAuth 2.0 / OIDC.",
-          "paragraphs": [
-            "عندما يضغط المستخدم «Sign in with WATAD» في تطبيقك، يُوجَّه إلى watadiq.com للدخول والموافقة، ثم يعود إلى تطبيقك برمز يمكن استبداله بتوكنات آمنة.",
-            "للتطبيقات العامة (SPA، جوال) استخدم PKCE بدون client secret. للتطبيقات السرية (خادم) يمكنك استخدام client secret."
-          ]
-        },
-        "prerequisites": {
-          "title": "المتطلبات",
-          "bullets": [
-            "حساب WATAD ONE, سجّل الدخول من watadiq.com/pass/login",
-            "منظمة في لوحة المطور, /pass/console",
-            "تطبيق مسجّل مع Client ID و Redirect URI واحد على الأقل",
-            "HTTPS في الإنتاج (localhost مسموح للتطوير)"
-          ]
-        },
-        "console": {
-          "title": "إعداد لوحة المطور",
-          "paragraphs": [
-            "1. افتح لوحة المطور وسجّل منظمتك (اسم + slug).",
-            "2. أنشئ تطبيقاً جديداً, اختر Public للمواقع و SPA، أو Confidential للخوادم.",
-            "3. من صفحة التطبيق: انسخ Client ID، أضف Redirect URIs، وخصّص الشعار ولون العلامة لشاشة الموافقة.",
-            "4. انسخ snippet التكامل من لوحة التطبيق أو استخدم الأمثلة في هذا الدليل."
-          ],
-          "note": "Client secret يُعرض مرة واحدة فقط عند الإنشاء أو التدوير, احفظه في متغيرات بيئة آمنة."
-        },
-        "redirects": {
-          "title": "Redirect URIs, أين يعود المستخدم؟",
-          "lead": "Redirect URI هو العنوان الذي يُعاد إليه المستخدم بعد الموافقة. أي اختلاف بسيط يسبب خطأ redirect_uri mismatch.",
-          "paragraphs": [
-            "مثال إنتاج: https://myapp.com/auth/callback",
-            "مثال تطوير: http://localhost:3000/auth/callback"
-          ]
-        },
-        "flow": {
-          "title": "مسار OAuth (Authorization Code + PKCE)",
-          "lead": "هذا هو المسار القياسي الموصى به لجميع التطبيقات الحديثة."
-        },
-        "spa": {
-          "title": "ربط موقع أو SPA (React، Vue، إلخ)",
-          "lead": "استخدم PKCE في المتصفح. لا تضع client secret في كود الواجهة الأمامية.",
-          "paragraphs": [
-            "بعد استلام التوكنات، تحقق من ID token عبر JWKS أو userinfo endpoint.",
-            "احفظ access token في الذاكرة أو HttpOnly cookie, لا localStorage للتوكنات الحساسة."
-          ]
-        },
-        "server": {
-          "title": "ربط تطبيق خادم (Confidential)",
-          "lead": "للخوادم التي يمكنها حفظ client secret بأمان.",
-          "paragraphs": [
-            "أرسل authorization code + client_secret + code_verifier إلى /oauth/token من خادمك فقط.",
-            "استخدم متغيرات بيئة لـ CLIENT_ID و CLIENT_SECRET."
-          ]
-        },
-        "tokens": {
-          "title": "Authorize URL, القالب",
-          "lead": "استبدل YOUR_CLIENT_ID و PKCE_CHALLENGE و RANDOM state بقيم حقيقية."
-        },
-        "scopes": {
-          "title": "الصلاحيات (Scopes)",
-          "lead": "اطلب فقط ما يحتاجه تطبيقك. المستخدم يرى كل scope في شاشة الموافقة."
-        },
-        "consent": {
-          "title": "شاشة الموافقة",
-          "paragraphs": [
-            "عند أول دخول أو عند طلب scopes جديدة، يرى المستخدم شاشة موافقة تعرض اسم تطبيقك وشعارك والصلاحيات.",
-            "خصّص الشعار ولون العلامة من لوحة المطور التطبيق الهوية.",
-            "المستخدم يمكنه إلغاء الوصول لاحقاً من /pass/account التطبيقات المتصلة."
-          ]
-        },
-        "test": {
-          "title": "اختبار التكامل",
-          "bullets": [
-            "من صفحة التطبيق في لوحة المطور: اضغط «جرّب تسجيل الدخول» إن وُجد، أو افتح Authorize URL يدوياً.",
-            "تحقق أن callback يستلم code و state.",
-            "استبدل code بتوكنات وتأكد من userinfo أو decode الـ ID token.",
-            "جرّب الرفض (Deny) وتأكد أن تطبيقك يتعامل مع الإلغاء."
-          ]
-        },
-        "troubleshoot": {
-          "title": "حل المشاكل الشائعة",
-          "lead": "أسئلة متكررة من المطورين أثناء الربط."
-        }
-      }
-    },
-    "console": {
-      "eyebrow": "WATAD ONE، لوحة المطور",
-      "title": "لوحة المطور",
-      "intro": "أنشئ منظمات، سجّل تطبيقات، أدر الفريق والWebhooks وسجل التدقيق من watadiq.com.",
-      "wizardTitle": "أنشئ منظمتك الأولى",
-      "wizardHint": "ثلاث خطوات سريعة، ثم تسجّل التطبيقات وتحصل على OAuth credentials.",
-      "orgNamePlaceholder": "شركتي",
-      "orgSlugHint": "يُستخدم في الروابط ومسارات API: أحرف صغيرة وأرقام وشرطات.",
-      "next": "متابعة",
-      "back": "رجوع",
-      "cancel": "إلغاء",
-      "createOrg": "أنشئ منظمتك",
-      "createOrgHint": "المنظمات تجمع تطبيقاتك وأعضاء الفريق.",
-      "orgName": "اسم المنظمة",
-      "orgSlug": "Slug للرابط",
-      "createOrgBtn": "إنشاء المنظمة",
-      "slugTaken": "هذا الـ slug مستخدم مسبقاً.",
-      "orgCreated": "تم إنشاء المنظمة.",
-      "selectOrg": "المنظمة",
-      "tabs": {
-        "apps": "التطبيقات",
-        "team": "الفريق",
-        "webhooks": "Webhooks",
-        "audit": "سجل التدقيق"
-      },
-      "yourApps": "التطبيقات",
-      "appsHint": "كل تطبيق يحصل على client ID لـ Sign in with WATAD.",
-      "noApps": "لا تطبيقات بعد. أنشئ تطبيقك الأول.",
-      "openApp": "فتح التطبيق",
-      "backToApps": "رجوع للتطبيقات",
-      "appDetail": "التطبيق",
-      "noRedirects": "لا Redirect URIs بعد.",
-      "selectApp": "اختر تطبيقاً",
-      "selectAppHint": "اختر تطبيقاً من القائمة أو أنشئ واحداً لعرض بيانات الاعتماد وكود التكامل.",
-      "newApp": "تطبيق جديد",
-      "appName": "اسم التطبيق",
-      "appSlug": "Slug التطبيق",
-      "environment": "البيئة",
-      "envDev": "تطوير",
-      "envProd": "إنتاج",
-      "typePublic": "Public (SPA / جوال)",
-      "typeConfidential": "Confidential (خادم)",
-      "createAppBtn": "إنشاء التطبيق",
-      "appCreated": "تم إنشاء التطبيق.",
-      "appEnabled": "تم تفعيل التطبيق.",
-      "appDisabled": "تم تعطيل التطبيق.",
-      "enableApp": "تفعيل",
-      "disableApp": "تعطيل",
-      "credentials": "بيانات OAuth",
-      "type": "نوع العميل",
-      "clientSecret": "Client secret",
-      "authorizeUrl": "Authorize URL (قالب)",
-      "secretOnce": "يُعرض مرة واحدة. انسخه واحفظه بأمان.",
-      "secretRotated": "تم إنشاء client secret جديد.",
-      "rotateSecret": "تدوير client secret",
-      "branding": "هوية التطبيق (شاشة الموافقة)",
-      "brandColor": "لون العلامة",
-      "logoUrl": "رابط الشعار",
-      "saveBranding": "حفظ الهوية",
-      "brandingSaved": "تم تحديث الهوية.",
-      "redirects": "Redirect URIs",
-      "redirectsHint": "يجب أن يطابق تماماً مكان عودة المستخدم بعد الدخول.",
-      "confirmRemoveRedirect": "إزالة هذا Redirect URI؟",
-      "addRedirect": "Redirect URI",
-      "addRedirectBtn": "إضافة URI",
-      "redirectAdded": "تمت إضافة Redirect URI.",
-      "redirectFormatHint": "مثال: https://your-app.com/auth/callback أو http://localhost:3000/callback للتطوير المحلي.",
-      "integration": "Snippet التكامل",
-      "teamTitle": "أعضاء الفريق",
-      "teamHint": "ادعُ زملاءك لإدارة التطبيقات والWebhooks والأمان.",
-      "inviteEmail": "بريد الزميل",
-      "inviteRole": "الدور",
-      "inviteBtn": "إرسال دعوة",
-      "inviteSent": "تم إنشاء الدعوة.",
-      "inviteToken": "رمز الدعوة",
-      "inviteTokenHint": "شارك هذا الرمز مع زميلك. يقبله من حساب WATAD.",
-      "noMembers": "أنت وحدك حالياً. ادعُ شخصاً من الأعلى.",
-      "confirmRemoveMember": "إزالة {{email}} من المنظمة؟",
-      "roleUpdated": "تم تحديث الدور.",
-      "roles": {
-        "admin": "مدير",
-        "developer": "مطور",
-        "security_analyst": "أمن",
-        "support": "دعم",
-        "read_only": "قراءة فقط"
-      },
-      "webhooksTitle": "Webhooks",
-      "webhooksHint": "استقبل أحداث HTTP موقّعة عند اتصال التطبيقات أو تغيّر الفريق.",
-      "webhookUrl": "رابط Endpoint",
-      "webhookEvents": "الأحداث",
-      "webhookEventsPlaceholder": "اختر الأحداث المراد إرسالها",
-      "selectAllEvents": "تحديد الكل",
-      "clearEvents": "مسح",
-      "createWebhook": "إنشاء webhook",
-      "webhookCreated": "تم إنشاء webhook.",
-      "webhookSecret": "Webhook signing secret",
-      "webhookSecretRotated": "تم تدوير secret.",
-      "rotateWebhookSecret": "تدوير secret",
-      "yourWebhooks": "Webhooks النشطة",
-      "noWebhooks": "لا webhooks بعد.",
-      "confirmDeleteWebhook": "حذف هذا webhook؟",
-      "viewDeliveries": "التسليمات",
-      "deliveriesTitle": "سجل التسليم",
-      "noDeliveries": "لا تسليمات بعد.",
-      "auditTitle": "سجل التدقيق",
-      "auditHint": "أحداث الأمان والإعدادات الأخيرة لهذه المنظمة.",
-      "noAudit": "لا أحداث تدقيق بعد.",
-      "action": "الإجراء",
-      "actor": "الفاعل",
-      "target": "الهدف",
-      "event": "الحدث",
-      "status": "الحالة",
-      "attempt": "المحاولة",
-      "time": "الوقت"
-    },
-    "consent": {
-      "invalid": "طلب تفويض غير صالح أو منتهٍ.",
-      "brand": "WATAD ONE",
-      "pageTitle": "طلب إذن الوصول",
-      "appLabel": "التطبيق",
-      "watadLabel": "هويتك",
-      "subtitle": "{{app}} يريد ربط حساب WATAD ONE الخاص بك",
-      "devBadge": "تطوير",
-      "requests": "سيحصل على:",
-      "allow": "سماح",
-      "deny": "رفض",
-      "allowHint": "بالموافقة، تسمح للتطبيق بالوصول إلى البيانات المذكورة أعلاه فقط.",
-      "denyHint": "يمكنك إلغاء الوصول في أي وقت من لوحة حسابك التطبيقات المتصلة.",
-      "accountLink": "إدارة الحساب والتطبيقات",
-      "devDocsLink": "دليل التكامل للمطورين",
-      "scope": {
-        "openid": {
-          "title": "تسجيل الدخول",
-          "desc": "التحقق من هويتك في WATAD."
-        },
-        "profile": {
-          "title": "الملف",
-          "desc": "معلومات الملف الأساسية."
-        },
-        "email": {
-          "title": "البريد",
-          "desc": "عنوان بريدك الإلكتروني."
-        },
-        "offline_access": {
-          "title": "البقاء مسجلاً",
-          "desc": "Refresh tokens للجلسات الطويلة."
-        }
-      }
-    },
-    "errors": {
-      "generic": "حدث خطأ. حاول مجدداً.",
-      "invalidCode": "رمز غير صحيح أو منتهي.",
-      "rate": "محاولات كثيرة. انتظر دقائق.",
-      "passkey": "فشل الدخول بـ Passkey. جرّب رمز البريد.",
-      "emailSendFailed": "تعذّر إرسال رمز البريد. خدمة البريد غير مفعّلة بعد, تواصل معنا أو جرّب Passkey.",
-      "redirectInvalid": "الرابط غير صالح. استخدم https:// أو http://localhost للتطوير.",
-      "redirectConflict": "هذا Redirect URI مسجّل مسبقاً لهذا التطبيق.",
-      "forbidden": "ليس لديك صلاحية إضافة Redirect URI. اطلب من مالك المنظمة."
-    },
-    "oauthDemo": {
-      "tryButton": "جرّب تسجيل بواسطة وتد",
-      "working": "جارٍ إكمال تسجيل الدخول",
-      "successTitle": "تم تسجيل الدخول بنجاح",
-      "successHint": "اكتمل تدفق OAuth مع PKCE وأرجع الخادم بيانات المستخدم.",
-      "signedInUser": "مستخدم مسجّل",
-      "failedTitle": "تعذّر إكمال تسجيل الدخول",
-      "backConsole": "رجوع للوحة المطور"
-    }
-  },
   "live": {
     "heroEyebrow": "وتد للبرمجيات",
     "byWatad": "من وتد للبرمجيات",
     "heroTitle": "WATAD Live",
+    "heroTitlePrefix": "WATAD",
+    "heroTitleRotate": ["Live", "أفلام", "مسلسلات", "معاً"],
     "heroTagline": "أفلام ومسلسلات عربية",
     "heroLead": "ملفات عائلية ومشاهدة جماعية",
     "heroIllustrationAlt": "رسم مسطح لتطبيق WATAD Live",

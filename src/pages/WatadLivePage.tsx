@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useLegacyPlugins } from '../lib/plugins';
 import LiveLaunchTimeline from '../components/LiveLaunchTimeline';
+import WatadLiveHeroTitle from '../components/WatadLiveHeroTitle';
 import './WatadLivePage.scss';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -51,17 +52,22 @@ export default function WatadLivePage() {
           <div className="live-hero__scrim" aria-hidden="true" />
 
           <div className="live-hero__inner">
-            <motion.div className="live-hero__copy" {...fadeUp}>
-              <h1 id="live-hero-title">{t('live.heroTitle')}</h1>
-              <p className="live-hero__tagline">{t('live.heroTagline')}</p>
-              <p className="live-hero__lead">{t('live.heroLead')}</p>
-
-              <div className="live-hero__status" aria-label={t('live.statusBadge')}>
-                <span className="live-hero__status-label">{t('live.statusBadge')}</span>
-                <span className="live-hero__status-dot" aria-hidden="true" />
-                <span className="live-hero__status-version">{t('live.versionLabel')}</span>
-              </div>
+            <motion.div className="live-hero__title-wrap" {...fadeUp}>
+              <WatadLiveHeroTitle id="live-hero-title" />
             </motion.div>
+
+            <div className="live-hero__lead-block">
+              <motion.div className="live-hero__copy" {...fadeUp}>
+                <p className="live-hero__tagline">{t('live.heroTagline')}</p>
+                <p className="live-hero__lead">{t('live.heroLead')}</p>
+
+                <div className="live-hero__status" aria-label={t('live.statusBadge')}>
+                  <span className="live-hero__status-label">{t('live.statusBadge')}</span>
+                  <span className="live-hero__status-dot" aria-hidden="true" />
+                  <span className="live-hero__status-version">{t('live.versionLabel')}</span>
+                </div>
+              </motion.div>
+            </div>
 
             <div className="live-hero__actions">
               <div className="live-hero__buttons">

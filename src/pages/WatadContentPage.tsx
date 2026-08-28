@@ -43,12 +43,12 @@ export default function WatadContentPage() {
             }${section.id === 'core-team' ? ' watad-content-page__section--core-team' : ''}`}
             id={section.id}
           >
-            {section.title && section.id !== 'core-team' && <h2>{section.title}</h2>}
+            {section.title && section.id !== 'core-team' && !section.pricingPlans && <h2>{section.title}</h2>}
             {section.paragraphs?.map((para) => (
               <p key={para.slice(0, 40)}>{para}</p>
             ))}
             {section.pricingPlans && (
-              <PricingCards plans={section.pricingPlans} />
+              <PricingCards plans={section.pricingPlans} sectionTitle={section.title} />
             )}
             {section.paymentOptions && (
               <PaymentOptions options={section.paymentOptions} />

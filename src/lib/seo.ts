@@ -22,7 +22,6 @@ export const PUBLIC_ROUTES = [
   '/pricing',
   '/contact',
   '/privacy',
-  '/pass',
 ] as const;
 
 type TFunction = (key: string, options?: Record<string, unknown>) => string;
@@ -134,12 +133,7 @@ export function applySeo(opts: { t: TFunction; lang: string; pathname: string })
       addressCountry: 'IQ',
     },
     areaServed: ['IQ', 'MENA'],
-    knowsAbout: [
-      'Web Development',
-      'Mobile Applications',
-      'Cybersecurity',
-      'Digital Identity',
-    ],
+    knowsAbout: ['Web Development', 'Mobile Applications', 'Cybersecurity'],
   });
 }
-
+

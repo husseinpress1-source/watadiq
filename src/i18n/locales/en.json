@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "WATAD Software, Web, Apps & Cybersecurity | Iraq",
-    "description": "WATAD Software is an Iraqi digital agency building websites, mobile apps, cybersecurity, and WATAD ONE identity. Official agency at watadiq.com.",
-    "keywords": "WATAD Software, web development Iraq, mobile apps, cybersecurity, WATAD ONE, digital agency Baghdad, وتد",
+    "description": "WATAD Software is an Iraqi digital agency building websites, mobile apps, and cybersecurity solutions. Official agency at watadiq.com.",
+    "keywords": "WATAD Software, web development Iraq, mobile apps, cybersecurity, digital agency Baghdad, وتد",
     "pages": {
       "home": {
         "title": "WATAD Software, Web, Apps & Cybersecurity | Iraq",
@@ -34,11 +34,7 @@
       },
       "privacy": {
         "title": "Privacy Policy, WATAD Software",
-        "description": "How WATAD Software and WATAD ONE collect, use, and protect your personal data, cookies, and identity information."
-      },
-      "pass": {
-        "title": "WATAD ONE, Identity Platform",
-        "description": "WATAD ONE is our passkey and OAuth identity platform, Sign in with WATAD for your apps."
+        "description": "How WATAD Software collects, uses, and protects your personal data and cookies."
       },
       "live": {
         "title": "WATAD Live, Movies & Series Streaming",
@@ -102,7 +98,6 @@
     "expertise": "Expertise",
     "work": "Our Work",
     "live": "WATAD Live",
-    "pass": "WATAD ONE",
     "domains": "Domains",
     "account": "My Account",
     "team": "Team",
@@ -118,7 +113,6 @@
     "allServices": "All Services",
     "work": "Our Work",
     "live": "WATAD Live",
-    "pass": "WATAD ONE",
     "domains": "Domains",
     "account": "My Account",
     "webDev": "Web Development",
@@ -269,6 +263,21 @@
     "securityOwasp": "OWASP, web application security standards",
     "watadSslSeal": "WATAD Software SSL Secured trust seal"
   },
+  "pricingUi": {
+    "title": "Packages",
+    "description": "Transparent packages for websites, apps, and security.\nBuilt for Iraqi brands, priced in IQD.",
+    "fullPaymentLabel": "Full payment",
+    "splitPaymentLabel": "50-50 split",
+    "splitBadge": "(2 milestones)",
+    "billedFullLabel": "total project fee",
+    "billedSplitLabel": "per milestone (50%)",
+    "splitTotalLabel": "Total",
+    "popularLabel": "Most popular",
+    "currencyLabel": "IQD",
+    "perProjectLabel": "per project",
+    "toggleHint": "50-50 split: pay 50% to start and 50% before launch. Same total price.",
+    "toggleAriaLabel": "Choose payment method"
+  },
   "cookies": {
     "ariaLabel": "Cookie consent notice",
     "title": "We use cookies",
@@ -302,7 +311,7 @@
   },
   "privacyPage": {
     "title": "Privacy Policy",
-    "lead": "This policy explains how WATAD Software («WATAD», «we») collects, uses, stores, and protects personal data when you visit watadiq.com, use WATAD ONE, or work with us as a client.",
+    "lead": "This policy explains how WATAD Software («WATAD», «we») collects, uses, stores, and protects personal data when you visit watadiq.com or work with us as a client.",
     "lastUpdated": "Last updated: July 2026",
     "tocTitle": "Contents",
     "cookieColType": "Category",
@@ -314,7 +323,7 @@
     "cookieRows": [
       {
         "type": "Essential",
-        "purpose": "Site security, language, session, WATAD ONE sign-in, cookie consent storage.",
+        "purpose": "Site security, language, session, cookie consent storage.",
         "duration": "Session to 12 months"
       },
       {
@@ -332,7 +341,7 @@
       "intro": {
         "title": "Introduction",
         "paragraphs": [
-          "We respect your privacy and aim to be transparent about the data we process. This policy applies to watadiq.com, WATAD ONE identity services, and related products operated by WATAD Software.",
+          "We respect your privacy and aim to be transparent about the data we process. This policy applies to watadiq.com and related products operated by WATAD Software.",
           "By using our website or services, you acknowledge this policy. Where consent is required (for example non-essential cookies), we ask before enabling those features."
         ]
       },
@@ -346,9 +355,6 @@
       "collect": {
         "title": "Information we collect",
         "bullets": [
-          "Account data: email, display name, profile fields when you create a WATAD ONE account.",
-          "Authentication data: passkey metadata, session identifiers, device labels, sign-in timestamps.",
-          "Developer data: organization name, app names, OAuth client IDs, redirect URIs, team invitations.",
           "Usage data: pages visited, browser type, IP address (truncated where possible), referral URLs.",
           "Communication data: messages you send via contact forms or email.",
           "Cookie preferences: your cookie consent choices stored locally on your device."
@@ -360,14 +366,6 @@
         "paragraphs": [
           "Essential cookies are always active because the site cannot function without them. You control optional categories from the cookie banner or the button at the bottom of this page."
         ]
-      },
-      "watadOne": {
-        "title": "WATAD ONE identity platform",
-        "paragraphs": [
-          "WATAD ONE provides Sign in with WATAD (OAuth 2.0 / OpenID Connect) for third-party applications. When you authorize an app, we share only the scopes you approve (such as email or profile).",
-          "Developers register applications in the developer console. OAuth tokens, refresh tokens, and audit logs are processed on api.watadiq.com with industry-standard security controls."
-        ],
-        "note": "You can revoke app access anytime from your WATAD ONE account Connected apps."
       },
       "legal": {
         "title": "Legal bases for processing",
@@ -381,9 +379,7 @@
       "use": {
         "title": "How we use your information",
         "bullets": [
-          "Provide and maintain watadiq.com and WATAD ONE.",
-          "Authenticate users and protect accounts (passkeys, email codes, sessions).",
-          "Operate developer features: apps, webhooks, audit logs, team access.",
+          "Provide and maintain watadiq.com.",
           "Respond to inquiries and support requests.",
           "Analyze aggregated usage to improve performance (with consent where required).",
           "Comply with law and enforce our terms."
@@ -392,23 +388,20 @@
       "sharing": {
         "title": "Sharing & processors",
         "paragraphs": [
-          "We do not sell personal data. We share data only with trusted processors who help us operate the service (hosting, email delivery, security/CDN), under contracts that require appropriate safeguards.",
-          "OAuth applications you authorize receive data according to the scopes shown on the consent screen."
+          "We do not sell personal data. We share data only with trusted processors who help us operate the service (hosting, email delivery, security/CDN), under contracts that require appropriate safeguards."
         ]
       },
       "retention": {
         "title": "Data retention",
         "bullets": [
-          "Account data: kept while your account is active and for a reasonable period after deletion for security and legal purposes.",
-          "Session and auth logs: typically 90 days to 24 months depending on security needs.",
-          "Developer audit logs: retained for security and compliance review.",
+          "Communication records: retained as needed to respond to inquiries.",
           "Cookie consent: stored locally until you clear browser storage or change preferences."
         ]
       },
       "security": {
         "title": "Security",
         "paragraphs": [
-          "We use HTTPS/TLS, HttpOnly session cookies for WATAD ONE, PKCE for OAuth public clients, rate limiting, audit logging, and infrastructure protections (WAF/CDN). No method is 100% secure; we continuously improve our controls."
+          "We use HTTPS/TLS, rate limiting, and infrastructure protections (WAF/CDN). No method is 100% secure; we continuously improve our controls."
         ]
       },
       "rights": {
@@ -416,7 +409,6 @@
         "bullets": [
           "Access, correction, or deletion of your personal data where applicable.",
           "Withdraw consent for optional cookies or marketing.",
-          "Revoke third-party app access from your WATAD ONE dashboard.",
           "Object to or restrict certain processing under applicable law.",
           "Lodge a complaint with a supervisory authority in your country."
         ],
@@ -437,7 +429,7 @@
       "contact": {
         "title": "Contact us",
         "paragraphs": [
-          "Questions about privacy, cookies, or WATAD ONE data processing:"
+          "Questions about privacy or cookies:"
         ]
       }
     }
@@ -601,7 +593,7 @@
               "name": "Launch",
               "price": "300,000",
               "currency": "IQD",
-              "period": "/ project",
+              "period": "project",
               "description": "Your first professional website, fast, responsive, and ready to launch.",
               "features": [
                 "1-page responsive site",
@@ -619,7 +611,7 @@
               "name": "Business",
               "price": "600,000",
               "currency": "IQD",
-              "period": "/ project",
+              "period": "project",
               "description": "A full multi page website built for growing Iraqi brands.",
               "features": [
                 "Up to 8 pages + CMS admin",
@@ -637,7 +629,7 @@
               "name": "Scale",
               "price": "1,000,000",
               "currency": "IQD",
-              "period": "/ project",
+              "period": "project",
               "description": "Sell online with e-commerce, bilingual support, and security built in.",
               "featured": true,
               "badge": "Special Offer!",
@@ -658,7 +650,7 @@
               "name": "Enterprise",
               "price": "2,500,000+",
               "currency": "IQD",
-              "period": "/ project",
+              "period": "project",
               "description": "Custom web and mobile platform for ambitious organizations.",
               "features": [
                 "Web + mobile app",
@@ -938,586 +930,12 @@
       "generic": "Something went wrong. Try again"
     }
   },
-  "pass": {
-    "navCta": "Sign in with WATAD",
-    "tabBadge": "NEW",
-    "platformNavLabel": "WATAD ONE platform",
-    "platformTabs": {
-      "overview": "Overview",
-      "login": "Sign in",
-      "account": "Dashboard",
-      "console": "Developer console",
-      "developers": "For developers"
-    },
-    "integratedBadge": "Built into watadiq.com, not a separate site",
-    "eyebrow": "WATAD ONE, Digital Identity",
-    "heroTitle": "Sign in once, access everything with no passwords",
-    "heroLead": "WATAD ONE is our identity platform on this site: passkeys, OAuth, developer console, and one account for any app that adds Sign in with WATAD.",
-    "ctaLogin": "Sign in with WATAD",
-    "ctaDevelopers": "Developer console",
-    "ctaStart": "Get started free",
-    "featuresTitle": "Why WATAD ONE",
-    "features": [
-      {
-        "title": "Passkeys & biometrics",
-        "text": "Fingerprint, face, or device PIN. No passwords to steal or forget."
-      },
-      {
-        "title": "One account",
-        "text": "One WATAD identity for every app and service that trusts WATAD ONE."
-      },
-      {
-        "title": "Enterprise-grade security",
-        "text": "OAuth 2.0 + PKCE, signed tokens, audit logs, and tenant isolation."
-      }
-    ],
-    "stepsTitle": "How it works",
-    "steps": [
-      {
-        "title": "Create your account",
-        "text": "Sign in with email code or register a passkey right here on watadiq.com."
-      },
-      {
-        "title": "Developers register apps",
-        "text": "Use the developer console tab to create an app and get a client ID."
-      },
-      {
-        "title": "Users connect & sign in",
-        "text": "Add Sign in with WATAD to your site. Users grant consent once."
-      }
-    ],
-    "bandTitle": "Ready to try it?",
-    "bandText": "Create your account in under a minute with no password required.",
-    "homeStripTitle": "One identity for every app",
-    "homeStripText": "Passkeys, OAuth, and a developer console integrated into watadiq.com, powered by our Go identity server.",
-    "homeStripLearn": "Open platform",
-    "loginTitle": "Sign in to WATAD ONE",
-    "loginIntro": "Use your email code or passkey, the same WATAD ONE identity companies embed like Google Sign-In.",
-    "accountPicker": {
-      "title": "Sign in with WATAD ONE",
-      "continueTo": "to continue to {{site}}",
-      "chooseAccount": "Choose an account",
-      "useAnother": "Use another account",
-      "enterEmail": "Sign in with your email",
-      "backToAccounts": "Back to account list",
-      "passkeyForAccount": "Use passkey for this account",
-      "confirmAccount": "Verify it's you",
-      "sendCodeInstead": "Send a sign-in code instead",
-      "footer": "Secure sign-in powered by WATAD ONE"
-    },
-    "signInModal": {
-      "title": "Sign in with WATAD ONE",
-      "lead": "One secure identity for watadiq.com and every app that adds Sign in with WATAD.",
-      "footer": "Companies can add WATAD ONE as a sign-in button, same flow, same trust.",
-      "profileTitle": "Your WATAD ONE profile",
-      "profileLead": "Add your name and photo. Other apps see this when users sign in with WATAD.",
-      "displayName": "Display name",
-      "changePhoto": "Change photo",
-      "saveProfile": "Save profile",
-      "profileSaved": "Profile updated.",
-      "avatarTooLarge": "Choose an image under 180 KB.",
-      "editProfile": "Edit profile",
-      "forDevelopers": "For developers"
-    },
-    "email": "Email",
-    "code": "6-digit code",
-    "sendCode": "Send sign-in code",
-    "verify": "Verify & continue",
-    "codeSent": "We sent a code to your email. Enter it below (check spam if needed).",
-    "changeEmail": "Use a different email",
-    "or": "or",
-    "withBiometricPasskey": "Sign in with face / fingerprint",
-    "withPasskey": "Sign in with passkey",
-    "wait": "One moment…",
-    "noAccount": "New here?",
-    "signUpHint": "Enter your email. We'll create your account on first sign-in.",
-    "backToProduct": "Back to WATAD ONE",
-    "backHome": "Home",
-    "backAccount": "My account",
-    "accountEyebrow": "WATAD ONE, Your identity",
-    "welcome": "Signed in as {{email}}",
-    "accountIntro": "Manage connected apps, passkeys, and open the developer console.",
-    "linkedAppsTitle": "Connected apps",
-    "linkedAppsHint": "Apps where you used Sign in with WATAD. Revoke access anytime.",
-    "noLinkedApps": "No connected apps yet.",
-    "revokeApp": "Revoke access",
-    "confirmRevokeApp": "Remove WATAD sign-in from {{name}}?",
-    "appRevoked": "App access revoked.",
-    "passkeysTitle": "Your passkeys",
-    "passkeysHint": "Register this device so you can sign in without email codes.",
-    "addBiometricPasskey": "Add face / fingerprint passkey",
-    "passkeysBiometricHint": "Use your device biometrics: face, fingerprint, or PIN for passwordless sign-in.",
-    "passkeyDefaultLabel": "This device",
-    "passkeyBackedUp": "Synced to cloud",
-    "passkeyLocal": "This device only",
-    "devicesTitle": "Known devices",
-    "devicesHint": "Browsers and devices that signed in to your WATAD account.",
-    "noDevices": "No devices recorded yet.",
-    "dashboard": {
-      "title": "Your dashboard",
-      "linkedApps": "Connected apps",
-      "passkeys": "Passkeys",
-      "devices": "Devices",
-      "orgs": "Organizations",
-      "colDevice": "Device",
-      "colStatus": "Status",
-      "colPlatform": "Platform",
-      "colDate": "Date",
-      "colAction": "Action",
-      "colApp": "App",
-      "colScopes": "Scopes"
-    },
-    "recovery": {
-      "title": "Recovery codes",
-      "hint": "One-time backup codes if you lose access to email and passkeys.",
-      "generate": "Generate new codes",
-      "remaining": "{{count}} codes remaining",
-      "generated": "New recovery codes generated.",
-      "confirmGenerate": "Generating new codes invalidates any old ones. Continue?",
-      "saveOnce": "Save these codes in a safe place. They won't be shown again.",
-      "allCodes": "All recovery codes"
-    },
-    "copy": {
-      "copy": "Copy",
-      "done": "Copied!"
-    },
-    "noPasskeys": "No passkeys yet. Add one for faster, safer sign-in.",
-    "passkeyAdded": "Passkey registered successfully.",
-    "confirmRevokePasskey": "Remove this passkey? You can add it again later.",
-    "remove": "Remove",
-    "devPanelTitle": "Build with WATAD ONE",
-    "devPanelHint": "Create organizations and apps so others can add Sign in with WATAD.",
-    "openConsole": "Open developer console",
-    "logout": "Sign out",
-    "devEyebrow": "WATAD ONE for developers",
-    "devTitle": "Add Sign in with WATAD to your app",
-    "devIntro": "OpenID Connect, OAuth 2.0 with PKCE, and a console on this site. Integrate in hours.",
-    "devItems": [
-      {
-        "title": "OAuth / OIDC",
-        "text": "Authorization code + PKCE, ID tokens, refresh rotation, JWKS endpoint."
-      },
-      {
-        "title": "Same site",
-        "text": "Login, consent, account, and developer console live under watadiq.com/pass."
-      },
-      {
-        "title": "Go identity server",
-        "text": "Production API at api.watadiq.com: passkeys, sessions, webhooks, audit."
-      }
-    ],
-    "devStepsTitle": "Integration steps",
-    "devSteps": [
-      {
-        "title": "Sign in & create org",
-        "text": "Open the developer console tab and register your organization."
-      },
-      {
-        "title": "Register your app",
-        "text": "Get a client ID, add redirect URIs, copy the integration snippet."
-      },
-      {
-        "title": "Redirect users",
-        "text": "Send users to our OAuth authorize endpoint with PKCE. They return with tokens."
-      }
-    ],
-    "devCtaTitle": "Start building",
-    "devCtaText": "Everything runs on watadiq.com with no separate product domain.",
-    "devFeaturesTitle": "What you get",
-    "devEndpointsTitle": "Core API endpoints",
-    "devColStep": "Step",
-    "devColTitle": "Title",
-    "devColDetail": "Details",
-    "devColEndpoint": "Endpoint",
-    "devColUrl": "URL",
-    "devEndpointIssuer": "Issuer",
-    "devEndpointAuthorize": "Authorize",
-    "devEndpointToken": "Token",
-    "devEndpointJwks": "JWKS",
-    "devQuickLinksTitle": "Start here",
-    "devQuickLinks": [
-      {
-        "title": "Full integration guide",
-        "text": "Step-by-step binding for your site or app with PKCE and OAuth.",
-        "href": "/pass/developers/guide"
-      },
-      {
-        "title": "Developer console",
-        "text": "Create an org, register an app, and get your Client ID.",
-        "href": "/pass/console"
-      },
-      {
-        "title": "Redirect URIs",
-        "text": "Add your callback URL, it must match exactly after sign-in.",
-        "href": "/pass/developers/guide#redirects"
-      }
-    ],
-    "devGuide": {
-      "eyebrow": "Advanced guide",
-      "promoTitle": "Connect your site or app to WATAD ONE",
-      "promoText": "Complete walkthrough from console setup to receiving tokens, with copy-ready examples.",
-      "openGuide": "Open integration guide",
-      "title": "WATAD ONE integration guide",
-      "lead": "This guide explains how to add Sign in with WATAD to your website or app using OAuth 2.0 and OpenID Connect with PKCE.",
-      "backToDevelopers": "Back to developers",
-      "tocTitle": "On this page",
-      "toc": {
-        "overview": "Overview",
-        "prerequisites": "Prerequisites",
-        "console": "Developer console",
-        "redirects": "Redirect URIs",
-        "flow": "OAuth flow",
-        "spa": "Web app (SPA)",
-        "server": "Server app",
-        "tokens": "Authorize URL",
-        "scopes": "Scopes",
-        "consent": "Consent screen",
-        "test": "Testing",
-        "troubleshoot": "Troubleshooting"
-      },
-      "hero": {
-        "api": "Production API",
-        "discovery": "OpenID Discovery",
-        "console": "Developer console"
-      },
-      "scopeCol": "Scope",
-      "scopeDescCol": "Grants",
-      "ctaTitle": "Ready to build?",
-      "ctaHint": "Open the developer console, create an app, then follow the steps in this guide.",
-      "code": {
-        "spaTitle": "SPA example, JavaScript",
-        "serverTitle": "Server app, Token exchange",
-        "authorizeTitle": "Authorize URL template"
-      },
-      "flowSteps": [
-        {
-          "num": "1",
-          "title": "Redirect user",
-          "text": "Send the user to /oauth/authorize with client_id, redirect_uri, and PKCE challenge."
-        },
-        {
-          "num": "2",
-          "title": "Sign in",
-          "text": "If not signed in, they authenticate with WATAD ONE (passkey or email code)."
-        },
-        {
-          "num": "3",
-          "title": "Consent",
-          "text": "They see your app name and requested scopes, Allow or Deny."
-        },
-        {
-          "num": "4",
-          "title": "Callback",
-          "text": "After approval, the user returns to redirect_uri with an authorization code."
-        },
-        {
-          "num": "5",
-          "title": "Token exchange",
-          "text": "Your app posts code + code_verifier to /oauth/token and receives access + ID tokens."
-        }
-      ],
-      "redirectRules": [
-        "Redirect URI must match exactly what you registered in the console, including https and the /callback path.",
-        "Local dev: http://localhost:3000/callback or http://127.0.0.1:5173/callback is allowed.",
-        "No wildcards, register each environment (dev / prod) separately.",
-        "After adding a new URI, wait a few seconds before testing sign-in."
-      ],
-      "scopeRows": [
-        {
-          "scope": "openid",
-          "desc": "Required, enables OpenID Connect and returns an ID token."
-        },
-        {
-          "scope": "profile",
-          "desc": "Display name and basic profile fields."
-        },
-        {
-          "scope": "email",
-          "desc": "Verified email address."
-        },
-        {
-          "scope": "offline_access",
-          "desc": "Refresh token for long-lived sessions (optional)."
-        }
-      ],
-      "faq": [
-        {
-          "q": "redirect_uri mismatch, what do I do?",
-          "a": "Ensure the URI in your OAuth request matches exactly what's registered in the console. See the Redirect URIs section in this guide."
-        },
-        {
-          "q": "invalid_client, wrong Client ID?",
-          "a": "Copy Client ID from your app page in the console. Make sure the app is enabled."
-        },
-        {
-          "q": "PKCE verification failed",
-          "a": "Store code_verifier before redirecting to authorize and send the same value when exchanging the code at /oauth/token."
-        },
-        {
-          "q": "CORS error in the browser",
-          "a": "Token exchange should run on your server or same registered origin, never expose client_secret in a public SPA."
-        }
-      ],
-      "sections": {
-        "overview": {
-          "title": "Overview",
-          "lead": "WATAD ONE is an identity provider at api.watadiq.com that integrates with any site or app via OAuth 2.0 / OIDC standards.",
-          "paragraphs": [
-            "When a user clicks Sign in with WATAD in your app, they're sent to watadiq.com to sign in and consent, then return to your app with a code you exchange for secure tokens.",
-            "For public clients (SPAs, mobile) use PKCE without a client secret. For confidential server apps you may use a client secret."
-          ]
-        },
-        "prerequisites": {
-          "title": "Prerequisites",
-          "bullets": [
-            "WATAD ONE account, sign in at watadiq.com/pass/login",
-            "Organization in the developer console, /pass/console",
-            "Registered app with Client ID and at least one Redirect URI",
-            "HTTPS in production (localhost allowed for development)"
-          ]
-        },
-        "console": {
-          "title": "Developer console setup",
-          "paragraphs": [
-            "1. Open the developer console and create your organization (name + slug).",
-            "2. Create a new app, choose Public for websites/SPAs, or Confidential for servers.",
-            "3. From the app page: copy Client ID, add Redirect URIs, and customize logo/brand color for the consent screen.",
-            "4. Copy the integration snippet from the app page or use the examples in this guide."
-          ],
-          "note": "Client secret is shown once on create or rotate, store it in secure environment variables."
-        },
-        "redirects": {
-          "title": "Redirect URIs, where users return",
-          "lead": "The redirect URI is where users land after consent. Any tiny mismatch causes redirect_uri mismatch errors.",
-          "paragraphs": [
-            "Production example: https://myapp.com/auth/callback",
-            "Dev example: http://localhost:3000/auth/callback"
-          ]
-        },
-        "flow": {
-          "title": "OAuth flow (Authorization Code + PKCE)",
-          "lead": "This is the recommended standard flow for modern applications."
-        },
-        "spa": {
-          "title": "Connect a website or SPA (React, Vue, etc.)",
-          "lead": "Use PKCE in the browser. Never put client secret in frontend code.",
-          "paragraphs": [
-            "After receiving tokens, validate the ID token via JWKS or the userinfo endpoint.",
-            "Store access tokens in memory or HttpOnly cookies, avoid localStorage for sensitive tokens."
-          ]
-        },
-        "server": {
-          "title": "Connect a server app (Confidential)",
-          "lead": "For backends that can safely store a client secret.",
-          "paragraphs": [
-            "Post authorization code + client_secret + code_verifier to /oauth/token from your server only.",
-            "Use environment variables for CLIENT_ID and CLIENT_SECRET."
-          ]
-        },
-        "tokens": {
-          "title": "Authorize URL, template",
-          "lead": "Replace YOUR_CLIENT_ID, PKCE_CHALLENGE, and RANDOM state with real values."
-        },
-        "scopes": {
-          "title": "Scopes",
-          "lead": "Request only what your app needs. Users see each scope on the consent screen."
-        },
-        "consent": {
-          "title": "Consent screen",
-          "paragraphs": [
-            "On first sign-in or new scopes, users see a consent screen with your app name, logo, and permissions.",
-            "Customize logo and brand color in Developer console App Branding.",
-            "Users can revoke access later at /pass/account Connected apps."
-          ]
-        },
-        "test": {
-          "title": "Testing your integration",
-          "bullets": [
-            "From your app page in the console: try sign-in or open the Authorize URL manually.",
-            "Verify your callback receives code and state.",
-            "Exchange the code for tokens and confirm userinfo or ID token decode.",
-            "Try Deny and ensure your app handles cancellation."
-          ]
-        },
-        "troubleshoot": {
-          "title": "Common issues",
-          "lead": "Frequent developer questions during integration."
-        }
-      }
-    },
-    "console": {
-      "eyebrow": "WATAD ONE, Developer console",
-      "title": "Developer console",
-      "intro": "Create organizations, register apps, manage your team, webhooks, and audit logs from watadiq.com.",
-      "wizardTitle": "Create your first organization",
-      "wizardHint": "Three quick steps, then you can register apps and get OAuth credentials.",
-      "orgNamePlaceholder": "My Company",
-      "orgSlugHint": "Used in URLs and API paths: lowercase letters, numbers, and dashes.",
-      "next": "Continue",
-      "back": "Back",
-      "cancel": "Cancel",
-      "createOrg": "Create your organization",
-      "createOrgHint": "Organizations group your apps and team members.",
-      "orgName": "Organization name",
-      "orgSlug": "URL slug",
-      "createOrgBtn": "Create organization",
-      "slugTaken": "This slug is already taken.",
-      "orgCreated": "Organization created.",
-      "selectOrg": "Organization",
-      "tabs": {
-        "apps": "Applications",
-        "team": "Team",
-        "webhooks": "Webhooks",
-        "audit": "Audit log"
-      },
-      "yourApps": "Applications",
-      "appsHint": "Each app gets a client ID for Sign in with WATAD.",
-      "noApps": "No applications yet. Create your first app.",
-      "openApp": "Open application",
-      "backToApps": "Back to applications",
-      "appDetail": "Application",
-      "noRedirects": "No redirect URIs yet.",
-      "selectApp": "Select an application",
-      "selectAppHint": "Choose an app from the list or create a new one to view credentials and integration code.",
-      "newApp": "New app",
-      "appName": "App name",
-      "appSlug": "App slug",
-      "environment": "Environment",
-      "envDev": "Development",
-      "envProd": "Production",
-      "typePublic": "Public (SPAs, mobile)",
-      "typeConfidential": "Confidential (server apps)",
-      "createAppBtn": "Create application",
-      "appCreated": "Application created.",
-      "appEnabled": "Application enabled.",
-      "appDisabled": "Application disabled.",
-      "enableApp": "Enable",
-      "disableApp": "Disable",
-      "credentials": "OAuth credentials",
-      "type": "Client type",
-      "clientSecret": "Client secret",
-      "authorizeUrl": "Authorize URL (template)",
-      "secretOnce": "Shown once. Copy and store securely.",
-      "secretRotated": "New client secret generated.",
-      "rotateSecret": "Rotate client secret",
-      "branding": "App branding (consent screen)",
-      "brandColor": "Brand color",
-      "logoUrl": "Logo URL",
-      "saveBranding": "Save branding",
-      "brandingSaved": "Branding updated.",
-      "redirects": "Redirect URIs",
-      "redirectsHint": "Must match exactly where users return after sign-in.",
-      "confirmRemoveRedirect": "Remove this redirect URI?",
-      "addRedirect": "Redirect URI",
-      "addRedirectBtn": "Add URI",
-      "redirectAdded": "Redirect URI added.",
-      "redirectFormatHint": "Example: https://your-app.com/auth/callback or http://localhost:3000/callback for local dev.",
-      "integration": "Integration snippet",
-      "teamTitle": "Team members",
-      "teamHint": "Invite teammates to manage apps, webhooks, and security settings.",
-      "inviteEmail": "Teammate email",
-      "inviteRole": "Role",
-      "inviteBtn": "Send invitation",
-      "inviteSent": "Invitation created.",
-      "inviteToken": "Invite token",
-      "inviteTokenHint": "Share this token with your teammate. They accept it from their WATAD account.",
-      "noMembers": "Only you for now. Invite someone above.",
-      "confirmRemoveMember": "Remove {{email}} from the organization?",
-      "roleUpdated": "Role updated.",
-      "roles": {
-        "admin": "Admin",
-        "developer": "Developer",
-        "security_analyst": "Security",
-        "support": "Support",
-        "read_only": "Read only"
-      },
-      "webhooksTitle": "Webhooks",
-      "webhooksHint": "Receive signed HTTP events when users connect apps or team changes happen.",
-      "webhookUrl": "Endpoint URL",
-      "webhookEvents": "Events to send",
-      "webhookEventsPlaceholder": "Choose events to send",
-      "selectAllEvents": "Select all",
-      "clearEvents": "Clear",
-      "createWebhook": "Create webhook",
-      "webhookCreated": "Webhook created.",
-      "webhookSecret": "Webhook signing secret",
-      "webhookSecretRotated": "Webhook secret rotated.",
-      "rotateWebhookSecret": "Rotate secret",
-      "yourWebhooks": "Active webhooks",
-      "noWebhooks": "No webhooks yet.",
-      "confirmDeleteWebhook": "Delete this webhook?",
-      "viewDeliveries": "Deliveries",
-      "deliveriesTitle": "Delivery log",
-      "noDeliveries": "No deliveries yet.",
-      "auditTitle": "Audit log",
-      "auditHint": "Recent security and configuration events for this organization.",
-      "noAudit": "No audit events yet.",
-      "action": "Action",
-      "actor": "Actor",
-      "target": "Target",
-      "event": "Event",
-      "status": "Status",
-      "attempt": "Attempt",
-      "time": "Time"
-    },
-    "consent": {
-      "invalid": "Invalid or expired authorization request.",
-      "brand": "WATAD ONE",
-      "pageTitle": "Permission request",
-      "appLabel": "Application",
-      "watadLabel": "Your identity",
-      "subtitle": "{{app}} wants to connect to your WATAD ONE account",
-      "devBadge": "Development",
-      "requests": "It will receive:",
-      "allow": "Allow",
-      "deny": "Deny",
-      "allowHint": "By allowing, you grant access only to the data listed above.",
-      "denyHint": "You can revoke access anytime from your account Connected apps.",
-      "accountLink": "Manage account & apps",
-      "devDocsLink": "Developer integration guide",
-      "scope": {
-        "openid": {
-          "title": "Sign in",
-          "desc": "Verify your WATAD identity."
-        },
-        "profile": {
-          "title": "Profile",
-          "desc": "Basic profile information."
-        },
-        "email": {
-          "title": "Email",
-          "desc": "Your email address."
-        },
-        "offline_access": {
-          "title": "Stay signed in",
-          "desc": "Refresh tokens for long-lived sessions."
-        }
-      }
-    },
-    "errors": {
-      "generic": "Something went wrong. Try again.",
-      "invalidCode": "Invalid or expired code.",
-      "rate": "Too many attempts. Wait a few minutes.",
-      "passkey": "Passkey sign-in failed. Try email code instead.",
-      "emailSendFailed": "We couldn't send the sign-in code. Email delivery isn't configured yet, try Passkey or contact support.",
-      "redirectInvalid": "Invalid redirect URI. Use https:// or http://localhost for local development.",
-      "redirectConflict": "This redirect URI is already registered for this app.",
-      "forbidden": "You don't have permission to manage redirect URIs. Ask your org owner."
-    },
-    "oauthDemo": {
-      "tryButton": "Try Sign in with WATAD",
-      "working": "Finishing sign in",
-      "successTitle": "Sign in worked",
-      "successHint": "The OAuth + PKCE flow completed and userinfo was returned by the identity server.",
-      "signedInUser": "Signed in user",
-      "failedTitle": "Sign in could not finish",
-      "backConsole": "Back to developer console"
-    }
-  },
   "live": {
     "heroEyebrow": "WATAD Software",
     "byWatad": "by WATAD Software",
     "heroTitle": "WATAD Live",
+    "heroTitlePrefix": "WATAD",
+    "heroTitleRotate": ["Live", "Movies", "Series", "Together"],
     "heroTagline": "Arabic movies and series",
     "heroLead": "Family profiles and watch parties",
     "heroIllustrationAlt": "Flat 2D illustration for WATAD Live streaming app",
@@ -1585,6 +1003,7 @@
     "launchTitle": "When is the app launching?",
     "launchIntro": "Three stages from infrastructure to public release",
     "launchFootnote": "Updated with each release milestone",
+    "progressLabel": "Launch progress",
     "timelineStatus": {
       "done": "Done",
       "active": "In progress",

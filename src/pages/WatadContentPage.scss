@@ -394,49 +394,6 @@
       border: none;
       box-shadow: none;
       border-radius: 0;
-
-      h2 {
-        font-family: $font-sans;
-        font-size: clamp(1.75rem, 3vw, 2rem);
-        font-weight: 700;
-        letter-spacing: -0.03em;
-        margin-bottom: 28px;
-        text-align: center;
-      }
-
-      .pricing-cards {
-        max-width: 100%;
-        margin-inline: auto;
-        padding: 0;
-      }
-
-      ul.pricing-card__features {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        max-width: none;
-        margin-inline: 0;
-        padding-inline-start: 0;
-        text-align: start;
-        overflow: visible;
-
-        li {
-          color: #fff;
-          margin-bottom: 0;
-          overflow: visible;
-          white-space: normal;
-        }
-      }
-
-      .pricing-card__name {
-        text-align: start;
-      }
-
-      .pricing-card__desc {
-        text-align: start;
-        max-width: none;
-        margin-inline: 0;
-      }
     }
 
     .watad-content-page__section--payments {

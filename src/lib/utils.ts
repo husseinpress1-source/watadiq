@@ -1,13 +1,6 @@
-import { chunk as lodashChunk } from 'lodash';
-import moment from 'moment';
-import cn from 'classnames';
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-export { cn };
-
-export function formatDate(date: string): string {
-  return moment(date).format('MMMM D, YYYY');
-}
-
-export function chunkArray<T>(arr: T[], size: number): T[][] {
-  return lodashChunk(arr, size);
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }

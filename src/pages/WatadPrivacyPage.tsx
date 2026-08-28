@@ -3,15 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { useCookieConsent } from '../context/CookieConsentContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { PassPageTitle, PassSection } from '../components/pass/pass-ui';
-import './pass/pass-tw.css';
 import './WatadPrivacyPage.scss';
+
 const TOC_KEYS = [
   'intro',
   'controller',
   'collect',
   'cookies',
-  'watadOne',
   'legal',
   'use',
   'sharing',
@@ -44,7 +42,10 @@ export default function WatadPrivacyPage() {
     <div className="privacy-page">
       <Header />
       <div className="privacy-page__wrap">
-        <PassPageTitle title={t('privacyPage.title')} lead={t('privacyPage.lead')} />
+        <header className="privacy-page__head">
+          <h1>{t('privacyPage.title')}</h1>
+          <p className="privacy-page__head-lead">{t('privacyPage.lead')}</p>
+        </header>
         <p className="privacy-page__updated">{lastUpdated}</p>
 
         <div className="privacy-page__layout">
@@ -133,11 +134,13 @@ export default function WatadPrivacyPage() {
               );
             })}
 
-            <PassSection title={t('privacyPage.manageCookiesTitle')} hint={t('privacyPage.manageCookiesHint')}>
+            <section className="privacy-page__manage">
+              <h2>{t('privacyPage.manageCookiesTitle')}</h2>
+              <p className="privacy-page__manage-hint">{t('privacyPage.manageCookiesHint')}</p>
               <button type="button" className="privacy-page__cookie-btn" onClick={openSettings}>
                 {t('cookies.manageLink')}
               </button>
-            </PassSection>
+            </section>
           </div>
         </div>
       </div>
