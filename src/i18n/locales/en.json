@@ -264,11 +264,272 @@
     "billedFullLabel": "total project fee",
     "billedSplitLabel": "per milestone (50%)",
     "splitTotalLabel": "Total",
-    "popularLabel": "Most popular",
+    "popularLabel": "Popular",
     "currencyLabel": "IQD",
     "perProjectLabel": "per project",
     "toggleHint": "50-50 split: pay 50% to start and 50% before launch. Same total price.",
     "toggleAriaLabel": "Choose payment method"
+  },
+  "pricingCompare": {
+    "title": "Compare plans",
+    "searchPlaceholder": "Search features…",
+    "featureColumn": "Features",
+    "selectPlanLabel": "Select a plan to compare",
+    "emptyResults": "No features match your search.",
+    "categories": [
+      {
+        "id": "website",
+        "title": "Website & pages",
+        "features": [
+          {
+            "id": "responsive",
+            "label": "Responsive design (mobile & desktop)",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pages",
+            "label": "Pages included",
+            "launch": "1 page",
+            "business": "Up to 8",
+            "scale": "Up to 15",
+            "enterprise": "Custom"
+          },
+          {
+            "id": "singlePage",
+            "label": "Single-page landing site",
+            "launch": true,
+            "business": false,
+            "scale": false,
+            "enterprise": false
+          },
+          {
+            "id": "multiPage",
+            "label": "Multi-page website",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "contactForm",
+            "label": "Contact form",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Content & CMS",
+        "features": [
+          {
+            "id": "cms",
+            "label": "CMS admin panel",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "blog",
+            "label": "Blog section",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "bilingual",
+            "label": "Bilingual site (AR / EN)",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "contentMigration",
+            "label": "Content migration assistance",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "commerce",
+        "title": "Commerce & apps",
+        "features": [
+          {
+            "id": "ecommerce",
+            "label": "E-commerce store",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "payments",
+            "label": "Payment gateway integration",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pwa",
+            "label": "PWA (installable web app)",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "mobileApp",
+            "label": "Native mobile app",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          },
+          {
+            "id": "apiCloud",
+            "label": "API & cloud architecture",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "seo",
+        "title": "SEO & analytics",
+        "features": [
+          {
+            "id": "ssl",
+            "label": "SSL certificate",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "seoSetup",
+            "label": "SEO setup",
+            "launch": "Basic",
+            "business": true,
+            "scale": true,
+            "enterprise": "Advanced"
+          },
+          {
+            "id": "analytics",
+            "label": "Analytics integration",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "performance",
+            "label": "Performance optimization",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security & support",
+        "features": [
+          {
+            "id": "securityAudit",
+            "label": "Security audit",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pentest",
+            "label": "Penetration test report",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          },
+          {
+            "id": "support",
+            "label": "Post-launch support",
+            "launch": "1 month",
+            "business": "3 months",
+            "scale": "6 months",
+            "enterprise": "12 month SLA"
+          },
+          {
+            "id": "dedicatedPm",
+            "label": "Dedicated project manager",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "delivery",
+        "title": "Delivery & billing",
+        "features": [
+          {
+            "id": "revisions",
+            "label": "Revision rounds",
+            "launch": "2",
+            "business": "4",
+            "scale": "6",
+            "enterprise": "Unlimited"
+          },
+          {
+            "id": "timeline",
+            "label": "Delivery timeline",
+            "launch": "10–14 days",
+            "business": "3–4 weeks",
+            "scale": "Priority",
+            "enterprise": "Custom"
+          },
+          {
+            "id": "hosting",
+            "label": "1 year hosting included",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "splitPayment",
+            "label": "50-50 split payment",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "milestoneBilling",
+            "label": "Custom milestone billing",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      }
+    ]
   },
   "cookies": {
     "ariaLabel": "Cookie consent notice",

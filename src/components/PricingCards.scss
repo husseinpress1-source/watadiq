@@ -5,38 +5,38 @@
 
   .pricing-ui {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1280px;
     margin-inline: auto;
-    padding-inline: clamp(16px, 3vw, 32px);
-    padding-block: 2.5rem 1rem;
+    padding-inline: clamp(16px, 4vw, 40px);
+    padding-block: 2rem 1rem;
 
     @media (min-width: 768px) {
-      padding-block: 3rem 1.5rem;
+      padding-block: 2.5rem 1.5rem;
     }
   }
 
   .pricing-ui__head {
-    margin-bottom: 2rem;
-    text-align: center;
+    margin-bottom: 1.75rem;
+    text-align: start;
 
     @media (min-width: 768px) {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
   }
 
   .pricing-ui__title {
     margin: 0 0 0.75rem;
-    font-size: clamp(1.75rem, 4vw, 2.75rem);
-    font-weight: 800;
+    font-size: clamp(1.85rem, 4vw, 2.5rem);
+    font-weight: 700;
     letter-spacing: -0.03em;
-    line-height: 1.1;
+    line-height: 1.12;
     color: $met-black;
   }
 
   .pricing-ui__lead {
-    margin: 0 auto;
-    max-width: 40rem;
-    font-size: clamp(0.95rem, 2vw, 1.125rem);
+    margin: 0;
+    max-width: 42rem;
+    font-size: clamp(0.95rem, 1.8vw, 1.0625rem);
     line-height: 1.6;
     white-space: pre-line;
     color: $met-gray;
@@ -45,44 +45,40 @@
   .pricing-ui__toggle-wrap {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    margin-bottom: 1.75rem;
 
     @media (min-width: 768px) {
-      margin-bottom: 2.25rem;
+      margin-bottom: 2rem;
     }
   }
 
   .pricing-ui__toggle {
     display: inline-flex;
     flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    gap: 0.35rem;
-    width: min(100%, 34rem);
-    padding: 0.35rem;
-    border: 2px solid $met-light-gray;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border: 1px solid #e5e5e5;
     border-radius: 999px;
-    background: #f3f3f3;
+    background: #fafafa;
   }
 
   .pricing-ui__toggle-btn {
     display: inline-flex;
-    flex: 1 1 auto;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
-    min-height: 2.875rem;
-    padding: 0.625rem 1.125rem;
+    gap: 0.35rem;
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 999px;
     background: transparent;
-    color: $met-gray;
-    font-size: 0.9375rem;
-    font-weight: 700;
+    color: #666;
+    font-size: 0.875rem;
+    font-weight: 600;
     line-height: 1.2;
-    text-align: center;
     cursor: pointer;
     font-family: inherit;
     transition: background 0.15s ease, color 0.15s ease;
@@ -93,12 +89,12 @@
     }
 
     &--split.is-active {
-      background: $met-red;
+      background: $met-black;
       color: #fff;
     }
 
     &:focus-visible {
-      outline: 2px solid $met-red;
+      outline: 2px solid $met-black;
       outline-offset: 2px;
     }
   }
@@ -106,319 +102,160 @@
   .pricing-ui__toggle-badge {
     display: inline-flex;
     align-items: center;
-    padding: 0.125rem 0.45rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.18);
-    font-size: 0.6875rem;
-    font-weight: 800;
-    letter-spacing: 0.02em;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
   }
 
-  .pricing-ui__toggle-btn.is-active .pricing-ui__toggle-badge {
-    background: rgba(255, 255, 255, 0.22);
-  }
-
   .pricing-ui__toggle-btn:not(.is-active) .pricing-ui__toggle-badge {
-    background: rgba(228, 0, 43, 0.1);
-    color: $met-red;
+    background: #eee;
+    color: #666;
   }
 
   .pricing-ui__toggle-hint {
     margin: 0;
-    max-width: 32rem;
-    padding-inline: 0.5rem;
+    max-width: 36rem;
     font-size: 0.8125rem;
     line-height: 1.55;
-    text-align: center;
     color: $met-gray;
   }
 
   .pricing-ui-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
+    grid-template-columns: 1fr;
+    gap: 16px;
     align-items: stretch;
 
-    @media (max-width: 1200px) {
+    @media (min-width: 768px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
 
-    &--desktop {
-      @media (max-width: 767px) {
-        display: none;
-      }
-    }
-  }
-
-  .pricing-ui-mobile {
-    display: none;
-
-    @media (max-width: 767px) {
-      display: block;
-      margin-inline: -4px;
-    }
-  }
-
-  .pricing-ui__tabs {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding: 0 4px 14px;
-    margin-bottom: 4px;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  .pricing-ui__tab {
-    flex: 0 0 auto;
-    min-height: 40px;
-    padding: 0 16px;
-    border-radius: 999px;
-    border: 1px solid $met-light-gray;
-    background: #fff;
-    color: $met-black;
-    font-size: 0.875rem;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: inherit;
-    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-
-    &.is-active {
-      background: #101010;
-      border-color: transparent;
-      color: #fff;
-    }
-
-    &.is-featured:not(.is-active) {
-      border-color: rgba(228, 0, 43, 0.35);
-      color: $met-red;
-    }
-  }
-
-  .pricing-ui__scroll {
-    .horizontal-scroll__track {
-      align-items: stretch;
+    @media (min-width: 1100px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
-      scroll-padding-inline: calc((100% - min(280px, 82vw)) / 2);
-      padding-inline: calc((100% - min(280px, 82vw)) / 2);
-      padding-bottom: 8px;
     }
-
-    .horizontal-scroll__arrow {
-      display: none;
-    }
-  }
-
-  .pricing-ui__swipe-hint {
-    margin: 10px 0 0;
-    font-size: 12px;
-    font-weight: 500;
-    color: $met-gray;
-    text-align: center;
-  }
-
-  .pricing-ui-card--scroll {
-    flex: 0 0 auto;
-    width: min(280px, 82vw);
-    min-height: 520px;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    align-self: stretch;
   }
 
   .pricing-ui-card {
-    position: relative;
-    display: grid;
-    grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    min-height: 100%;
-    padding: 1.25rem 1.125rem 1.125rem;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 1.25rem;
-    background: #101010;
-    color: #fff;
-    text-align: center;
+    padding: 1.5rem 1.375rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fff;
+    color: $met-black;
+    text-align: start;
     box-shadow: none;
 
     @media (min-width: 768px) {
-      padding: 1.375rem 1.25rem 1.25rem;
+      padding: 1.75rem 1.5rem;
     }
 
     &--featured {
-      border: 2px solid $met-red;
-      box-shadow: none;
-
-      &::before {
-        content: '';
-        position: absolute;
-        inset-inline: 1.25rem;
-        top: 0;
-        height: 3px;
-        border-radius: 0 0 4px 4px;
-        background: linear-gradient(90deg, rgba(228, 0, 43, 0.2), $met-red, rgba(228, 0, 43, 0.2));
-      }
+      border-color: #d9d9d9;
     }
   }
 
-  .pricing-ui-card__badge-row {
+  .pricing-ui-card__head {
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 1.75rem;
-    margin-bottom: 0.375rem;
-  }
-
-  .pricing-ui-card__badge-spacer {
-    display: block;
-    width: 100%;
-    min-height: 1.75rem;
-  }
-
-  .pricing-ui-card__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0.25rem 0.625rem;
-    border-radius: 999px;
-    background: $met-red;
-    color: #fff;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-
-    svg {
-      width: 0.875rem;
-      height: 0.875rem;
-      fill: currentColor;
-    }
-  }
-
-  .pricing-ui-card__name {
-    margin: 0 0 0.875rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.62);
-  }
-
-  .pricing-ui-card__price {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.35rem;
-    min-height: 7.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     margin-bottom: 1rem;
   }
 
-  .pricing-ui-card__price-island {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.875rem;
-    background: rgba(255, 255, 255, 0.04);
-    unicode-bidi: isolate;
+  .pricing-ui-card__name {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: $met-black;
   }
 
-  .pricing-ui-card__amount-row {
+  .pricing-ui-card__pill {
     display: inline-flex;
-    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: #f3f3f3;
+    color: #666;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .pricing-ui-card__price-block {
+    margin-bottom: 1rem;
+  }
+
+  .pricing-ui-card__price-row {
+    display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
-    justify-content: center;
-    gap: 0.4rem;
-    max-width: 100%;
+    gap: 0.35rem;
+    margin-bottom: 0.35rem;
+    unicode-bidi: isolate;
   }
 
   .pricing-ui-card__amount {
-    font-size: clamp(1.95rem, 2.6vw, 2.5rem);
-    font-weight: 800;
+    font-size: clamp(1.75rem, 2.4vw, 2.125rem);
+    font-weight: 700;
     line-height: 1.1;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     font-variant-numeric: tabular-nums;
-    color: #fff;
-    white-space: nowrap;
+    color: $met-black;
   }
 
   .pricing-ui-card__suffix {
-    font-size: clamp(1.35rem, 2vw, 1.75rem);
-    font-weight: 800;
-    line-height: 1;
-    color: #fff;
-
-    &--split {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.72);
-    }
-  }
-
-  .pricing-ui-card__currency {
-    font-size: 1rem;
-    font-weight: 800;
-    line-height: 1.1;
-    color: rgba(255, 255, 255, 0.88);
-    white-space: nowrap;
-  }
-
-  .pricing-ui-card__period {
-    margin: 0.125rem 0 0;
-    font-size: 0.9375rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.72);
+    line-height: 1;
+    color: $met-black;
   }
 
-  .pricing-ui-card__billing {
+  .pricing-ui-card__currency,
+  .pricing-ui-card__period {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #666;
+  }
+
+  .pricing-ui-card__billing,
+  .pricing-ui-card__total {
     margin: 0;
     font-size: 0.8125rem;
-    color: rgba(255, 255, 255, 0.52);
+    line-height: 1.45;
+    color: #888;
   }
 
   .pricing-ui-card__total {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.15rem;
-    margin: 0;
-    min-height: 2.2rem;
-    font-size: 0.8125rem;
-    visibility: hidden;
-
-    &.is-visible {
-      visibility: visible;
-    }
+    margin-top: 0.25rem;
+    font-weight: 600;
+    color: #666;
   }
 
-  .pricing-ui-card__total-label {
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.62);
-  }
-
-  .pricing-ui-card__total-value {
-    font-weight: 800;
-    font-variant-numeric: tabular-nums;
-    color: rgba(255, 255, 255, 0.92);
-    unicode-bidi: isolate;
-    white-space: nowrap;
+  .pricing-ui-card__desc {
+    margin: 0 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #666;
   }
 
   .pricing-ui-card__features {
     list-style: none;
     margin: 0;
-    padding: 0 0 1rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
-    text-align: start;
-    align-self: stretch;
+    flex: 1;
 
     li {
       display: flex;
@@ -426,15 +263,15 @@
       gap: 0.625rem;
       font-size: 0.875rem;
       line-height: 1.45;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.92);
+      font-weight: 500;
+      color: $met-black;
 
       svg {
         width: 1rem;
         height: 1rem;
         margin-top: 0.125rem;
         flex-shrink: 0;
-        color: $met-red;
+        color: #888;
       }
     }
   }
@@ -442,10 +279,9 @@
   .pricing-ui-card__footer {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    margin-top: auto;
-    padding-top: 0.875rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    gap: 0.625rem;
+    margin-top: 1.25rem;
+    padding-top: 0;
   }
 
   .pricing-ui-card__cta {
@@ -454,73 +290,64 @@
     justify-content: center;
     width: 100%;
     min-height: 2.75rem;
-    border: none;
-    border-radius: 999px;
+    padding: 0 1rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
     background: #fff;
-    color: #0a0a0a;
-    font-size: 0.9375rem;
-    font-weight: 700;
+    color: $met-black;
+    font-size: 0.875rem;
+    font-weight: 600;
     text-decoration: none;
-    box-shadow: none;
     cursor: pointer;
     font-family: inherit;
-    transition: opacity 0.15s ease;
+    transition: background 0.15s ease, border-color 0.15s ease;
 
     &:hover {
-      opacity: 0.9;
-      box-shadow: none;
+      background: #fafafa;
+      border-color: #ccc;
     }
 
     &:focus-visible {
-      outline: 2px solid $met-red;
+      outline: 2px solid $met-black;
       outline-offset: 2px;
     }
 
     &--featured {
-      background: $met-red;
+      border-color: $met-black;
+      background: $met-black;
       color: #fff;
-    }
-  }
 
-  .pricing-ui-card__desc {
-    margin: 0;
-    min-height: 2.5rem;
-    font-size: 0.75rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.52);
+      &:hover {
+        background: #333;
+        border-color: #333;
+      }
+    }
   }
 
   .pricing-ui-card__note {
     margin: 0;
-    min-height: 1.125rem;
     font-size: 0.75rem;
-    font-weight: 700;
-    color: $met-red;
-    visibility: hidden;
-
-    &.is-visible {
-      visibility: visible;
-    }
+    line-height: 1.45;
+    color: $met-gray;
   }
 }
 
 html[dir='rtl'] {
   .watad-pricing-ui {
+    .pricing-ui__head,
+    .pricing-ui__toggle-wrap,
+    .pricing-ui-card {
+      text-align: start;
+    }
+
     .pricing-ui-card__features li {
       flex-direction: row-reverse;
-      text-align: end;
+      text-align: start;
     }
 
-    .pricing-ui-card__price,
-    .pricing-ui-card__period,
-    .pricing-ui-card__billing,
-    .pricing-ui-card__total-label {
-      direction: rtl;
-    }
-
-    .pricing-ui-card__price-island,
-    .pricing-ui-card__total-value {
+    .pricing-ui-card__price-row {
       direction: ltr;
+      justify-content: flex-end;
     }
   }
 }

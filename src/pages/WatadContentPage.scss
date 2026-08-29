@@ -73,22 +73,17 @@
     }
 
     &--team {
-      direction: ltr;
-      grid-template-columns: repeat(2, minmax(0, 280px));
-      gap: 32px;
-      max-width: 100%;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(40px, 6vw, 72px);
+      max-width: 920px;
       justify-content: center;
+      align-items: start;
       margin-top: 0;
 
-      @media (min-width: 769px) {
-        grid-template-columns: repeat(2, minmax(0, 320px));
-        gap: 36px;
-        max-width: 720px;
-      }
-
       @media (max-width: 640px) {
-        grid-template-columns: minmax(0, 340px);
-        max-width: 340px;
+        grid-template-columns: 1fr;
+        gap: 48px;
+        max-width: 420px;
       }
     }
   }
@@ -101,46 +96,43 @@
 
   html[dir='rtl'] &__cards--team &__card--team {
     direction: rtl;
+    text-align: start;
+
+    .watad-content-page__card-quote,
+    .watad-content-page__card-role,
+    h3 {
+      text-align: start;
+    }
   }
 
   &__section--core-team {
     margin-bottom: 64px;
-    margin-top: -12px;
+    margin-top: 0;
     padding-top: 0;
   }
 
   &__team-block {
     width: 100%;
-    max-width: 720px;
+    max-width: 920px;
     margin-inline: auto;
   }
 
   &__team-head {
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: clamp(32px, 5vw, 48px);
 
     h2 {
-      font-family: $font-serif;
-      font-size: clamp(15px, 1.6vw, 17px);
+      font-family: inherit;
+      font-size: clamp(22px, 2.8vw, 28px);
       font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: $met-red;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      color: $met-black;
       margin: 0;
-      padding-bottom: 14px;
-      position: relative;
-      display: inline-block;
+      padding: 0;
 
       &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        width: 48px;
-        height: 2px;
-        background: $met-red;
-        border-radius: 1px;
+        display: none;
       }
     }
   }
@@ -148,6 +140,10 @@
   &--team {
     .watad-content-page__main {
       padding-top: 28px;
+    }
+
+    .watad-content-page__section--core-team {
+      text-align: center;
     }
 
     .watad-content-page__section--core-team + .watad-content-page__section {
@@ -167,7 +163,7 @@
   }
 
   &--team &__section--core-team {
-    margin-top: -12px;
+    margin-top: 0;
   }
 
   &__card {
@@ -178,44 +174,77 @@
 
     &--team {
       padding: 0;
-      overflow: hidden;
-      border-radius: 20px;
-      text-align: center;
-      border-top: 3px solid $met-red;
+      overflow: visible;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      height: auto;
 
       .watad-content-page__card-body {
-        padding: 20px 22px 26px;
+        padding: 0;
+        flex: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .watad-content-page__card-photo-wrap {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 clamp(20px, 3vw, 28px);
+        border-radius: clamp(12px, 2vw, 20px);
+        overflow: hidden;
+        background: #f3f3f3;
+        box-shadow: none;
+        line-height: 0;
+      }
+
+      .watad-content-page__card-photo {
+        width: 100%;
+        height: auto;
+        object-fit: unset;
+        object-position: unset;
+        transform: none;
+        display: block;
+        vertical-align: top;
+      }
+
+      .watad-content-page__card-quote {
+        margin: 0 0 clamp(18px, 2.5vw, 22px);
+        padding: 0;
+        font-family: inherit;
+        font-size: clamp(16px, 1.8vw, 19px);
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: -0.01em;
+        color: #555;
+        max-width: none;
+        text-align: start;
       }
 
       h3 {
-        margin: 0 0 10px;
-        font-size: 21px;
+        margin: 0 0 4px;
+        font-family: inherit;
+        font-size: clamp(15px, 1.5vw, 16px);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: $met-black;
+        text-align: start;
       }
 
-      p {
-        padding-bottom: 0;
-        margin: 14px 0 0;
-        font-size: 14px;
-        line-height: 1.65;
-        color: #555;
-      }
-
-      .watad-content-page__card-meta-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 6px;
-      }
-
-      .watad-content-page__card-meta {
+      .watad-content-page__card-role {
         margin: 0;
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 999px;
-        background: rgba(228, 0, 43, 0.08);
-        font-size: 12px;
-        font-weight: 600;
-        color: $met-red;
+        padding: 0;
+        font-size: clamp(14px, 1.4vw, 15px);
+        font-weight: 400;
+        line-height: 1.5;
+        color: #888;
+        max-width: none;
+        text-align: start;
       }
     }
 
@@ -383,7 +412,9 @@
 
   &--pricing {
     .watad-content-page__main {
-      max-width: 1360px;
+      max-width: 1280px;
+      padding: 20px 0 56px;
+      text-align: start;
     }
 
     .watad-content-page__section--pricing {

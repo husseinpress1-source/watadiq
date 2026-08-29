@@ -264,11 +264,272 @@
     "billedFullLabel": "رسوم المشروع الكاملة",
     "billedSplitLabel": "لكل دفعة (50%)",
     "splitTotalLabel": "الإجمالي",
-    "popularLabel": "الأكثر طلباً",
+    "popularLabel": "شائع",
     "currencyLabel": "د.ع",
     "perProjectLabel": "لكل مشروع",
     "toggleHint": "تقسيم 50-50: ادفع 50% للبدء و50% قبل الإطلاق. نفس السعر الإجمالي.",
     "toggleAriaLabel": "اختر طريقة الدفع"
+  },
+  "pricingCompare": {
+    "title": "مقارنة الباقات",
+    "searchPlaceholder": "ابحث عن ميزة…",
+    "featureColumn": "الميزات",
+    "selectPlanLabel": "اختر باقة للمقارنة",
+    "emptyResults": "لا توجد ميزات مطابقة لبحثك.",
+    "categories": [
+      {
+        "id": "website",
+        "title": "الموقع والصفحات",
+        "features": [
+          {
+            "id": "responsive",
+            "label": "تصميم متجاوب (جوال وحاسوب)",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pages",
+            "label": "عدد الصفحات",
+            "launch": "صفحة واحدة",
+            "business": "حتى 8",
+            "scale": "حتى 15",
+            "enterprise": "حسب الطلب"
+          },
+          {
+            "id": "singlePage",
+            "label": "موقع صفحة واحدة (Landing)",
+            "launch": true,
+            "business": false,
+            "scale": false,
+            "enterprise": false
+          },
+          {
+            "id": "multiPage",
+            "label": "موقع متعدد الصفحات",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "contactForm",
+            "label": "نموذج تواصل",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "content",
+        "title": "المحتوى ولوحة التحكم",
+        "features": [
+          {
+            "id": "cms",
+            "label": "لوحة تحكم CMS",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "blog",
+            "label": "قسم مدونة",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "bilingual",
+            "label": "موقع ثنائي اللغة (عربي / إنجليزي)",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "contentMigration",
+            "label": "مساعدة في نقل المحتوى",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "commerce",
+        "title": "التجارة والتطبيقات",
+        "features": [
+          {
+            "id": "ecommerce",
+            "label": "متجر إلكتروني",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "payments",
+            "label": "ربط بوابة دفع",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pwa",
+            "label": "PWA (تطبيق ويب قابل للتثبيت)",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "mobileApp",
+            "label": "تطبيق جوال أصلي",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          },
+          {
+            "id": "apiCloud",
+            "label": "API وبنية سحابية",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "seo",
+        "title": "SEO والتحليلات",
+        "features": [
+          {
+            "id": "ssl",
+            "label": "شهادة SSL",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "seoSetup",
+            "label": "إعداد SEO",
+            "launch": "أساسي",
+            "business": true,
+            "scale": true,
+            "enterprise": "متقدم"
+          },
+          {
+            "id": "analytics",
+            "label": "ربط Google Analytics",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "performance",
+            "label": "تحسين الأداء",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "الأمان والدعم",
+        "features": [
+          {
+            "id": "securityAudit",
+            "label": "تدقيق أمني",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pentest",
+            "label": "تقرير اختبار اختراق",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          },
+          {
+            "id": "support",
+            "label": "دعم بعد الإطلاق",
+            "launch": "شهر واحد",
+            "business": "3 أشهر",
+            "scale": "6 أشهر",
+            "enterprise": "SLA 12 شهراً"
+          },
+          {
+            "id": "dedicatedPm",
+            "label": "مدير مشروع مخصص",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "delivery",
+        "title": "التسليم والدفع",
+        "features": [
+          {
+            "id": "revisions",
+            "label": "جولات مراجعة",
+            "launch": "2",
+            "business": "4",
+            "scale": "6",
+            "enterprise": "غير محدود"
+          },
+          {
+            "id": "timeline",
+            "label": "مدة التسليم",
+            "launch": "10–14 يوم",
+            "business": "3–4 أسابيع",
+            "scale": "أولوية",
+            "enterprise": "حسب الطلب"
+          },
+          {
+            "id": "hosting",
+            "label": "استضافة سنة واحدة",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "splitPayment",
+            "label": "تقسيم 50-50",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "milestoneBilling",
+            "label": "فوترة حسب مراحل مخصصة",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      }
+    ]
   },
   "cookies": {
     "ariaLabel": "إشعار ملفات تعريف الارتباط",

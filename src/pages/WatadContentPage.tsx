@@ -112,17 +112,31 @@ export default function WatadContentPage() {
                         </div>
                       )}
                       <div className="watad-content-page__card-body">
-                        <h3>{card.title}</h3>
-                        {card.meta && (
-                          <div className="watad-content-page__card-meta-row">
-                            {card.meta.split('·').map((tag) => (
-                              <span key={tag.trim()} className="watad-content-page__card-meta">
-                                {tag.trim()}
-                              </span>
-                            ))}
-                          </div>
+                        {card.photo ? (
+                          <>
+                            {card.text ? <p className="watad-content-page__card-quote">{card.text}</p> : null}
+                            <h3>{card.title}</h3>
+                            {card.meta ? (
+                              <p className="watad-content-page__card-role">
+                                {card.meta.split('·').map((tag) => tag.trim()).join(' · ')}
+                              </p>
+                            ) : null}
+                          </>
+                        ) : (
+                          <>
+                            <h3>{card.title}</h3>
+                            {card.meta && (
+                              <div className="watad-content-page__card-meta-row">
+                                {card.meta.split('·').map((tag) => (
+                                  <span key={tag.trim()} className="watad-content-page__card-meta">
+                                    {tag.trim()}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+                            <p>{card.text}</p>
+                          </>
                         )}
-                        <p>{card.text}</p>
                       </div>
                     </>
                   );

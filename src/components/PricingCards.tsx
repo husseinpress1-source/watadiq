@@ -5,6 +5,7 @@ import type { PricingPlan } from '../data/watad-pages';
 import { Pricing } from '@/components/ui/pricing';
 import { findWatadPlanByName, getNumberLocale, mapWatadPlansToUi } from '@/lib/pricing-ui';
 import PlanInquiryModal from './PlanInquiryModal';
+import PricingComparison from './PricingComparison';
 import './PricingCards.scss';
 import '@/styles/tailwind.css';
 
@@ -44,11 +45,10 @@ export default function PricingCards({ plans, sectionTitle }: PricingCardsProps)
           toggleHint={t('pricingUi.toggleHint')}
           toggleAriaLabel={t('pricingUi.toggleAriaLabel')}
           perProjectLabel={t('pricingUi.perProjectLabel')}
-          swipeHint={t('common.swipePlans')}
-          packagesLabel={t('common.packages')}
           locale={numberLocale}
           onPlanAction={(plan) => handlePlanAction(plan.name)}
         />
+        <PricingComparison planNames={uiPlans.map((plan) => plan.name)} />
       </div>
 
       <PlanInquiryModal plan={selectedPlan} onClose={handleCloseModal} />
