@@ -48,21 +48,30 @@
     align-items: flex-start;
     gap: 0.625rem;
     margin-bottom: 1.75rem;
+    width: 100%;
 
     @media (min-width: 768px) {
       margin-bottom: 2rem;
+      width: auto;
     }
   }
 
   .pricing-ui__toggle {
     display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-items: stretch;
     gap: 0.25rem;
     padding: 0.25rem;
     border: 1px solid #e5e5e5;
     border-radius: 999px;
     background: #fafafa;
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      display: inline-flex;
+      width: auto;
+    }
   }
 
   .pricing-ui__toggle-btn {
@@ -70,18 +79,40 @@
     align-items: center;
     justify-content: center;
     gap: 0.35rem;
-    min-height: 2.5rem;
-    padding: 0.5rem 1rem;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
     border: none;
     border-radius: 999px;
     background: transparent;
     color: #666;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.25;
+    text-align: center;
     cursor: pointer;
     font-family: inherit;
     transition: background 0.15s ease, color 0.15s ease;
+
+    @media (min-width: 768px) {
+      flex: 0 0 auto;
+      min-height: 2.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    &--split {
+      flex-direction: column;
+      gap: 0.125rem;
+      padding-block: 0.4375rem;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 0.35rem;
+        padding-block: 0.5rem;
+      }
+    }
 
     &.is-active {
       background: $met-black;
@@ -105,10 +136,16 @@
     padding: 0.1rem 0.4rem;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.16);
-    font-size: 0.625rem;
+    font-size: 0.5625rem;
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    @media (min-width: 768px) {
+      font-size: 0.625rem;
+    }
   }
 
   .pricing-ui__toggle-btn:not(.is-active) .pricing-ui__toggle-badge {
@@ -338,6 +375,10 @@ html[dir='rtl'] {
     .pricing-ui__toggle-wrap,
     .pricing-ui-card {
       text-align: start;
+    }
+
+    .pricing-ui__toggle-btn {
+      text-align: center;
     }
 
     .pricing-ui-card__features li {
