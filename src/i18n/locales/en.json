@@ -598,6 +598,7 @@
   },
   "privacyPage": {
     "title": "Privacy Policy",
+    "eyebrow": "WATAD Legal",
     "lead": "This policy explains how WATAD Software («WATAD», «we») collects, uses, stores, and protects personal data when you visit watadiq.com or work with us as a client.",
     "lastUpdated": "Last updated: July 2026",
     "tocTitle": "Contents",
@@ -723,6 +724,8 @@
   },
   "termsPage": {
     "title": "Terms of Service",
+    "eyebrow": "WATAD Legal",
+    "lead": "These terms govern your use of watadiq.com and WATAD Software services. Please read them carefully before working with us.",
     "lastUpdated": "Last updated: August 2026",
     "tocTitle": "Contents",
     "contactForm": "Contact form",

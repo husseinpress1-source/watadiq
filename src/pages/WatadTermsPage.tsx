@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageIntro from '../components/PageIntro';
 import './WatadTermsPage.scss';
 
 const TOC_KEYS = [
@@ -77,84 +78,92 @@ export default function WatadTermsPage() {
   }, []);
 
   return (
-    <div className="terms-page">
+    <div className="legal-page terms-page">
       <Header />
 
-      <main className="terms-page__main">
-        <header className="terms-page__hero">
-          <div className="terms-page__shell">
-            <h1>{t('termsPage.title')}</h1>
-            <p className="terms-page__updated">{lastUpdated}</p>
-          </div>
-        </header>
+      <main className="legal-page__main">
+        <PageIntro
+          eyebrow={t('termsPage.eyebrow')}
+          title={t('termsPage.title')}
+          intro={t('termsPage.lead')}
+        />
 
-        <div className="terms-page__body">
-          <div className="terms-page__shell terms-page__layout">
-            <aside className="terms-page__toc" aria-label={t('termsPage.tocTitle')}>
-              <nav>
-                <ul>
-                  {TOC_KEYS.map((key, index) => (
-                    <li key={key}>
-                      <a
-                        href={`#terms-${key}`}
-                        className={activeSection === key ? 'is-active' : undefined}
-                        aria-current={activeSection === key ? 'true' : undefined}
-                      >
-                        <span className="terms-page__toc-index">{index + 1}.</span>
-                        <span className="terms-page__toc-text">{sections[key]?.title ?? key}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </aside>
+        <div className="legal-page__body">
+          <div className="legal-page__shell">
+            <div className="legal-page__panel">
+              <div className="legal-page__meta">
+                <p className="legal-page__updated">{lastUpdated}</p>
+              </div>
 
-            <div className="terms-page__content">
-              {TOC_KEYS.map((key, index) => {
-                const sec = sections[key];
-                if (!sec) return null;
+              <div className="legal-page__layout">
+                <aside className="legal-page__toc" aria-label={t('termsPage.tocTitle')}>
+                  <p className="legal-page__toc-title">{t('termsPage.tocTitle')}</p>
+                  <nav>
+                    <ul>
+                      {TOC_KEYS.map((key, index) => (
+                        <li key={key}>
+                          <a
+                            href={`#terms-${key}`}
+                            className={activeSection === key ? 'is-active' : undefined}
+                            aria-current={activeSection === key ? 'true' : undefined}
+                          >
+                            <span className="legal-page__toc-index">{index + 1}.</span>
+                            <span className="legal-page__toc-text">{sections[key]?.title ?? key}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                </aside>
 
-                return (
-                  <section key={key} id={`terms-${key}`} className="terms-page__section">
-                    <h2>
-                      <span className="terms-page__section-index">{index + 1}.</span>
-                      {sec.title}
-                    </h2>
-                    {sec.lead && <p className="terms-page__lead">{sec.lead}</p>}
-                    {sec.paragraphs?.map((p) => (
-                      <p key={p.slice(0, 48)} className="terms-page__p">
-                        {p}
-                      </p>
-                    ))}
-                    {sec.bullets && sec.bullets.length > 0 && (
-                      <ul className="terms-page__list">
-                        {sec.bullets.map((b) => (
-                          <li key={b.slice(0, 48)}>{b}</li>
+                <div className="legal-page__content">
+                  {TOC_KEYS.map((key, index) => {
+                    const sec = sections[key];
+                    if (!sec) return null;
+
+                    return (
+                      <section key={key} id={`terms-${key}`} className="legal-page__section">
+                        <h2>
+                          <span className="legal-page__section-index">{index + 1}.</span>
+                          {sec.title}
+                        </h2>
+                        {sec.lead && <p className="legal-page__lead">{sec.lead}</p>}
+                        {sec.paragraphs?.map((p) => (
+                          <p key={p.slice(0, 48)} className="legal-page__p">
+                            {p}
+                          </p>
                         ))}
-                      </ul>
-                    )}
-                    {sec.note && <p className="terms-page__note">{sec.note}</p>}
+                        {sec.bullets && sec.bullets.length > 0 && (
+                          <ul className="legal-page__list">
+                            {sec.bullets.map((b) => (
+                              <li key={b.slice(0, 48)}>{b}</li>
+                            ))}
+                          </ul>
+                        )}
+                        {sec.note && <p className="legal-page__note">{sec.note}</p>}
 
-                    {key === 'contact' && (
-                      <p className="terms-page__contact">
-                        <a href="mailto:info@watadiq.com">info@watadiq.com</a>
-                        <span className="terms-page__contact-sep" aria-hidden="true">
-                          ·
-                        </span>
-                        <Link to="/contact">{t('termsPage.contactForm')}</Link>
-                      </p>
-                    )}
+                        {key === 'contact' && (
+                          <p className="legal-page__contact">
+                            <a href="mailto:info@watadiq.com">info@watadiq.com</a>
+                            <span className="legal-page__contact-sep" aria-hidden="true">
+                              ·
+                            </span>
+                            <Link to="/contact">{t('termsPage.contactForm')}</Link>
+                          </p>
+                        )}
+                      </section>
+                    );
+                  })}
+
+                  <section className="legal-page__footer-block">
+                    <h2>{t('termsPage.relatedTitle')}</h2>
+                    <p className="legal-page__footer-hint">{t('termsPage.relatedHint')}</p>
+                    <Link to="/privacy" className="legal-page__footer-link">
+                      {t('termsPage.relatedPrivacy')}
+                    </Link>
                   </section>
-                );
-              })}
-
-              <section className="terms-page__related">
-                <h2>{t('termsPage.relatedTitle')}</h2>
-                <p className="terms-page__related-hint">{t('termsPage.relatedHint')}</p>
-                <Link to="/privacy" className="terms-page__related-link">
-                  {t('termsPage.relatedPrivacy')}
-                </Link>
-              </section>
+                </div>
+              </div>
             </div>
           </div>
         </div>

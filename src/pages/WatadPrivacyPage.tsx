@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useCookieConsent } from '../context/CookieConsentContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageIntro from '../components/PageIntro';
 import './WatadPrivacyPage.scss';
 
 const TOC_KEYS = [
@@ -83,128 +84,136 @@ export default function WatadPrivacyPage() {
   }, []);
 
   return (
-    <div className="privacy-page">
+    <div className="legal-page privacy-page">
       <Header />
 
-      <main className="privacy-page__main">
-        <header className="privacy-page__hero">
-          <div className="privacy-page__shell">
-            <h1>{t('privacyPage.title')}</h1>
-            <p className="privacy-page__updated">{lastUpdated}</p>
-          </div>
-        </header>
+      <main className="legal-page__main">
+        <PageIntro
+          eyebrow={t('privacyPage.eyebrow')}
+          title={t('privacyPage.title')}
+          intro={t('privacyPage.lead')}
+        />
 
-        <div className="privacy-page__body">
-          <div className="privacy-page__shell privacy-page__layout">
-            <aside className="privacy-page__toc" aria-label={t('privacyPage.tocTitle')}>
-              <nav>
-                <ul>
-                  {TOC_KEYS.map((key, index) => (
-                    <li key={key}>
-                      <a
-                        href={`#privacy-${key}`}
-                        className={activeSection === key ? 'is-active' : undefined}
-                        aria-current={activeSection === key ? 'true' : undefined}
-                      >
-                        <span className="privacy-page__toc-index">{index + 1}.</span>
-                        <span className="privacy-page__toc-text">{sections[key]?.title ?? key}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </aside>
+        <div className="legal-page__body">
+          <div className="legal-page__shell">
+            <div className="legal-page__panel">
+              <div className="legal-page__meta">
+                <p className="legal-page__updated">{lastUpdated}</p>
+              </div>
 
-            <div className="privacy-page__content">
-              {TOC_KEYS.map((key, index) => {
-                const sec = sections[key];
-                if (!sec) return null;
+              <div className="legal-page__layout">
+                <aside className="legal-page__toc" aria-label={t('privacyPage.tocTitle')}>
+                  <p className="legal-page__toc-title">{t('privacyPage.tocTitle')}</p>
+                  <nav>
+                    <ul>
+                      {TOC_KEYS.map((key, index) => (
+                        <li key={key}>
+                          <a
+                            href={`#privacy-${key}`}
+                            className={activeSection === key ? 'is-active' : undefined}
+                            aria-current={activeSection === key ? 'true' : undefined}
+                          >
+                            <span className="legal-page__toc-index">{index + 1}.</span>
+                            <span className="legal-page__toc-text">{sections[key]?.title ?? key}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                </aside>
 
-                return (
-                  <section key={key} id={`privacy-${key}`} className="privacy-page__section">
-                    <h2>
-                      <span className="privacy-page__section-index">{index + 1}.</span>
-                      {sec.title}
-                    </h2>
-                    {sec.lead && <p className="privacy-page__lead">{sec.lead}</p>}
-                    {sec.paragraphs?.map((p) => (
-                      <p key={p.slice(0, 48)} className="privacy-page__p">
-                        {p}
-                      </p>
-                    ))}
-                    {sec.bullets && sec.bullets.length > 0 && (
-                      <ul className="privacy-page__list">
-                        {sec.bullets.map((b) => (
-                          <li key={b.slice(0, 48)}>{b}</li>
+                <div className="legal-page__content">
+                  {TOC_KEYS.map((key, index) => {
+                    const sec = sections[key];
+                    if (!sec) return null;
+
+                    return (
+                      <section key={key} id={`privacy-${key}`} className="legal-page__section">
+                        <h2>
+                          <span className="legal-page__section-index">{index + 1}.</span>
+                          {sec.title}
+                        </h2>
+                        {sec.lead && <p className="legal-page__lead">{sec.lead}</p>}
+                        {sec.paragraphs?.map((p) => (
+                          <p key={p.slice(0, 48)} className="legal-page__p">
+                            {p}
+                          </p>
                         ))}
-                      </ul>
-                    )}
-                    {sec.note && <p className="privacy-page__note">{sec.note}</p>}
+                        {sec.bullets && sec.bullets.length > 0 && (
+                          <ul className="legal-page__list">
+                            {sec.bullets.map((b) => (
+                              <li key={b.slice(0, 48)}>{b}</li>
+                            ))}
+                          </ul>
+                        )}
+                        {sec.note && <p className="legal-page__note">{sec.note}</p>}
 
-                    {key === 'cookies' && (
-                      <>
-                        <div className="privacy-page__cookie-cards">
-                          {cookieRows.map((row) => (
-                            <article key={row.type} className="privacy-page__cookie-card">
-                              <h3>{row.type}</h3>
-                              <dl>
-                                <div>
-                                  <dt>{t('privacyPage.cookieColPurpose')}</dt>
-                                  <dd>{row.purpose}</dd>
-                                </div>
-                                <div>
-                                  <dt>{t('privacyPage.cookieColDuration')}</dt>
-                                  <dd>{row.duration}</dd>
-                                </div>
-                              </dl>
-                            </article>
-                          ))}
-                        </div>
-                        <div className="privacy-page__table-wrap privacy-page__table-wrap--desktop">
-                          <table className="privacy-page__table">
-                            <thead>
-                              <tr>
-                                <th>{t('privacyPage.cookieColType')}</th>
-                                <th>{t('privacyPage.cookieColPurpose')}</th>
-                                <th>{t('privacyPage.cookieColDuration')}</th>
-                              </tr>
-                            </thead>
-                            <tbody>
+                        {key === 'cookies' && (
+                          <>
+                            <div className="privacy-page__cookie-cards">
                               {cookieRows.map((row) => (
-                                <tr key={row.type}>
-                                  <td>
-                                    <strong>{row.type}</strong>
-                                  </td>
-                                  <td>{row.purpose}</td>
-                                  <td>{row.duration}</td>
-                                </tr>
+                                <article key={row.type} className="privacy-page__cookie-card">
+                                  <h3>{row.type}</h3>
+                                  <dl>
+                                    <div>
+                                      <dt>{t('privacyPage.cookieColPurpose')}</dt>
+                                      <dd>{row.purpose}</dd>
+                                    </div>
+                                    <div>
+                                      <dt>{t('privacyPage.cookieColDuration')}</dt>
+                                      <dd>{row.duration}</dd>
+                                    </div>
+                                  </dl>
+                                </article>
                               ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      </>
-                    )}
+                            </div>
+                            <div className="privacy-page__table-wrap privacy-page__table-wrap--desktop">
+                              <table className="privacy-page__table">
+                                <thead>
+                                  <tr>
+                                    <th>{t('privacyPage.cookieColType')}</th>
+                                    <th>{t('privacyPage.cookieColPurpose')}</th>
+                                    <th>{t('privacyPage.cookieColDuration')}</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {cookieRows.map((row) => (
+                                    <tr key={row.type}>
+                                      <td>
+                                        <strong>{row.type}</strong>
+                                      </td>
+                                      <td>{row.purpose}</td>
+                                      <td>{row.duration}</td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          </>
+                        )}
 
-                    {key === 'contact' && (
-                      <p className="privacy-page__contact">
-                        <a href="mailto:info@watadiq.com">info@watadiq.com</a>
-                        <span className="privacy-page__contact-sep" aria-hidden="true">
-                          ·
-                        </span>
-                        <Link to="/contact">{t('privacyPage.contactForm')}</Link>
-                      </p>
-                    )}
+                        {key === 'contact' && (
+                          <p className="legal-page__contact">
+                            <a href="mailto:info@watadiq.com">info@watadiq.com</a>
+                            <span className="legal-page__contact-sep" aria-hidden="true">
+                              ·
+                            </span>
+                            <Link to="/contact">{t('privacyPage.contactForm')}</Link>
+                          </p>
+                        )}
+                      </section>
+                    );
+                  })}
+
+                  <section className="legal-page__footer-block">
+                    <h2>{t('privacyPage.manageCookiesTitle')}</h2>
+                    <p className="legal-page__footer-hint">{t('privacyPage.manageCookiesHint')}</p>
+                    <button type="button" className="legal-page__footer-btn" onClick={openSettings}>
+                      {t('cookies.manageLink')}
+                    </button>
                   </section>
-                );
-              })}
-
-              <section className="privacy-page__manage">
-                <h2>{t('privacyPage.manageCookiesTitle')}</h2>
-                <p className="privacy-page__manage-hint">{t('privacyPage.manageCookiesHint')}</p>
-                <button type="button" className="privacy-page__cookie-btn" onClick={openSettings}>
-                  {t('cookies.manageLink')}
-                </button>
-              </section>
+                </div>
+              </div>
             </div>
           </div>
         </div>
