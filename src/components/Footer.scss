@@ -1,6 +1,11 @@
 @use '../styles/global.scss' as *;
 
 .met-footer {
+  &__crest {
+    background: var(--watad-bg-soft);
+    padding-bottom: clamp(12px, 2vw, 24px);
+  }
+
   &__wave {
     display: block;
     width: 100%;
@@ -11,15 +16,26 @@
     svg {
       display: block;
       width: 100%;
-      height: clamp(36px, 6vw, 64px);
     }
 
-    &--top path {
-      fill: var(--watad-bg-soft);
+    &--top {
+      margin-bottom: 0;
+
+      svg {
+        height: clamp(28px, 5vw, 48px);
+      }
+
+      path {
+        fill: var(--watad-bg-soft);
+      }
     }
 
     &--legal {
       margin-bottom: -1px;
+
+      svg {
+        height: clamp(64px, 11vw, 112px);
+      }
 
       path {
         fill: var(--watad-footer-wave);
@@ -96,7 +112,7 @@
 
   &__legal {
     background: var(--watad-footer-wave);
-    padding: 20px 32px 28px;
+    padding: clamp(28px, 4vw, 40px) 32px clamp(32px, 5vw, 44px);
   }
 
   &__legal-inner {
@@ -207,8 +223,18 @@
 
 @media (max-width: 768px) {
   .met-footer {
-    &__wave svg {
-      height: clamp(28px, 8vw, 44px);
+    &__wave {
+      &--top svg {
+        height: clamp(24px, 7vw, 40px);
+      }
+
+      &--legal svg {
+        height: clamp(52px, 14vw, 80px);
+      }
+    }
+
+    &__crest {
+      padding-bottom: 12px;
     }
 
     &__main {

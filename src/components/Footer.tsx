@@ -23,13 +23,14 @@ export default function Footer() {
 
   return (
     <footer className="met-footer">
-      <div className="met-footer__wave met-footer__wave--top" aria-hidden="true">
-        <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,46 C220,46 360,10 580,24 C800,38 960,62 1180,44 C1310,34 1380,50 1440,42 V72 H0 Z" />
-        </svg>
-      </div>
-
-      <FooterBanner />
+      <section className="met-footer__crest" aria-label={t('footer.bannerLabel')}>
+        <div className="met-footer__wave met-footer__wave--top" aria-hidden="true">
+          <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,24 C220,4 440,32 660,14 C880,0 1100,28 1320,10 C1380,16 1410,12 1440,14 V56 H0 Z" />
+          </svg>
+        </div>
+        <FooterBanner />
+      </section>
 
       <div className="met-footer__main">
         <div className="met-footer__inner">
@@ -83,8 +84,8 @@ export default function Footer() {
       </div>
 
       <div className="met-footer__wave met-footer__wave--legal" aria-hidden="true">
-        <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,34 C240,58 480,12 720,38 C960,64 1200,18 1440,40 V72 H0 Z" />
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,52 C220,96 440,20 660,56 C880,92 1100,28 1320,64 C1380,76 1410,48 1440,60 V120 H0 Z" />
         </svg>
       </div>
 
