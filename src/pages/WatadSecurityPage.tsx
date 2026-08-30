@@ -49,7 +49,6 @@ export default function WatadSecurityPage() {
           cta={{ label: t('securityPage.ctaPrimary'), href: '/contact' }}
           ctaSecondary={{ label: t('securityPage.ctaSecondary'), href: '/pricing' }}
           heroImage={hero?.src}
-          heroImageMobile={hero?.mobileSrc}
           heroImageAlt={hero ? t(hero.altKey) : undefined}
         />
 

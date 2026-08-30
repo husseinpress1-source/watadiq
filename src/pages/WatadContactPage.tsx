@@ -31,7 +31,6 @@ export default function WatadContactPage() {
         intro={page.intro}
         cta={page.cta}
         heroImage={hero?.src}
-        heroImageMobile={hero?.mobileSrc}
         heroImageAlt={hero ? t(hero.altKey) : undefined}
       />
 

@@ -9,7 +9,6 @@ interface PageIntroProps {
   cta?: { label: string; href: string };
   ctaSecondary?: { label: string; href: string };
   heroImage?: string;
-  heroImageMobile?: string;
   heroImageAlt?: string;
 }
 
@@ -44,7 +43,6 @@ export default function PageIntro({
   cta,
   ctaSecondary,
   heroImage,
-  heroImageMobile,
   heroImageAlt,
 }: PageIntroProps) {
   const hasActions = Boolean(cta || ctaSecondary);
@@ -73,21 +71,16 @@ export default function PageIntro({
         {hasVisual && (
           <motion.div className="page-intro__visual" {...visualMotion}>
             <div className="page-intro__visual-frame">
-              <picture>
-                {heroImageMobile && (
-                  <source media="(max-width: 960px)" srcSet={heroImageMobile} />
-                )}
-                <img
-                  src={heroImage}
-                  alt={heroImageAlt ?? ''}
-                  className="page-intro__visual-image"
-                  width={640}
-                  height={480}
-                  loading="eager"
-                  decoding="async"
-                  draggable={false}
-                />
-              </picture>
+              <img
+                src={heroImage}
+                alt={heroImageAlt ?? ''}
+                className="page-intro__visual-image"
+                width={640}
+                height={480}
+                loading="eager"
+                decoding="async"
+                draggable={false}
+              />
             </div>
           </motion.div>
         )}
