@@ -1,29 +1,34 @@
 import { useTranslation } from 'react-i18next';
+import { getSiteIconAssets, type ExpertiseIcon } from '../data/expertise-icons';
 import './FooterBanner.scss';
 
-function MarqueeRow({
-  text,
-  variant,
-  reverse = false,
-}: {
-  text: string;
-  variant: 'title' | 'text';
-  reverse?: boolean;
-}) {
-  const items = Array.from({ length: 4 }, (_, index) => index);
+const FOOTER_ICONS: ExpertiseIcon[] = ['web', 'mobile', 'design', 'security', 'commerce', 'cloud'];
+
+function IconMarquee() {
+  const icons = [...FOOTER_ICONS, ...FOOTER_ICONS];
 
   return (
-    <div
-      className={`footer-banner__row footer-banner__row--${variant}${reverse ? ' is-reverse' : ''}`}
-      aria-hidden="true"
-    >
-      <div className="footer-banner__track">
-        {items.map((index) => (
-          <div key={index} className="footer-banner__content">
-            <span className="footer-banner__item">{text}</span>
-            <span className="footer-banner__sep" aria-hidden="true" />
-          </div>
-        ))}
+    <div className="footer-banner__icon-row" aria-hidden="true">
+      <div className="footer-banner__icon-track">
+        {icons.map((icon, index) => {
+          const assets = getSiteIconAssets(icon, 56);
+          if (!assets) return null;
+
+          return (
+            <span key={`${icon}-${index}`} className="footer-banner__icon-item">
+              <img
+                src={assets.src}
+                srcSet={assets.srcSet}
+                alt=""
+                width={assets.width}
+                height={assets.height}
+                loading="lazy"
+                decoding="async"
+                draggable={false}
+              />
+            </span>
+          );
+        })}
       </div>
     </div>
   );
@@ -31,24 +36,15 @@ function MarqueeRow({
 
 export default function FooterBanner() {
   const { t } = useTranslation();
-  const title = t('footer.bannerTitle');
-  const text = t('footer.bannerText');
 
   return (
     <section className="footer-banner" aria-label={t('footer.bannerLabel')}>
-      <p className="footer-banner__sr-only">
-        {title}. {text}
-      </p>
-
-      <div className="footer-banner__marquee" aria-hidden="true">
-        <MarqueeRow text={title} variant="title" />
-        <MarqueeRow text={text} variant="text" reverse />
+      <div className="footer-banner__copy">
+        <p className="footer-banner__title">{t('footer.bannerTitle')}</p>
+        <p className="footer-banner__text">{t('footer.bannerText')}</p>
       </div>
 
-      <div className="footer-banner__static">
-        <p className="footer-banner__title">{title}</p>
-        <p className="footer-banner__text">{text}</p>
-      </div>
+      <IconMarquee />
     </section>
   );
 }
