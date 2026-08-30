@@ -140,6 +140,19 @@
     }
   }
 
+  &__legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 10px;
+  }
+
+  &__legal-sep {
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 600;
+  }
+
   &__badges {
     display: flex;
     flex-wrap: wrap;

@@ -113,6 +113,8 @@ export default function CookieConsentBanner() {
               <p className="cookie-consent__legal">
                 {t('cookies.learnMore')}{' '}
                 <Link to="/privacy">{t('cookies.privacyLink')}</Link>
+                {' '}{t('cookies.and')}{' '}
+                <Link to="/terms">{t('cookies.termsLink')}</Link>
               </p>
             </div>
           </div>

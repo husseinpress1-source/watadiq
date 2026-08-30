@@ -22,6 +22,8 @@ export const PUBLIC_ROUTES = [
   '/pricing',
   '/contact',
   '/privacy',
+  '/terms',
+  '/security',
 ] as const;
 
 type TFunction = (key: string, options?: Record<string, unknown>) => string;

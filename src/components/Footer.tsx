@@ -75,7 +75,7 @@ export default function Footer() {
               <ul>
                 <li><Link to="/expertise">{t('footer.webDev')}</Link></li>
                 <li><Link to="/expertise">{t('footer.mobileApps')}</Link></li>
-                <li><Link to="/expertise">{t('footer.cybersecurity')}</Link></li>
+                <li><Link to="/security">{t('footer.cybersecurity')}</Link></li>
               </ul>
             </div>
           </div>
@@ -104,7 +104,11 @@ export default function Footer() {
             ))}
           </div>
           <p>{t('footer.copyright')}</p>
-          <Link to="/privacy" className="met-footer__legal-link">{t('footer.privacy')}</Link>
+          <div className="met-footer__legal-links">
+            <Link to="/privacy" className="met-footer__legal-link">{t('footer.privacy')}</Link>
+            <span className="met-footer__legal-sep" aria-hidden="true">·</span>
+            <Link to="/terms" className="met-footer__legal-link">{t('footer.terms')}</Link>
+          </div>
           <button type="button" className="met-footer__cookie-link" onClick={openSettings}>
             {t('cookies.manageLink')}
           </button>

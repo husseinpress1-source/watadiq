@@ -1,0 +1,233 @@
+@use '../styles/global.scss' as *;
+
+.contact-page {
+  min-height: 100vh;
+  background: #fff;
+  color: $met-black;
+
+  &__main {
+    flex: 1;
+  }
+
+  &__shell {
+    width: 100%;
+    max-width: $max-width-wide;
+    margin-inline: auto;
+    padding: clamp(40px, 6vw, 64px) clamp(24px, 4vw, 64px) clamp(48px, 6vw, 72px);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(40px, 6vw, 72px);
+    align-items: start;
+  }
+
+  &__block {
+    text-align: start;
+
+    h2 {
+      margin: 0 0 clamp(20px, 3vw, 28px);
+      font-family: $font-sans;
+      font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: $met-black;
+    }
+  }
+
+  &__channels {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__channel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+    transition: background 0.15s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: #fafafa;
+
+      .contact-page__channel-value {
+        color: $met-black;
+      }
+
+      .contact-page__channel-arrow {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  &__channel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__channel-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    text-align: start;
+  }
+
+  &__channel-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: $met-gray;
+    letter-spacing: 0.02em;
+  }
+
+  &__channel-value {
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: $met-black;
+    word-break: break-word;
+    transition: color 0.15s ease;
+  }
+
+  &__channel-arrow {
+    font-size: 1.125rem;
+    color: #bbb;
+    transition: transform 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  &__steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: clamp(16px, 2.5vw, 24px);
+
+    li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      padding-bottom: clamp(16px, 2.5vw, 24px);
+      border-bottom: 1px solid #f0f0f0;
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: #555;
+      text-align: start;
+    }
+  }
+
+  &__step-index {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #aaa;
+    font-variant-numeric: tabular-nums;
+    padding-top: 2px;
+  }
+
+  .locations--page {
+    padding: clamp(48px, 6vw, 72px) 0 clamp(64px, 8vw, 96px);
+    border-top: 1px solid #ececec;
+    background: #fafafa;
+
+    h2 {
+      font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+      letter-spacing: -0.02em;
+      margin-bottom: clamp(24px, 3vw, 32px);
+    }
+
+    .locations__grid {
+      max-width: 960px;
+      gap: 16px;
+    }
+
+    .location-card {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 12px;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+html[dir='rtl'] .contact-page {
+  &__channel-arrow {
+    transform: scaleX(-1);
+  }
+
+  &__channel:hover .contact-page__channel-arrow {
+    transform: scaleX(-1) translateX(3px);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    &__shell {
+      padding-top: 32px;
+      padding-bottom: 40px;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    &__channel {
+      padding: 18px 16px;
+      gap: 14px;
+    }
+
+    .locations--page {
+      padding-bottom: 48px;
+
+      .locations__inner {
+        padding-inline: 20px;
+      }
+
+      .locations__grid {
+        grid-template-columns: 1fr;
+        max-width: none;
+      }
+    }
+  }
+}

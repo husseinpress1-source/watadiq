@@ -1,7 +1,7 @@
 @use '../styles/global.scss' as *;
 
 .locations {
-  padding: 48px 0 64px;
+  padding: 48px 0 72px;
   background: #fff;
 
   &__inner {
@@ -14,102 +14,154 @@
 
   h2 {
     font-family: $font-sans;
-    font-size: 28px;
+    font-size: clamp(1.75rem, 3vw, 2rem);
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     color: $met-black;
     width: 100%;
-    max-width: 640px;
+    max-width: 960px;
+    text-align: center;
+    letter-spacing: -0.03em;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 18px;
     width: 100%;
-    max-width: 640px;
+    max-width: 960px;
   }
 }
 
 .location-card {
+  position: relative;
   display: block;
-  background: #f5f5f5;
-  border-radius: 8px;
+  min-height: 280px;
+  border-radius: 18px;
   overflow: hidden;
-  transition: box-shadow 0.2s;
+  text-decoration: none;
+  color: #fff;
+  isolation: isolate;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  }
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 
-  &__icon-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 16px 8px;
-    background: transparent;
-  }
-
-  &__icon {
-    width: 72px;
-    height: 72px;
-    object-fit: contain;
-    background: transparent;
-  }
-
-  &__body {
-    padding: 12px 18px 20px;
-
-    h3 {
-      font-family: $font-sans;
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: $met-black;
+    .location-card__image {
+      transform: scale(1.06);
     }
+  }
 
+  &__media,
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    object-fit: cover;
+    transition: transform 0.55s ease;
+  }
+
+  &__shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.22) 42%, rgba(0, 0, 0, 0.78) 100%),
+      linear-gradient(135deg, rgba(228, 0, 43, 0.18) 0%, transparent 55%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 280px;
+    padding: 24px 24px 22px;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    font-family: $font-sans;
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  &__lines {
     p {
+      margin: 0 0 5px;
       font-size: 14px;
-      line-height: 1.55;
-      color: #333;
-      margin-bottom: 6px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.92);
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.28);
 
       strong {
         font-weight: 700;
-        color: $met-black;
+        color: #fff;
       }
     }
   }
 
   &__note {
-    margin-top: 10px !important;
+    margin: 12px 0 0 !important;
     font-size: 13px !important;
-    color: $met-gray !important;
+    color: rgba(255, 255, 255, 0.78) !important;
+  }
+
+  &--hq .location-card__shade {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(20, 8, 8, 0.82) 100%),
+      linear-gradient(135deg, rgba(228, 0, 43, 0.28) 0%, transparent 60%);
+  }
+
+  &--hours .location-card__shade {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.28) 45%, rgba(8, 12, 28, 0.84) 100%),
+      linear-gradient(135deg, rgba(120, 24, 74, 0.24) 0%, transparent 58%);
+  }
+
+  &--email .location-card__shade {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.24) 45%, rgba(10, 10, 18, 0.82) 100%),
+      linear-gradient(135deg, rgba(228, 0, 43, 0.22) 0%, transparent 55%);
+  }
+
+  &--instagram .location-card__shade {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.3) 45%, rgba(24, 6, 22, 0.86) 100%),
+      linear-gradient(135deg, rgba(221, 42, 123, 0.28) 0%, rgba(228, 0, 43, 0.16) 42%, transparent 70%);
   }
 }
 
 @media (max-width: 768px) {
   .locations {
-    padding: 40px 0 48px;
+    padding: 40px 0 56px;
 
     &__inner {
       padding: 0 20px;
     }
 
-    h2 {
-      font-size: 24px;
-      max-width: 420px;
-    }
-
     &__grid {
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 14px;
       max-width: 420px;
     }
+  }
 
-    .location-card__icon {
-      width: 64px;
-      height: 64px;
+  .location-card {
+    min-height: 250px;
+
+    &__content {
+      min-height: 250px;
+      padding: 18px 18px 16px;
     }
   }
 }
@@ -120,24 +172,22 @@
 
   .locations__inner {
     max-width: 1100px;
-    margin: 0 auto;
+    margin-inline: auto;
     padding: 0 32px;
   }
 
-  h2 {
-    text-align: center;
-    max-width: 640px;
-    margin-inline: auto;
-    margin-bottom: 24px;
-  }
-
   .locations__grid {
-    max-width: 640px;
+    max-width: 960px;
     margin-inline: auto;
   }
 
   .location-card:hover {
+    transform: none;
     box-shadow: none;
+
+    .location-card__image {
+      transform: none;
+    }
   }
 }
 
@@ -148,5 +198,11 @@
     .locations__inner {
       padding: 0 20px;
     }
+  }
+}
+
+html[dir='rtl'] .location-card {
+  &__content {
+    text-align: start;
   }
 }

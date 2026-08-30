@@ -24,7 +24,7 @@ export default function PromoSections() {
             className={cn('promo-row', { 'promo-row--reverse': asset.reverse })}
           >
             <div className="promo-row__media">
-              <img src={asset.image} alt={promo.title} loading="lazy" decoding="async" />
+              <img src={asset.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />
             </div>
             <div className="promo-row__content">
               <div className="promo-row__inner">

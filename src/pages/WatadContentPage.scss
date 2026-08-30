@@ -6,21 +6,23 @@
 
   &__main {
     width: 100%;
-    max-width: 1100px;
+    max-width: $max-width-wide;
     margin: 0 auto;
-    padding: 40px 32px 80px;
-    text-align: center;
+    padding: 40px clamp(24px, 4vw, 64px) 80px;
+    text-align: start;
   }
 
   &__section {
     margin-bottom: 48px;
     width: 100%;
+    text-align: start;
 
     h2 {
       font-family: $font-serif;
       font-size: 26px;
       font-weight: 700;
       margin-bottom: 16px;
+      text-align: start;
     }
 
     p {
@@ -28,17 +30,17 @@
       line-height: 1.7;
       color: var(--watad-text-muted);
       margin-bottom: 12px;
-      max-width: 720px;
-      margin-inline: auto;
+      max-width: 42rem;
+      margin-inline: 0;
     }
 
     ul {
       list-style: disc;
-      display: inline-block;
+      display: block;
       text-align: start;
       padding-inline-start: 22px;
-      max-width: 720px;
-      margin-inline: auto;
+      max-width: 42rem;
+      margin-inline: 0;
 
       li {
         margin-bottom: 8px;
@@ -74,8 +76,10 @@
 
     &--team {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: clamp(40px, 6vw, 72px);
-      max-width: 920px;
+      gap: clamp(32px, 4vw, 48px);
+      width: 100%;
+      max-width: min(880px, 100%);
+      margin-inline: auto;
       justify-content: center;
       align-items: start;
       margin-top: 0;
@@ -113,12 +117,12 @@
 
   &__team-block {
     width: 100%;
-    max-width: 920px;
+    max-width: min(880px, 100%);
     margin-inline: auto;
   }
 
   &__team-head {
-    text-align: center;
+    text-align: start;
     margin-bottom: clamp(32px, 5vw, 48px);
 
     h2 {
@@ -146,18 +150,109 @@
       text-align: center;
     }
 
-    .watad-content-page__section--core-team + .watad-content-page__section {
-      padding-top: 48px;
-      border-top: 1px solid $met-light-gray;
-      max-width: 720px;
+    .watad-content-page__team-head {
+      text-align: center;
+    }
+
+    .watad-content-page__cards--team {
       margin-inline: auto;
+    }
+
+    .watad-content-page__card--team {
+      .watad-content-page__card-photo-wrap {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 4 / 5;
+        margin: 0 0 20px;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #f3f3f3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .watad-content-page__card-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center top;
+        display: block;
+      }
+
+      @media (max-width: 640px) {
+        .watad-content-page__card-photo-wrap {
+          aspect-ratio: auto;
+        }
+
+        .watad-content-page__card-photo {
+          height: auto;
+          object-fit: unset;
+        }
+      }
+    }
+
+    .watad-content-page__section--work-together {
+      width: 100%;
+      max-width: min(880px, 100%);
+      margin-inline: auto;
+      margin-bottom: 0;
+      padding-top: clamp(48px, 6vw, 64px);
+      border-top: 1px solid $met-light-gray;
+      text-align: center;
 
       h2 {
         font-size: clamp(22px, 2.8vw, 28px);
-        letter-spacing: 0;
+        letter-spacing: -0.02em;
         text-transform: none;
         color: $met-black;
-        margin-bottom: 20px;
+        margin: 0 0 clamp(28px, 4vw, 40px);
+        text-align: center;
+      }
+    }
+
+    .watad-content-page__principles {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(20px, 3vw, 32px);
+      padding: 0;
+      margin: 0;
+      max-width: none;
+      text-align: start;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        color: #444;
+      }
+    }
+
+    .watad-content-page__principles-index {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: $met-red;
+      line-height: 1;
+    }
+
+    .watad-content-page__principles-text {
+      font-size: clamp(15px, 1.5vw, 17px);
+      line-height: 1.65;
+      color: #444;
+      letter-spacing: -0.01em;
+    }
+
+    @media (max-width: 768px) {
+      .watad-content-page__principles {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 36rem;
+        margin-inline: auto;
+        text-align: start;
       }
     }
   }
@@ -410,6 +505,68 @@
     }
   }
 
+  &__section--core-disciplines {
+    text-align: start;
+
+    h2 {
+      font-size: clamp(28px, 3.2vw, 42px);
+      margin-bottom: clamp(28px, 3vw, 40px);
+      letter-spacing: -0.02em;
+      text-align: start;
+    }
+
+    .watad-content-page__cards--disciplines {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(16px, 2vw, 24px);
+      max-width: 100%;
+      width: 100%;
+      margin-inline: 0;
+    }
+
+    .watad-content-page__card--discipline {
+      padding: clamp(28px, 3vw, 36px) clamp(20px, 2vw, 24px);
+      min-height: auto;
+      border-radius: 16px;
+      border-color: #ececec;
+      background: #fff;
+
+      .watad-content-page__card-icon-wrap {
+        width: clamp(88px, 11vw, 120px);
+        height: clamp(88px, 11vw, 120px);
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .watad-content-page__card-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      h3 {
+        font-size: clamp(18px, 1.8vw, 22px);
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: clamp(15px, 1.1vw, 17px);
+        line-height: 1.6;
+        color: #555;
+        max-width: none;
+        margin-inline: 0;
+      }
+    }
+  }
+
+  &--expertise {
+    .watad-content-page__main {
+      max-width: min(1180px, 100%);
+    }
+  }
+
   &--pricing {
     .watad-content-page__main {
       max-width: 1280px;
@@ -428,15 +585,15 @@
     }
 
     .watad-content-page__section--payments {
-      max-width: 760px;
+      max-width: 960px;
       margin-inline: auto;
-      padding: 48px 0 56px;
+      padding: 48px clamp(20px, 4vw, 32px) 56px;
       margin-bottom: 0;
       border-top: 0;
 
       h2 {
         font-size: clamp(24px, 3vw, 32px);
-        margin-bottom: 24px;
+        margin-bottom: 28px;
         letter-spacing: -0.02em;
         text-align: center;
       }
@@ -486,11 +643,48 @@
 
 @media (min-width: 1025px) {
   .watad-content-page__main {
-    padding: 48px 40px 88px;
+    padding: 48px clamp(24px, 4vw, 64px) 88px;
+  }
+
+  .page-intro__shell {
+    padding-inline: clamp(24px, 4vw, 64px);
   }
 }
 
 @media (max-width: 768px) {
+  .watad-content-page__section--core-disciplines {
+    h2 {
+      text-align: start;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .watad-content-page__cards--disciplines {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .watad-content-page__card--discipline {
+      padding: 20px 14px;
+
+      .watad-content-page__card-icon-wrap {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+  }
+
   .watad-content-page__section--contact-channels {
     .watad-content-page__cards {
       grid-template-columns: 1fr;
@@ -604,6 +798,14 @@
   .watad-content-page--pricing {
     .watad-content-page__section--pricing .pricing-cards {
       padding: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .watad-content-page__section--core-disciplines {
+    .watad-content-page__cards--disciplines {
+      grid-template-columns: 1fr;
     }
   }
 }

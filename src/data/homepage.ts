@@ -21,18 +21,41 @@ export const highlightAssets = [
 ];
 
 export const locationAssets = [
-  { id: '1', icon: 'location-hq' as const, href: '/contact' },
-  { id: '2', icon: 'location-remote' as const, href: '/contact' },
+  {
+    id: '1',
+    icon: 'location-hq' as const,
+    image: 'contact-bg-hq',
+    href: '/contact',
+  },
+  {
+    id: '2',
+    icon: 'contact-hours' as const,
+    image: 'contact-bg-hours',
+    href: '/contact',
+  },
+  {
+    id: '3',
+    icon: 'email' as const,
+    image: 'contact-bg-email',
+    href: 'mailto:info@watadiq.com',
+  },
+  {
+    id: '4',
+    icon: 'instagram' as const,
+    image: 'contact-bg-instagram',
+    href: 'https://instagram.com/watd_iq',
+  },
 ];
 
 export const promoAssets = [
-  { id: '1', image: '/images/home/promo-1.png', href: '/about', reverse: false },
-  { id: '2', image: '/images/home/promo-2.png', href: '/pricing', reverse: true },
+  { id: '1', image: '/images/home/promo-story.webp', href: '/about', reverse: false },
+  { id: '2', image: '/images/home/promo-pricing.webp', href: '/pricing', reverse: true },
 ];
 
 export const navHrefs = [
   { key: 'about', href: '/about' },
   { key: 'expertise', href: '/expertise' },
+  { key: 'security', href: '/security' },
   { key: 'work', href: '/work' },
   { key: 'live', href: '/live' },
   { key: 'team', href: '/team' },

@@ -1,19 +1,19 @@
 export type ExpertiseIcon = 'web' | 'mobile' | 'design' | 'security' | 'commerce' | 'cloud';
-export type LocationIcon = 'location-hq' | 'location-remote';
+export type LocationIcon = 'location-hq' | 'contact-hours';
 export type ContactIcon = 'email' | 'instagram';
 export type SiteIcon = ExpertiseIcon | LocationIcon | ContactIcon;
 
 export const SITE_ICONS: Record<SiteIcon, string> = {
-  web: '/assets/expertise/expertise-web.png',
-  mobile: '/assets/expertise/expertise-mobile.png',
-  design: '/assets/expertise/expertise-design.png',
-  security: '/assets/expertise/expertise-security.png',
-  commerce: '/assets/expertise/expertise-commerce.png',
-  cloud: '/assets/expertise/expertise-cloud.png',
-  'location-hq': '/assets/icons/location-hq.png',
-  'location-remote': '/assets/icons/location-remote.png',
-  email: '/assets/icons/contact-email.png',
-  instagram: '/assets/icons/contact-instagram.png',
+  web: '/assets/expertise/expertise-web-512.webp',
+  mobile: '/assets/expertise/expertise-mobile-512.webp',
+  design: '/assets/expertise/expertise-design-512.webp',
+  security: '/assets/expertise/expertise-security-512.webp',
+  commerce: '/assets/expertise/expertise-commerce-512.webp',
+  cloud: '/assets/expertise/expertise-cloud-512.webp',
+  'location-hq': '/assets/contact/contact-hq-512.webp',
+  'contact-hours': '/assets/contact/contact-hours-512.webp',
+  email: '/assets/contact/contact-email-512.webp',
+  instagram: '/assets/contact/contact-instagram-512.webp',
 };
 
 export function getSiteIcon(icon?: string): string | undefined {
@@ -37,12 +37,19 @@ const EXPERTISE_ICON_SET = new Set<ExpertiseIcon>([
   'cloud',
 ]);
 
+const SIZED_ICON_SET = new Set<SiteIcon>([
+  ...EXPERTISE_ICON_SET,
+  'location-hq',
+  'contact-hours',
+  'email',
+  'instagram',
+]);
+
 export function getSiteIconAssets(icon?: string, displaySize = 160): SiteIconAssets | undefined {
   const base = getSiteIcon(icon);
   if (!base) return undefined;
 
-  // Contact/location icons ship as single PNG masters (no -256/-512 exports).
-  if (!icon || !EXPERTISE_ICON_SET.has(icon as ExpertiseIcon)) {
+  if (!icon || !SIZED_ICON_SET.has(icon as SiteIcon)) {
     return {
       src: base,
       width: displaySize,
@@ -50,10 +57,10 @@ export function getSiteIconAssets(icon?: string, displaySize = 160): SiteIconAss
     };
   }
 
-  const stem = base.replace(/\.png$/, '');
+  const stem = base.replace(/-512\.webp$/, '');
   return {
-    src: `${stem}-256.png`,
-    srcSet: `${stem}-256.png 1x, ${stem}-512.png 2x`,
+    src: `${stem}-256.webp`,
+    srcSet: `${stem}-256.webp 1x, ${stem}-512.webp 2x`,
     width: displaySize,
     height: displaySize,
   };

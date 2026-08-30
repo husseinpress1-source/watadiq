@@ -34,10 +34,6 @@ html[dir='rtl'] {
 
   .watad-content-page__main,
   .watad-content-page__section {
-    text-align: center;
-  }
-
-  .page-hero__content {
     text-align: start;
   }
 
@@ -46,9 +42,8 @@ html[dir='rtl'] {
   }
 
   @media (max-width: 768px) {
-    .watad-content-page__main,
-    .watad-content-page__section {
-      text-align: right;
+    .page-intro__shell {
+      text-align: start;
     }
   }
 

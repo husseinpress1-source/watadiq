@@ -2,10 +2,9 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import PageHero from '../components/PageHero';
+import PageIntro from '../components/PageIntro';
 import PricingCards from '../components/PricingCards';
 import PaymentOptions from '../components/PaymentOptions';
-import LocationsSection from '../components/LocationsSection';
 import { getWatadPage } from '../i18n/helpers';
 import { getPageHero } from '../data/page-heroes';
 import { getSiteIcon, getSiteIconAssets } from '../data/expertise-icons';
@@ -21,15 +20,19 @@ export default function WatadContentPage() {
 
   if (!page) return <Navigate to="/" replace />;
 
+  const hero = getPageHero(slug);
+
   return (
-    <div className={`watad-content-page${slug === 'pricing' ? ' watad-content-page--pricing' : ''}${slug === 'contact' ? ' watad-content-page--contact' : ''}${slug === 'team' ? ' watad-content-page--team' : ''}${slug === 'about' ? ' watad-content-page--about' : ''}`}>
+    <div className={`watad-content-page${slug === 'pricing' ? ' watad-content-page--pricing' : ''}${slug === 'team' ? ' watad-content-page--team' : ''}${slug === 'about' ? ' watad-content-page--about' : ''}${slug === 'expertise' ? ' watad-content-page--expertise' : ''}`}>
       <Header />
-      <PageHero
-        image={getPageHero(slug)}
+      <PageIntro
         eyebrow={page.eyebrow}
         title={page.title}
         intro={page.intro}
         cta={page.cta}
+        heroImage={hero?.src}
+        heroImageMobile={hero?.mobileSrc}
+        heroImageAlt={hero ? t(hero.altKey) : undefined}
       />
 
       <main className="watad-content-page__main">
@@ -40,7 +43,9 @@ export default function WatadContentPage() {
               section.pricingPlans ? ' watad-content-page__section--pricing' : ''
             }${section.paymentOptions ? ' watad-content-page__section--payments' : ''}${
               section.id === 'contact-channels' ? ' watad-content-page__section--contact-channels' : ''
-            }${section.id === 'core-team' ? ' watad-content-page__section--core-team' : ''}`}
+            }${section.id === 'core-team' ? ' watad-content-page__section--core-team' : ''}${
+              section.id === 'work-together' ? ' watad-content-page__section--work-together' : ''
+            }${section.id === 'core-disciplines' ? ' watad-content-page__section--core-disciplines' : ''}`}
             id={section.id}
           >
             {section.title && section.id !== 'core-team' && !section.pricingPlans && <h2>{section.title}</h2>}
@@ -54,9 +59,26 @@ export default function WatadContentPage() {
               <PaymentOptions options={section.paymentOptions} />
             )}
             {section.list && !section.paymentOptions ? (
-              <ul>
-                {section.list.map((item) => (
-                  <li key={item}>{item}</li>
+              <ul
+                className={
+                  section.id === 'work-together'
+                    ? 'watad-content-page__principles'
+                    : undefined
+                }
+              >
+                {section.list.map((item, index) => (
+                  <li key={item}>
+                    {section.id === 'work-together' ? (
+                      <>
+                        <span className="watad-content-page__principles-index" aria-hidden="true">
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                        <span className="watad-content-page__principles-text">{item}</span>
+                      </>
+                    ) : (
+                      item
+                    )}
+                  </li>
                 ))}
               </ul>
             ) : null}
@@ -164,8 +186,6 @@ export default function WatadContentPage() {
         ))}
 
       </main>
-
-      {slug === 'contact' && <LocationsSection asPage />}
 
       <Footer />
     </div>
