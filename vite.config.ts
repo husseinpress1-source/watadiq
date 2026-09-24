@@ -3,7 +3,9 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'node:path';
 
-export default defineConfig({
+/** Production assets always load from apex — avoids split HTML/asset cache between www and bare domain. */
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? 'https://watadiq.com/' : '/',
   plugins: [
     tailwindcss(),
     react(),
@@ -46,4 +48,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['jquery', 'gsap', 'lodash', 'moment'],
   },
-});
+}));

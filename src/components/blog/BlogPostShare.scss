@@ -1,0 +1,48 @@
+.blog-post-share {
+  flex-shrink: 0;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.5rem 1.125rem;
+    border: 1px solid var(--watad-border);
+    border-radius: 999px;
+    background: var(--watad-bg-elevated);
+    color: var(--watad-text);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease,
+      color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      border-color: var(--watad-border-strong);
+      background: var(--watad-bg-soft);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--watad-brand);
+      outline-offset: 2px;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-post-share {
+    width: 100%;
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}

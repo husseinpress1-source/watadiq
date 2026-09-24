@@ -57,6 +57,7 @@ export const navHrefs = [
   { key: 'expertise', href: '/expertise' },
   { key: 'security', href: '/security' },
   { key: 'work', href: '/work' },
+  { key: 'blog', href: '/blog' },
   { key: 'live', href: '/live' },
   { key: 'team', href: '/team' },
   { key: 'pricing', href: '/pricing' },
@@ -82,6 +83,7 @@ export const mobileNavStructure = [
     ],
   },
   { key: 'work', href: '/work' },
+  { key: 'blog', href: '/blog' },
   { key: 'live', href: '/live' },
   {
     key: 'pricing',

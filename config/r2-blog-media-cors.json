@@ -1,0 +1,19 @@
+{
+  "rules": [
+    {
+      "allowed": {
+        "origins": [
+          "https://watadiq.com",
+          "https://www.watadiq.com",
+          "https://watadiq-cpk.pages.dev",
+          "http://localhost:5173",
+          "http://127.0.0.1:5173"
+        ],
+        "methods": ["GET", "HEAD"],
+        "headers": ["*"]
+      },
+      "exposeHeaders": ["ETag", "Content-Type", "Content-Length"],
+      "maxAgeSeconds": 86400
+    }
+  ]
+}

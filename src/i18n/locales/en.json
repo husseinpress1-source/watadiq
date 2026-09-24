@@ -1,54 +1,130 @@
 {
   "meta": {
-    "title": "WATAD Software, Web, Apps & Cybersecurity | Iraq",
-    "description": "WATAD Software is an Iraqi digital agency building websites, mobile apps, and cybersecurity solutions. Official agency at watadiq.com.",
-    "keywords": "WATAD Software, web development Iraq, mobile apps, cybersecurity, digital agency Baghdad, وتد",
+    "title": "WATAD Software | Web, Apps and Cybersecurity in Iraq",
+    "description": "WATAD Software builds websites, mobile apps, and cybersecurity programs for ambitious teams in Iraq and the region.",
+    "keywords": "WATAD Software, Watad, web development Iraq, mobile apps, cybersecurity, digital agency Baghdad, وتد",
     "pages": {
       "home": {
-        "title": "WATAD Software, Web, Apps & Cybersecurity | Iraq",
-        "description": "WATAD Software builds websites, mobile apps, and cybersecurity solutions for businesses in Iraq and the region."
+        "title": "WATAD Software | Web, Apps and Cybersecurity in Iraq",
+        "description": "WATAD Software builds websites, mobile apps, and cybersecurity programs for ambitious teams in Iraq and the region."
       },
       "about": {
-        "title": "About WATAD Software",
-        "description": "Learn about WATAD Software, our story, mission, and the team behind Iraq's digital agency."
+        "title": "WATAD Software | About the studio",
+        "description": "Story, mission, and team behind WATAD Software, the Iraqi studio for product, design, and security."
       },
       "expertise": {
-        "title": "Expertise, Web, Apps & Security",
-        "description": "Web development, mobile apps, UI/UX, e-commerce, cloud, and cybersecurity services by WATAD Software."
+        "title": "WATAD Software | Services and expertise",
+        "description": "Web development, mobile apps, UI and UX, e commerce, cloud, and cybersecurity delivered by WATAD Software."
       },
       "work": {
-        "title": "Our Work & Portfolio",
-        "description": "Selected projects and digital products built by WATAD Software for clients in Iraq and beyond."
+        "title": "WATAD Software | Work and portfolio",
+        "description": "Selected websites, apps, and platforms shipped by WATAD Software for clients in Iraq and the region."
       },
       "team": {
-        "title": "Our Team",
-        "description": "Meet the WATAD Software team, engineers, designers, and security specialists."
+        "title": "WATAD Software | Team",
+        "description": "Engineers, designers, and security specialists building under one WATAD Software studio."
       },
       "pricing": {
-        "title": "Pricing & Plans",
-        "description": "Transparent pricing for web, app, and cybersecurity projects from WATAD Software."
+        "title": "WATAD Software | Pricing",
+        "description": "Clear packages for websites, applications, and security engagements from WATAD Software."
       },
       "contact": {
-        "title": "Contact WATAD Software",
-        "description": "Get a quote or talk to WATAD Software about your next website, app, or security project."
+        "title": "WATAD Software | Contact",
+        "description": "Request a quote or start a conversation about your next website, app, or security program."
       },
       "privacy": {
-        "title": "Privacy Policy, WATAD Software",
-        "description": "How WATAD Software collects, uses, and protects your personal data and cookies."
+        "title": "WATAD Software | Privacy policy",
+        "description": "How WATAD Software collects, uses, and protects personal data and cookies on this website."
       },
       "terms": {
-        "title": "Terms of Service, WATAD Software",
-        "description": "Terms and conditions for using watadiq.com and engaging WATAD Software for digital services."
+        "title": "WATAD Software | Terms of service",
+        "description": "Terms for using this website and working with WATAD Software on digital projects."
       },
       "security": {
-        "title": "Cybersecurity & Security Audits",
-        "description": "Security audits, penetration testing, SSL, OWASP-aligned reviews, and secure architecture by WATAD Software in Iraq."
+        "title": "WATAD Software | Cybersecurity services",
+        "description": "Security reviews, penetration testing, SSL hardening, and OWASP aligned audits by WATAD Software."
       },
       "live": {
-        "title": "WATAD Live, Movies & Series Streaming",
-        "description": "WATAD Live is an Arabic streaming app by WATAD Software, movies, series, watch parties, and family profiles. Coming soon."
+        "title": "WATAD Software | WATAD Live streaming",
+        "description": "WATAD Live is an Arabic streaming app with movies, series, watch parties, and family profiles from WATAD Software."
+      },
+      "blog": {
+        "title": "WATAD Software | The WATAD Journal",
+        "description": "Long form writing on product, application security, and infrastructure from the WATAD Software team."
       }
     }
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as {{name}}",
+    "welcomeBack": "Welcome back",
+    "joinTitle": "Create your account",
+    "loginLead": "Use your email and password to access your account.",
+    "registerLead": "Join WATAD in a minute — we will email you a welcome note.",
+    "continue": "Continue",
+    "createAccount": "Create account",
+    "noAccount": "New here?",
+    "haveAccount": "Already have an account?",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@example.com",
+    "heroQuote": "Great products start with people who trust each other.",
+    "heroQuoteBy": "WATAD Software team",
+    "signInTo": "Sign in to WATAD",
+    "createAccountTitle": "Create your WATAD account",
+    "modeTabsAria": "Sign in or create account",
+    "or": "OR",
+    "remember": "Save email on this device",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "forgot": "Forgot your password?",
+    "legalPrefix": "By continuing, you agree to our",
+    "promoAria": "WATAD highlights",
+    "promoEyebrow": "The WATAD Journal",
+    "promoTitle": "Long reads on what we build and how we run it.",
+    "promoLead": "Product, security, and infrastructure. From Baghdad to your screen.",
+    "promoCta": "Open the journal",
+    "forgotTitle": "Reset your password",
+    "forgotLead": "Enter the email on your account. We will send a 6-digit code valid for 15 minutes.",
+    "sendCode": "Send code",
+    "codeSent": "If an account exists, we sent a code. Check your inbox and spam folder.",
+    "resetTitle": "Choose a new password",
+    "resetLead": "Enter the code from your email, then set a new password.",
+    "codeLabel": "6-digit code",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password",
+    "resetButton": "Update password",
+    "resetSuccess": "Password updated. Redirecting to sign in…",
+    "backSignIn": "Back to sign in",
+    "resendCode": "Request a new code",
+    "recoveryErrors": {
+      "generic": "Something went wrong. Try again.",
+      "invalid-email": "Enter a valid email address.",
+      "invalid-code": "That code is wrong or expired. Request a new one.",
+      "weak-password": "Use at least 8 characters.",
+      "password-mismatch": "Passwords do not match.",
+      "email-not-configured": "Email is not configured yet. Contact support.",
+      "email-failed": "We could not send the email. Try again in a moment."
+    }
+  },
+  "blog": {
+    "eyebrow": "The WATAD Journal",
+    "title": "Writing from the studio",
+    "lead": "We publish essays on product design, application security, and running infrastructure. What you read here is what we practice on client work.",
+    "byline": "By the WATAD Software team",
+    "loading": "Loading articles…",
+    "loadError": "We could not load articles right now. Please try again in a moment.",
+    "empty": "Nothing published yet. Check back soon.",
+    "featured": "Featured",
+    "latest": "Recent posts",
+    "related": "Continue reading",
+    "backToIndex": "All articles",
+    "notFound": "This article could not be found.",
+    "readTime": "{{count}} min read",
+    "share": "Share",
+    "shareCopied": "Link copied",
+    "shareCopyPrompt": "Copy this link"
   },
   "legalCommon": {
     "breadcrumbAria": "Breadcrumb",
@@ -112,6 +188,7 @@
     "expertise": "Expertise",
     "security": "Security",
     "work": "Our Work",
+    "blog": "Journal",
     "live": "WATAD Live",
     "domains": "Domains",
     "account": "My Account",
@@ -127,6 +204,7 @@
     "expertise": "Expertise",
     "allServices": "All Services",
     "work": "Our Work",
+    "blog": "Journal",
     "live": "WATAD Live",
     "domains": "Domains",
     "account": "My Account",
@@ -1485,6 +1563,9 @@
   },
   "one": {
     "eyebrow": "Watad ONE, Your account",
+    "signInCta": "Sign in",
+    "authVisualTitle": "One account for everything WATAD",
+    "authVisualLead": "Manage your profile, access admin tools when authorized, and stay connected to watadiq.com.",
     "createTitle": "Create your Watad ONE account",
     "createIntro": "One account for your domains, orders and services, control everything from one place.",
     "loginTitle": "Sign in",
@@ -1525,10 +1606,50 @@
       "invalid-email": "Invalid email address",
       "weak-password": "Password too short, at least 8 characters",
       "email-exists": "This email is already registered, sign in",
+      "admin-email-reserved": "This email is reserved for WATAD administrators",
       "wrong-credentials": "Wrong email or password",
       "rate-limited": "Too many attempts, wait a minute",
       "generic": "Something went wrong. Try again"
     }
+  },
+  "adminBlog": {
+    "eyebrow": "WATAD Editorial",
+    "title": "Blog publishing",
+    "shortNav": "Admin",
+    "viewBlog": "View blog",
+    "posts": "Posts",
+    "newPost": "New post",
+    "newPostEditor": "New article",
+    "editPost": "Edit article",
+    "delete": "Delete",
+    "deleteConfirm": "Delete “{{title}}”? This cannot be undone.",
+    "deleted": "Post deleted.",
+    "deleteError": "Could not delete this post.",
+    "deleteNotFound": "Post was already removed. Refresh the list.",
+    "closeList": "Done",
+    "loadPostError": "Could not load this post for editing.",
+    "editor": "Editor",
+    "slug": "URL slug",
+    "status": "Status",
+    "published": "Published",
+    "draft": "Draft",
+    "coverStudio": "Cover image",
+    "coverTap": "Tap to add cover photo",
+    "coverHint": "Upload from your gallery — we compress to WebP automatically (max ~1400px).",
+    "coverUploaded": "Cover uploaded.",
+    "uploadError": "Could not upload image. Try again.",
+    "readTime": "Reading time (min)",
+    "tags": "Tags (comma separated)",
+    "titleEn": "Title (English)",
+    "titleAr": "Title (Arabic)",
+    "excerptEn": "Excerpt (English)",
+    "excerptAr": "Excerpt (Arabic)",
+    "bodyAr": "Article body (Arabic)",
+    "bodyArHint": "Plain text — separate paragraphs with a blank line. English body is built from the excerpt.",
+    "publish": "Publish / save",
+    "saved": "Post saved successfully.",
+    "loadError": "Could not load posts.",
+    "saveError": "Could not save post. Check you are signed in as admin."
   },
   "admin": {
     "eyebrow": "Watad admin panel",
@@ -1664,8 +1785,8 @@
       "Series",
       "Together"
     ],
-    "heroTagline": "Arabic movies and series",
-    "heroLead": "Family profiles and watch parties",
+    "heroTagline": "Movies and series in Arabic",
+    "heroLead": "Family profiles, watch parties, and parental controls. Android first.",
     "heroImageAlt": "People in a cinema and at home watching movies with popcorn",
     "heroIllustrationAlt": "Flat 2D illustration for WATAD Live streaming app",
     "heroScreenshotAlt": "WATAD Live home screen",
@@ -1675,7 +1796,7 @@
     "ctaExplore": "Explore features",
     "featuresEyebrow": "Features",
     "featuresTitle": "Everything you need to watch",
-    "featuresIntro": "A modern viewing experience built from scratch, Android first, with Android TV support.",
+    "featuresIntro": "A viewing app built from scratch. Android first, with Android TV support.",
     "features": [
       {
         "title": "Huge library",
@@ -1705,7 +1826,7 @@
     "spotlights": [
       {
         "title": "Watch with friends",
-        "text": "Open a movie or series and invite friends with a room code. Live chat, reactions, and voice, everything stays in sync.",
+        "text": "Pick a title, share a room code, and stay on the same moment. Chat and voice run in lockstep with playback.",
         "image": "/images/live/screen-party.png",
         "imageAlt": "Watch Party screen in WATAD Live"
       },

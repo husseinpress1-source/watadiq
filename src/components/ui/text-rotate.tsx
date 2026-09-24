@@ -185,9 +185,8 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
 
     return (
       <motion.span
-        className={cn('flex flex-wrap whitespace-pre-wrap', mainClassName)}
+        className={cn('inline-flex flex-nowrap whitespace-nowrap', mainClassName)}
         {...props}
-        layout
         transition={transition}
       >
         <span className="sr-only">{texts[currentTextIndex]}</span>
@@ -195,8 +194,10 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
         <AnimatePresence mode={animatePresenceMode} initial={animatePresenceInitial}>
           <motion.div
             key={currentTextIndex}
-            className={cn('flex flex-wrap', splitBy === 'lines' && 'w-full flex-col')}
-            layout
+            className={cn(
+              'inline-flex flex-nowrap',
+              splitBy === 'lines' && 'w-full flex-col flex-wrap',
+            )}
             aria-hidden="true"
           >
             {(splitBy === 'characters'

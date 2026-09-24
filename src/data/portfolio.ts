@@ -10,14 +10,14 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'victorian',
     url: 'https://victorianiraq.com',
-    screenshot: '/images/work/victorian-screenshot.png',
+    screenshot: '/images/work/victorian-screenshot.webp',
     logo: '/images/work/victorian-logo.jpg',
     i18nKey: 'victorian',
   },
   {
     id: 'crazy',
     url: 'https://crazystore1.com',
-    screenshot: '/images/work/crazy-screenshot.png',
+    screenshot: '/images/work/crazy-screenshot.webp',
     logo: '/images/work/crazy-logo.png',
     i18nKey: 'crazy',
   },

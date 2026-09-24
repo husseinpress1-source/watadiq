@@ -37,4 +37,10 @@ tools/.tmp-*.png
 .vercel
 .env*
 
+# Local scratch / login artifacts (never commit)
+.tmp-*
+.wrangler-login-*.txt
+public/images/**/*.tmp
+scripts/_portfolio-src/
+
 .vercel

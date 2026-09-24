@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dns from 'node:dns/promises';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
+import { createHash, randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -10,6 +10,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, 'data');
 const ORDERS_FILE = path.join(DATA_DIR, 'orders.json');
 const ACCOUNTS_FILE = path.join(DATA_DIR, 'accounts.json');
+const BLOG_POSTS_FILE = path.join(DATA_DIR, 'blog-posts.json');
+const RESETS_FILE = path.join(DATA_DIR, 'password-resets.json');
+
+const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || 'hswnbrys@gmail.com').trim().toLowerCase();
+const ADMIN_PASSWORD = process.env.WATAD_ADMIN_PASSWORD || 'WatadAdmin2026!';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -27,6 +32,8 @@ app.use(
   }),
 );
 app.use(express.json());
+
+const BLOG_MEDIA_DIR = path.join(__dirname, '../public/blog-media/covers');
 
 const POPULAR_TLDS = ['com', 'net', 'org', 'io', 'dev', 'co', 'iq', 'me', 'shop', 'store'];
 
@@ -132,11 +139,156 @@ async function accountFromRequest(req) {
 
 function publicAccount(account) {
   return {
+    id: account.id,
     fullName: account.fullName,
     email: account.email,
     phone: account.phone || '',
+    role: account.role || 'user',
     createdAt: account.createdAt,
   };
+}
+
+async function sendWelcomeEmail({ to, name }) {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) {
+    console.log(`[watad-api] welcome email skipped (no RESEND_API_KEY) → ${to}`);
+    return;
+  }
+  const from = process.env.RESEND_FROM || 'WATAD Software <onboarding@resend.dev>';
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from,
+      to,
+      subject: 'Welcome to WATAD ONE',
+      html: `<p>Welcome, ${name}! Your WATAD ONE account is ready at <a href="https://watadiq.com/account/sign-in">watadiq.com</a>.</p>`,
+    }),
+  });
+  if (!res.ok) console.error('[watad-api] Resend failed', await res.text());
+}
+
+function hashResetCode(code) {
+  return createHash('sha256').update(String(code)).digest('hex');
+}
+
+function generateResetCode() {
+  return String(randomBytes(3).readUIntBE(0, 3) % 1_000_000).padStart(6, '0');
+}
+
+async function readResets() {
+  try {
+    return JSON.parse(await readFile(RESETS_FILE, 'utf8'));
+  } catch {
+    return [];
+  }
+}
+
+async function saveResets(rows) {
+  await mkdir(DATA_DIR, { recursive: true });
+  await writeFile(RESETS_FILE, JSON.stringify(rows, null, 2), 'utf8');
+}
+
+async function sendPasswordResetEmail({ to, code }) {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) {
+    console.log(`[watad-api] reset email skipped (no RESEND_API_KEY) → ${to} code=${code}`);
+    return false;
+  }
+  const from = process.env.RESEND_FROM || 'WATAD Software <onboarding@resend.dev>';
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from,
+      to,
+      subject: 'Your WATAD password reset code',
+      html: `<p>Your reset code: <strong style="font-size:24px;letter-spacing:4px">${code}</strong></p><p>Expires in 15 minutes.</p>`,
+    }),
+  });
+  if (!res.ok) {
+    console.error('[watad-api] Resend reset failed', await res.text());
+    return false;
+  }
+  return true;
+}
+
+async function ensureAdminAccount() {
+  const accounts = await readAccounts();
+  let admin = accounts.find((a) => a.email === ADMIN_EMAIL);
+  const salt = randomBytes(16).toString('hex');
+  const passwordHash = hashPassword(ADMIN_PASSWORD, salt);
+
+  if (!admin) {
+    admin = {
+      id: 'admin_watad',
+      fullName: 'WATAD Admin',
+      email: ADMIN_EMAIL,
+      phone: '',
+      salt,
+      passwordHash,
+      role: 'admin',
+      createdAt: new Date().toISOString(),
+      sessions: [],
+    };
+    accounts.push(admin);
+  } else {
+    admin.role = 'admin';
+    admin.salt = salt;
+    admin.passwordHash = passwordHash;
+  }
+  await saveAccounts(accounts);
+  console.log(`[watad-api] admin ready: ${ADMIN_EMAIL}`);
+}
+
+async function requireWatadAdmin(req, res) {
+  const account = await accountFromRequest(req);
+  if (!account || account.role !== 'admin') {
+    res.status(401).json({ error: 'unauthorized' });
+    return null;
+  }
+  return account;
+}
+
+const DEFAULT_BLOG_POSTS = [
+  {
+    id: 'post_watad_cloudflare',
+    slug: 'watadiq-on-cloudflare-edge',
+    status: 'published',
+    publishedAt: '2026-03-20T10:00:00.000Z',
+    coverImage: '/images/home/highlight-1.jpg',
+    readingTimeMin: 6,
+    authorName: 'WATAD Software',
+    tags: ['Engineering', 'Cloud', 'Performance'],
+    titleEn: 'Why we moved watadiq.com to Cloudflare Pages',
+    titleAr: 'لماذا نقلنا watadiq.com إلى Cloudflare Pages',
+    excerptEn: 'Faster global delivery, stronger SSL, and a single edge for our marketing site and blog API.',
+    excerptAr: 'توصيل أسرع عالمياً وSSL أقوى ومنصة edge واحدة للموقع والمدونة.',
+    bodyEn: '<p>WATAD Software rebuilt watadiq.com on <strong>Cloudflare Pages</strong>.</p>',
+    bodyAr: '<p>أعدنا بناء watadiq.com على <strong>Cloudflare Pages</strong>.</p>',
+    updatedAt: new Date().toISOString(),
+  },
+];
+
+async function readBlogPosts() {
+  try {
+    const raw = await readFile(BLOG_POSTS_FILE, 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    await mkdir(DATA_DIR, { recursive: true });
+    await writeFile(BLOG_POSTS_FILE, JSON.stringify(DEFAULT_BLOG_POSTS, null, 2), 'utf8');
+    return DEFAULT_BLOG_POSTS;
+  }
+}
+
+async function saveBlogPosts(posts) {
+  await mkdir(DATA_DIR, { recursive: true });
+  await writeFile(BLOG_POSTS_FILE, JSON.stringify(posts, null, 2), 'utf8');
+}
+
+function mapBlogListItem(p) {
+  const { bodyEn, bodyAr, ...rest } = p;
+  return rest;
 }
 
 function generateApiKey() {
@@ -457,6 +609,9 @@ app.post('/api/auth/register', async (req, res) => {
   }
 
   const accounts = await readAccounts();
+  if (cleanEmail === ADMIN_EMAIL) {
+    return res.status(403).json({ error: 'admin-email-reserved' });
+  }
   if (accounts.some((a) => a.email === cleanEmail)) {
     return res.status(409).json({ error: 'email-exists' });
   }
@@ -469,6 +624,7 @@ app.post('/api/auth/register', async (req, res) => {
     phone: cleanPhone,
     salt,
     passwordHash: hashPassword(pwd, salt),
+    role: 'user',
     createdAt: new Date().toISOString(),
     sessions: [],
   };
@@ -477,6 +633,7 @@ app.post('/api/auth/register', async (req, res) => {
   accounts.push(account);
   await saveAccounts(accounts);
 
+  await sendWelcomeEmail({ to: cleanEmail, name: cleanName });
   console.log(`[watad-api] new Watad ONE account: ${account.email}`);
 
   return res.status(201).json({ token, account: publicAccount(account) });
@@ -484,6 +641,7 @@ app.post('/api/auth/register', async (req, res) => {
 
 app.post('/api/auth/login', async (req, res) => {
   if (!rateLimitAuth(req, res)) return;
+  await ensureAdminAccount();
 
   const { email, password } = req.body || {};
   const cleanEmail = String(email || '').trim().toLowerCase();
@@ -503,6 +661,7 @@ app.post('/api/auth/login', async (req, res) => {
 });
 
 app.get('/api/auth/me', async (req, res) => {
+  await ensureAdminAccount();
   const account = await accountFromRequest(req);
   if (!account) {
     return res.status(401).json({ error: 'unauthorized' });
@@ -521,6 +680,71 @@ app.post('/api/auth/logout', async (req, res) => {
     account.sessions = account.sessions.filter((s) => s.token !== token);
     await saveAccounts(accounts);
   }
+  return res.json({ ok: true });
+});
+
+app.post('/api/auth/forgot-password', async (req, res) => {
+  if (!rateLimitAuth(req, res)) return;
+
+  const cleanEmail = String(req.body?.email || '')
+    .trim()
+    .toLowerCase();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
+    return res.status(400).json({ error: 'invalid-email' });
+  }
+
+  const accounts = await readAccounts();
+  const account = accounts.find((a) => a.email === cleanEmail);
+  if (account) {
+    const code = generateResetCode();
+    const expiresAt = Date.now() + 15 * 60 * 1000;
+    const rows = (await readResets()).filter((r) => r.email !== cleanEmail);
+    rows.push({ email: cleanEmail, codeHash: hashResetCode(code), expiresAt });
+    await saveResets(rows);
+    const sent = await sendPasswordResetEmail({ to: cleanEmail, code });
+    if (process.env.RESEND_API_KEY && !sent) {
+      return res.status(502).json({ error: 'email-failed' });
+    }
+  }
+
+  return res.json({ ok: true });
+});
+
+app.post('/api/auth/reset-password', async (req, res) => {
+  if (!rateLimitAuth(req, res)) return;
+
+  const cleanEmail = String(req.body?.email || '')
+    .trim()
+    .toLowerCase();
+  const code = String(req.body?.code || '').trim().replace(/\s/g, '');
+  const pwd = String(req.body?.password || '');
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
+    return res.status(400).json({ error: 'invalid-email' });
+  }
+  if (!/^\d{6}$/.test(code)) return res.status(400).json({ error: 'invalid-code' });
+  if (pwd.length < 8 || pwd.length > 100) return res.status(400).json({ error: 'weak-password' });
+
+  const now = Date.now();
+  const rows = await readResets();
+  const row = rows
+    .filter((r) => r.email === cleanEmail && r.expiresAt > now)
+    .sort((a, b) => b.expiresAt - a.expiresAt)[0];
+  if (!row || row.codeHash !== hashResetCode(code)) {
+    return res.status(400).json({ error: 'invalid-code' });
+  }
+
+  const accounts = await readAccounts();
+  const account = accounts.find((a) => a.email === cleanEmail);
+  if (!account) return res.status(400).json({ error: 'invalid-code' });
+
+  const salt = randomBytes(16).toString('hex');
+  account.salt = salt;
+  account.passwordHash = hashPassword(pwd, salt);
+  account.sessions = [];
+  await saveAccounts(accounts);
+  await saveResets(rows.filter((r) => r.email !== cleanEmail));
+
   return res.json({ ok: true });
 });
 
@@ -673,6 +897,111 @@ app.patch('/api/admin/domain-orders/:id', requireAdmin, async (req, res) => {
   return res.json({ order });
 });
 
-app.listen(PORT, () => {
+app.get('/api/blog/posts', async (_req, res) => {
+  const posts = await readBlogPosts();
+  const published = posts.filter((p) => p.status === 'published').map(mapBlogListItem);
+  return res.json({ posts: published, limit: 24, offset: 0 });
+});
+
+app.get('/api/blog/posts/:slug', async (req, res) => {
+  const posts = await readBlogPosts();
+  const post = posts.find((p) => p.slug === req.params.slug && p.status === 'published');
+  if (!post) return res.status(404).json({ error: 'Post not found' });
+  return res.json({ post });
+});
+
+app.get('/api/blog/admin/posts', async (req, res) => {
+  if (!(await requireWatadAdmin(req, res))) return;
+  const posts = (await readBlogPosts()).map(mapBlogListItem);
+  return res.json({ posts });
+});
+
+app.get('/api/blog/admin/posts/:slug', async (req, res) => {
+  if (!(await requireWatadAdmin(req, res))) return;
+  const posts = await readBlogPosts();
+  const post = posts.find((p) => p.slug === req.params.slug);
+  if (!post) return res.status(404).json({ error: 'Post not found' });
+  return res.json({ post });
+});
+
+app.post('/api/blog/admin/post-delete', async (req, res) => {
+  if (!(await requireWatadAdmin(req, res))) return;
+  const id = String(req.body?.id || '').trim();
+  const slug = String(req.body?.slug || '')
+    .trim()
+    .toLowerCase();
+  if (!id && !slug) return res.status(400).json({ error: 'Post id or slug is required' });
+  const posts = await readBlogPosts();
+  const next = posts.filter((p) => {
+    if (slug && p.slug === slug) return false;
+    if (id && p.id === id) return false;
+    return true;
+  });
+  if (next.length === posts.length) return res.status(404).json({ error: 'Post not found' });
+  await saveBlogPosts(next);
+  return res.json({ ok: true, id: id || null, slug: slug || null });
+});
+
+app.post(
+  '/api/blog/admin/upload',
+  express.raw({ type: ['image/webp', 'image/*'], limit: '3mb' }),
+  async (req, res) => {
+    if (!(await requireWatadAdmin(req, res))) return;
+    if (!req.body?.length) return res.status(400).json({ error: 'Missing file' });
+    await mkdir(BLOG_MEDIA_DIR, { recursive: true });
+    const id = randomBytes(8).toString('hex');
+    const filename = `${id}.webp`;
+    await writeFile(path.join(BLOG_MEDIA_DIR, filename), req.body);
+    return res.json({ ok: true, url: `/blog-media/covers/${filename}`, key: `covers/${filename}` });
+  },
+);
+
+function excerptToBodyEnServer(excerpt) {
+  const t = String(excerpt || '').trim();
+  if (!t) return '';
+  return `<p>${t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>`;
+}
+
+app.post('/api/blog/admin/posts', async (req, res) => {
+  if (!(await requireWatadAdmin(req, res))) return;
+  const body = req.body || {};
+  const slug = String(body.slug || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '-');
+  if (!slug) return res.status(400).json({ error: 'Valid slug is required' });
+
+  const posts = await readBlogPosts();
+  const byId = body.id ? posts.findIndex((p) => p.id === body.id) : -1;
+  const bySlug = posts.findIndex((p) => p.slug === slug);
+  const idx = byId >= 0 ? byId : bySlug;
+  const id = body.id || (idx >= 0 ? posts[idx].id : `post_${randomBytes(6).toString('hex')}`);
+  const status = body.status === 'draft' ? 'draft' : 'published';
+  const next = {
+    id,
+    slug,
+    status,
+    publishedAt: status === 'published' ? body.publishedAt || new Date().toISOString() : body.publishedAt || null,
+    coverImage: body.coverImage || '/images/home/highlight-2.jpg',
+    readingTimeMin: Number(body.readingTimeMin) || 5,
+    authorName: body.authorName || 'WATAD Software',
+    tags: Array.isArray(body.tags) ? body.tags : String(body.tags || '').split(',').map((s) => s.trim()).filter(Boolean),
+    titleEn: body.titleEn,
+    titleAr: body.titleAr,
+    excerptEn: body.excerptEn,
+    excerptAr: body.excerptAr,
+    bodyEn: body.bodyEn || excerptToBodyEnServer(body.excerptEn),
+    bodyAr: body.bodyAr,
+    updatedAt: new Date().toISOString(),
+  };
+
+  if (idx >= 0) posts[idx] = next;
+  else posts.unshift(next);
+  await saveBlogPosts(posts);
+  return res.status(201).json({ ok: true, id, slug, status });
+});
+
+app.listen(PORT, async () => {
+  await ensureAdminAccount();
   console.log(`[watad-api] listening on http://localhost:${PORT}`);
 });

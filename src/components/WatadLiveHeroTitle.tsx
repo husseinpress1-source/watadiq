@@ -8,26 +8,36 @@ type WatadLiveHeroTitleProps = {
 };
 
 export default function WatadLiveHeroTitle({ id }: WatadLiveHeroTitleProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const reduceMotion = useReducedMotion() ?? false;
   const rotateTexts = t('live.heroTitleRotate', { returnObjects: true }) as string[];
+  const isRtl = i18n.language?.startsWith('ar');
+
+  if (reduceMotion) {
+    return (
+      <h1 id={id} className="live-hero__title">
+        <span className="live-hero__title-row live-hero__title-row--static" dir="ltr">
+          <span className="live-hero__title-brand">{t('live.heroTitlePrefix')}</span>
+          <span className="live-hero__title-rotate live-hero__title-rotate--static">{rotateTexts[0]}</span>
+        </span>
+      </h1>
+    );
+  }
 
   return (
     <h1 id={id} className="live-hero__title">
-      <span className="live-hero__title-row">
+      <span className="live-hero__title-row" dir="ltr" lang={isRtl ? 'ar' : 'en'}>
         <span className="live-hero__title-brand">{t('live.heroTitlePrefix')}</span>
         <TextRotate
           texts={rotateTexts}
-          auto={!reduceMotion}
+          auto
           loop
-          splitBy="characters"
-          staggerFrom="last"
-          staggerDuration={0.022}
-          rotationInterval={2600}
+          splitBy="words"
+          rotationInterval={3000}
           initial={{ y: '100%', opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: '-115%', opacity: 0 }}
-          transition={{ type: 'spring', damping: 28, stiffness: 380 }}
+          exit={{ y: '-100%', opacity: 0 }}
+          transition={{ type: 'spring', damping: 32, stiffness: 420 }}
           mainClassName="live-hero__title-rotate"
           splitLevelClassName="live-hero__title-rotate-split"
           elementLevelClassName="live-hero__title-rotate-char"

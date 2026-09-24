@@ -33,6 +33,18 @@ export function LayoutProvider({ children }: { children: ReactNode }) {
     unlockBodyScroll();
   }, [location.pathname]);
 
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    const onChange = () => {
+      if (mq.matches) {
+        setMenuOpen(false);
+        unlockBodyScroll();
+      }
+    };
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
   const openMenu = useCallback(() => {
     setMenuOpen(true);
     document.body.style.overflow = 'hidden';

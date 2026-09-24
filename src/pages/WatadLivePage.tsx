@@ -10,6 +10,11 @@ import './WatadLivePage.scss';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+const LIVE_SPOTLIGHT_IMAGES = [
+  '/images/live/screen-party.png',
+  '/images/live/screen-profiles.png',
+] as const;
+
 export default function WatadLivePage() {
   const { t } = useTranslation();
   const reduceMotion = useReducedMotion() ?? false;
@@ -60,12 +65,13 @@ export default function WatadLivePage() {
           <div className="live-hero__scrim" aria-hidden="true" />
 
           <div className="live-hero__inner">
-            <motion.div className="live-hero__title-wrap" {...fadeUp}>
+            <motion.div className="live-hero__top" {...fadeUp}>
               <WatadLiveHeroTitle id="live-hero-title" />
             </motion.div>
 
-            <div className="live-hero__lead-block">
+            <div className="live-hero__bottom">
               <motion.div className="live-hero__copy" {...fadeUp}>
+                <p className="live-hero__eyebrow">{t('live.heroEyebrow')}</p>
                 <p className="live-hero__tagline">{t('live.heroTagline')}</p>
                 <p className="live-hero__lead">{t('live.heroLead')}</p>
 
@@ -75,18 +81,18 @@ export default function WatadLivePage() {
                   <span className="live-hero__status-version">{t('live.versionLabel')}</span>
                 </div>
               </motion.div>
-            </div>
 
-            <div className="live-hero__actions">
-              <div className="live-hero__buttons">
-                <Link to="/contact" className="live-btn live-btn--primary live-btn--hero">
-                  {t('live.ctaSubscribe')}
-                </Link>
-                <a href="#features" className="live-btn live-btn--ghost live-btn--hero">
-                  {t('live.ctaExplore')}
-                </a>
+              <div className="live-hero__actions">
+                <div className="live-hero__buttons">
+                  <Link to="/contact" className="live-btn live-btn--primary live-btn--hero">
+                    {t('live.ctaSubscribe')}
+                  </Link>
+                  <a href="#features" className="live-btn live-btn--ghost live-btn--hero">
+                    {t('live.ctaExplore')}
+                  </a>
+                </div>
+                <p className="live-hero__by">{t('live.byWatad')}</p>
               </div>
-              <p className="live-hero__by">{t('live.byWatad')}</p>
             </div>
           </div>
         </section>
@@ -123,7 +129,12 @@ export default function WatadLivePage() {
                   <p>{spot.text}</p>
                 </div>
                 <div className="live-spotlight__media">
-                  <img src={spot.image} alt={spot.imageAlt} loading="lazy" decoding="async" />
+                  <img
+                    src={spot.image ?? LIVE_SPOTLIGHT_IMAGES[index]}
+                    alt={spot.imageAlt}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </article>
             ))}

@@ -1,0 +1,24 @@
+.watad-wordmark-img {
+  display: block;
+  width: auto;
+  height: 46px;
+  max-width: min(56vw, 260px);
+  object-fit: contain;
+  object-position: center;
+
+  &--compact {
+    height: 40px;
+    max-width: min(50vw, 220px);
+  }
+}
+
+@media (max-width: 640px) {
+  .watad-wordmark-img {
+    height: 42px;
+    max-width: min(62vw, 240px);
+
+    &--compact {
+      height: 38px;
+    }
+  }
+}

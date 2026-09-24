@@ -6,7 +6,7 @@ import LocaleFlag from './LocaleFlag';
 import './LanguageSwitcher.scss';
 
 interface LanguageSwitcherProps {
-  variant?: 'header' | 'footer' | 'mobile';
+  variant?: 'header' | 'footer' | 'mobile' | 'mobileMenu' | 'auth';
 }
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -199,7 +199,7 @@ export default function LanguageSwitcher({ variant = 'footer' }: LanguageSwitche
   }
 
   useEffect(() => {
-    if (variant !== 'header' || !pickerOpen) return;
+    if ((variant !== 'header' && variant !== 'auth') || !pickerOpen) return;
 
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') setPickerOpen(false);
@@ -218,6 +218,40 @@ export default function LanguageSwitcher({ variant = 'footer' }: LanguageSwitche
       document.removeEventListener('mousedown', onPointerDown);
     };
   }, [pickerOpen, variant]);
+
+  if (variant === 'auth') {
+    return (
+      <div className="lang-switcher lang-switcher--auth-wrap" ref={headerRef}>
+        <button
+          type="button"
+          className={`lang-switcher lang-switcher--auth${pickerOpen ? ' is-open' : ''}`}
+          onClick={() => setPickerOpen((open) => !open)}
+          aria-haspopup="menu"
+          aria-expanded={pickerOpen}
+          aria-label={t('common.language')}
+        >
+          <svg className="lang-switcher__auth-globe" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.75" />
+            <path d="M3 12h18M12 3c2.5 2.8 4 6 4 9s-1.5 6.2-4 9M12 3c-2.5 2.8-4 6-4 9s1.5 6.2 4 9" stroke="currentColor" strokeWidth="1.75" />
+          </svg>
+          <span className="lang-switcher__header-flag" aria-hidden="true">
+            <LocaleFlag code={activeCode} />
+          </span>
+          <span className="lang-switcher__header-label">{t(activeOption.labelKey)}</span>
+          <svg className="lang-switcher__header-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+          </svg>
+        </button>
+
+        <LanguageHeaderDropdown
+          open={pickerOpen}
+          activeCode={activeCode}
+          onSelect={setLanguage}
+          reduceMotion={reduceMotion}
+        />
+      </div>
+    );
+  }
 
   if (variant === 'header') {
     return (
@@ -244,6 +278,43 @@ export default function LanguageSwitcher({ variant = 'footer' }: LanguageSwitche
           onSelect={setLanguage}
           reduceMotion={reduceMotion}
         />
+      </div>
+    );
+  }
+
+  if (variant === 'mobileMenu') {
+    return (
+      <div className="lang-switcher lang-switcher--mobile-menu" role="group" aria-label={t('common.language')}>
+        {LOCALE_OPTIONS.map(({ code, labelKey }) => {
+          const selected = activeCode === code;
+          return (
+            <button
+              key={code}
+              type="button"
+              className={`lang-switcher__menu-opt${selected ? ' is-active' : ''}`}
+              aria-pressed={selected}
+              onClick={() => setLanguage(code)}
+            >
+              {selected ? (
+                <motion.span
+                  layoutId="watad-mobile-lang-pill"
+                  className="lang-switcher__menu-pill"
+                  transition={
+                    reduceMotion
+                      ? { duration: 0 }
+                      : { type: 'spring', stiffness: 420, damping: 34, mass: 0.85 }
+                  }
+                />
+              ) : null}
+              <span className="lang-switcher__menu-inner">
+                <span className="lang-switcher__menu-flag" aria-hidden="true">
+                  <LocaleFlag code={code} />
+                </span>
+                <span>{t(labelKey)}</span>
+              </span>
+            </button>
+          );
+        })}
       </div>
     );
   }

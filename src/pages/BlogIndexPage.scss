@@ -1,0 +1,112 @@
+@use '../styles/global.scss' as *;
+
+.blog-index {
+  background: var(--watad-bg);
+  color: var(--watad-text);
+  min-height: 100vh;
+}
+
+.blog-index__hero {
+  padding: calc(var(--header-offset) + 40px) 0 44px;
+  border-bottom: 1px solid var(--watad-border);
+  background: linear-gradient(180deg, var(--watad-bg-soft) 0%, var(--watad-bg) 100%);
+}
+
+.blog-index__hero-inner {
+  @include container-wide;
+  max-width: 820px;
+}
+
+.blog-index__eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--watad-brand);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.blog-index__title {
+  font-family: var(--watad-font-serif);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.blog-index__lead {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--watad-text-muted);
+  max-width: 42rem;
+  margin: 0;
+}
+
+.blog-index__byline {
+  margin: 18px 0 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--watad-text-muted);
+  opacity: 0.85;
+}
+
+html[dir='rtl'] {
+  .blog-index__title {
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .blog-index__lead {
+    line-height: 1.75;
+    max-width: 38rem;
+  }
+
+  .blog-index__byline {
+    letter-spacing: 0;
+  }
+}
+
+.blog-index__main {
+  @include container-wide;
+  padding-top: 28px;
+  padding-bottom: 72px;
+}
+
+.blog-index__status {
+  text-align: center;
+  color: var(--watad-text-muted);
+  padding: 48px 0;
+
+  &--error {
+    color: var(--watad-brand);
+  }
+}
+
+.blog-index__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 10px;
+
+  @media (min-width: 512px) and (max-width: 899px) {
+    gap: 14px 12px;
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 18px;
+
+    .blog-journal-tile--featured {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (max-width: 899px) {
+  .blog-index__main {
+    padding-top: 22px;
+  }
+
+  .blog-index__hero {
+    padding-bottom: 36px;
+  }
+}

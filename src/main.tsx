@@ -13,7 +13,19 @@ import { initHeroViewportLock } from './lib/hero-viewport';
 
 initHeroViewportLock();
 
-createRoot(document.getElementById('root')!).render(
+window.addEventListener('error', (event) => {
+  console.error('Uncaught error', event.error ?? event.message);
+});
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('Unhandled rejection', event.reason);
+});
+
+const rootEl = document.getElementById('root');
+if (!rootEl) {
+  throw new Error('Missing #root element');
+}
+
+createRoot(rootEl).render(
   <StrictMode>
     <App />
   </StrictMode>,

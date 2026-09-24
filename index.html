@@ -4,27 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="google-site-verification" content="B5_Ghfarf_2zHm5WfO5pLAvXxIEF3UEM8mEIgFsprdo" />
-    <title>WATAD Software — Web, Apps &amp; Cybersecurity | Iraq</title>
-    <meta name="description" content="WATAD Software is an Iraqi digital agency building websites, mobile apps, and cybersecurity solutions. Official agency at watadiq.com." />
-    <meta name="keywords" content="WATAD Software, web development Iraq, mobile apps, cybersecurity, digital agency, وتد" />
+    <title>WATAD Software | Web, Apps and Cybersecurity in Iraq</title>
+    <meta name="description" content="WATAD Software builds websites, mobile apps, and cybersecurity programs for ambitious teams in Iraq and the region." />
+    <meta name="keywords" content="WATAD Software, web development Iraq, mobile apps, cybersecurity, digital agency Baghdad, Watad, وتد" />
     <meta name="author" content="WATAD Software" />
-    <meta name="application-name" content="WATAD" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="application-name" content="WATAD Software" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://watadiq.com/" />
     <link rel="alternate" hreflang="x-default" href="https://watadiq.com/" />
     <link rel="alternate" hreflang="en" href="https://watadiq.com/?lang=en" />
     <link rel="alternate" hreflang="ar" href="https://watadiq.com/?lang=ar" />
-    <meta property="og:site_name" content="WATAD" />
-    <meta property="og:title" content="WATAD Software — Web, Apps &amp; Cybersecurity | Iraq" />
-    <meta property="og:description" content="WATAD Software is an Iraqi digital agency building websites, mobile apps, and cybersecurity solutions." />
+    <meta property="og:site_name" content="WATAD Software" />
+    <meta property="og:title" content="WATAD Software | Web, Apps and Cybersecurity in Iraq" />
+    <meta property="og:description" content="WATAD Software builds websites, mobile apps, and cybersecurity programs for ambitious teams in Iraq and the region." />
     <meta property="og:url" content="https://watadiq.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://watadiq.com/favicon-512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="ar_IQ" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="WATAD Software — Web, Apps &amp; Cybersecurity | Iraq" />
-    <meta name="twitter:description" content="WATAD Software is an Iraqi digital agency building websites, mobile apps, and cybersecurity solutions." />
+    <meta name="twitter:title" content="WATAD Software | Web, Apps and Cybersecurity in Iraq" />
+    <meta name="twitter:description" content="WATAD Software builds websites, mobile apps, and cybersecurity programs for ambitious teams in Iraq and the region." />
     <meta name="twitter:image" content="https://watadiq.com/favicon-512.png" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
@@ -34,21 +36,38 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "WATAD",
-        "alternateName": ["WATAD Software", "Watad", "وتد", "watadiq.com"],
-        "url": "https://watadiq.com/",
-        "inLanguage": ["en", "ar"],
-        "publisher": {
-          "@type": "Organization",
-          "name": "WATAD Software",
-          "url": "https://watadiq.com/",
-          "logo": "https://watadiq.com/favicon-512.png",
-          "sameAs": [
-            "https://instagram.com/watd_iq",
-            "https://github.com/husseinpress1-source/watadiq"
-          ]
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://watadiq.com/#website",
+            "name": "WATAD Software",
+            "alternateName": ["WATAD", "Watad", "watadiq", "وتد", "وتد للبرمجيات"],
+            "url": "https://watadiq.com/",
+            "inLanguage": ["en", "ar"],
+            "publisher": { "@id": "https://watadiq.com/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://watadiq.com/#organization",
+            "name": "WATAD Software",
+            "alternateName": ["WATAD", "Watad", "watadiq", "وتد", "وتد للبرمجيات"],
+            "url": "https://watadiq.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://watadiq.com/favicon-512.png",
+              "width": 512,
+              "height": 512
+            },
+            "sameAs": [
+              "https://instagram.com/watd_iq",
+              "https://github.com/husseinpress1-source/watadiq"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IQ"
+            }
+          }
+        ]
       }
     </script>
   </head>

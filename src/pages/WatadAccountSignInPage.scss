@@ -1,0 +1,626 @@
+@use '../styles/global.scss' as *;
+
+$auth-brand: #e4002b;
+
+.watad-auth {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #fff;
+  color: var(--watad-text);
+}
+
+.watad-auth__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    min-height: 100dvh;
+  }
+}
+
+/* —— Left: form (Cloudflare-style) —— */
+.watad-auth__form-pane {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(20px, 3vw, 40px) clamp(24px, 5vw, 56px);
+  background: #fff;
+  position: relative;
+
+  @media (max-width: 900px) {
+    min-height: 100dvh;
+    min-height: 100svh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding:
+      max(12px, env(safe-area-inset-top))
+      max(20px, env(safe-area-inset-right))
+      max(28px, env(safe-area-inset-bottom))
+      max(20px, env(safe-area-inset-left));
+    background: #fff;
+  }
+}
+
+.watad-auth__mobile-top {
+  display: none;
+
+  @media (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+
+    .lang-switcher--header-wrap {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.watad-auth__mobile-logo img {
+  display: block;
+  height: 28px;
+  width: auto;
+}
+
+.watad-auth__tabs {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  padding: 4px;
+  margin: 0 0 clamp(24px, 3vh, 32px);
+  border-radius: 12px;
+  background: #f3f4f6;
+
+  button {
+    flex: 1;
+    min-height: 42px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: #555;
+    font: inherit;
+    font-size: clamp(0.9375rem, 1.1vw, 1rem);
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+    transition:
+      background 0.15s ease,
+      color 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover:not(.is-active) {
+      color: #101010;
+    }
+
+    &.is-active,
+    &[aria-selected='true'] {
+      background: #fff;
+      color: #101010;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    margin-bottom: 24px;
+
+    button {
+      min-height: 44px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.watad-auth__logo {
+  align-self: flex-start;
+  margin-bottom: clamp(20px, 4vh, 40px);
+
+  img {
+    display: block;
+    height: clamp(32px, 4vw, 38px);
+    width: auto;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.watad-auth__form-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 48px;
+
+  @media (min-width: 901px) {
+    max-width: 480px;
+    padding-bottom: 56px;
+  }
+
+  @media (max-width: 900px) {
+    max-width: none;
+    flex: 1;
+    justify-content: flex-start;
+    padding: 4px 2px 8px;
+  }
+}
+
+.watad-auth__heading {
+  font-family: var(--watad-font-serif);
+  font-size: clamp(1.75rem, 3.2vw, 2.125rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: clamp(20px, 2.5vh, 28px);
+  color: #101010;
+
+  @media (max-width: 900px) {
+    font-size: clamp(1.85rem, 6.5vw, 2.15rem);
+    margin-bottom: 20px;
+    text-align: start;
+  }
+}
+
+.watad-auth__sublead {
+  margin: clamp(-12px, -1vh, -8px) 0 clamp(24px, 3vh, 32px);
+  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+  line-height: 1.55;
+  color: var(--watad-text-muted);
+  text-align: center;
+
+  @media (max-width: 900px) {
+    margin-bottom: 28px;
+    font-size: 1.0625rem;
+    text-align: start;
+  }
+}
+
+.watad-auth__account-email {
+  margin: -12px 0 clamp(22px, 2.5vh, 28px);
+  font-size: clamp(0.9375rem, 1.1vw, 1rem);
+  font-weight: 600;
+  color: #101010;
+  text-align: center;
+  word-break: break-all;
+
+  @media (max-width: 900px) {
+    text-align: start;
+    font-size: 1rem;
+  }
+}
+
+.watad-auth__status {
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  line-height: 1.55;
+  color: #0a7a3e;
+  margin-bottom: 24px;
+  text-align: center;
+
+  @media (max-width: 900px) {
+    text-align: start;
+    font-size: 1.0625rem;
+  }
+}
+
+.watad-auth__field--code input {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.watad-auth__or {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: clamp(22px, 2.5vh, 28px);
+  color: #777;
+  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--watad-border);
+  }
+}
+
+.watad-auth__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: clamp(20px, 2.2vh, 24px);
+
+  > span:first-child {
+    font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+    font-weight: 600;
+    color: #222;
+  }
+
+  input {
+    width: 100%;
+    min-height: clamp(48px, 5vh, 54px);
+    padding: 0 16px;
+    border: 1px solid #b8b8b8;
+    border-radius: 10px;
+    font: inherit;
+    font-size: clamp(1rem, 1.15vw, 1.0625rem);
+    background: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
+    }
+  }
+
+  @media (max-width: 900px) {
+    gap: 12px;
+    margin-bottom: 22px;
+
+    > span:first-child {
+      font-size: 1.0625rem;
+    }
+
+    input {
+      min-height: 54px;
+      font-size: 16px;
+      padding: 0 18px;
+      border-radius: 12px;
+    }
+  }
+}
+
+.watad-auth__password {
+  position: relative;
+  display: block;
+
+  input {
+    padding-inline-end: 52px;
+  }
+}
+
+.watad-auth__eye {
+  position: absolute;
+  top: 50%;
+  inset-inline-end: 10px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #101010;
+  }
+}
+
+.watad-auth__remember {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: clamp(22px, 2.5vh, 28px);
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  line-height: 1.45;
+  color: #333;
+  cursor: pointer;
+
+  input {
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    accent-color: #2563eb;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 1.0625rem;
+    gap: 14px;
+
+    input {
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.watad-auth__hint {
+  font-size: 0.8125rem;
+  color: var(--watad-text-muted);
+  margin: -8px 0 16px;
+}
+
+.watad-auth__error {
+  font-size: clamp(0.9375rem, 1vw, 1rem);
+  color: $auth-brand;
+  margin-bottom: 14px;
+
+  @media (max-width: 900px) {
+    font-size: 1rem;
+  }
+}
+
+html[dir='rtl'] {
+  .watad-auth__heading,
+  .watad-auth__sublead,
+  .watad-auth__account-email,
+  .watad-auth__status,
+  .watad-auth__links,
+  .watad-auth__legal {
+    @media (min-width: 901px) {
+      text-align: start;
+    }
+  }
+}
+
+.watad-auth__submit {
+  width: 100%;
+  min-height: clamp(50px, 5.5vh, 56px);
+  border: 0;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-size: clamp(1rem, 1.15vw, 1.125rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover:not(:disabled) {
+    background: #1d4ed8;
+  }
+
+  &:disabled {
+    opacity: 0.65;
+    cursor: wait;
+  }
+
+  @media (max-width: 900px) {
+    min-height: 56px;
+    font-size: 1.125rem;
+    border-radius: 12px;
+    margin-top: 4px;
+  }
+}
+
+.watad-auth__links {
+  margin-top: clamp(18px, 2vh, 24px);
+  text-align: center;
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  line-height: 1.5;
+  color: #444;
+
+  button {
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    color: #2563eb;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--muted a {
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 1.0625rem;
+    text-align: start;
+  }
+}
+
+.watad-auth__legal {
+  margin-top: clamp(28px, 3vh, 36px);
+  font-size: clamp(0.8125rem, 0.95vw, 0.875rem);
+  line-height: 1.6;
+  color: #666;
+  text-align: center;
+
+  a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 900px) {
+    font-size: 0.9375rem;
+    text-align: start;
+  }
+}
+
+.watad-auth__back-home {
+  font-size: 0.8125rem;
+  color: #888;
+  text-decoration: none;
+  margin-top: auto;
+
+  &:hover {
+    color: $auth-brand;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+/* —— Right: brand promo (desktop only) —— */
+.watad-auth__promo-pane {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(20px, 3vw, 32px) clamp(24px, 4vw, 40px);
+  color: #fff;
+  overflow: hidden;
+  background: $auth-brand;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.watad-auth__promo-pane .lang-switcher--auth-wrap .lang-dropdown {
+  z-index: 400;
+}
+
+.watad-auth__promo-bg {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 32%;
+    display: block;
+  }
+}
+
+.watad-auth__promo-scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(228, 0, 43, 0.72) 0%,
+    rgba(228, 0, 43, 0.35) 38%,
+    rgba(0, 0, 0, 0.25) 72%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.watad-auth__promo-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: auto;
+  padding-top: 2px;
+}
+
+.watad-auth__promo-signup {
+  min-height: 36px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: 0;
+  background: #fff;
+  color: $auth-brand;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.92);
+  }
+}
+
+.watad-auth__promo-body {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  margin-top: auto;
+  padding-bottom: clamp(24px, 8vh, 64px);
+
+  @media (max-width: 900px) {
+    padding-bottom: 24px;
+  }
+
+  h2 {
+    font-family: var(--watad-font-serif);
+    font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+}
+
+.watad-auth__promo-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.watad-auth__promo-lead {
+  font-size: 1rem;
+  line-height: 1.55;
+  opacity: 0.92;
+  margin-bottom: 24px;
+}
+
+.watad-auth__promo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #fff;
+  color: #101010;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}

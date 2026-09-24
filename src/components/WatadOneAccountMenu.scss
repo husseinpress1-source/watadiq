@@ -1,0 +1,176 @@
+@use '../styles/global.scss' as *;
+
+.watad-account-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  &--mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid var(--watad-border);
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+  }
+
+  &--mobile-menu {
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid var(--watad-border);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    color: #101010;
+    background: #fff;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &--mobile-menu-signed {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__menu-greeting {
+    margin: 0;
+    padding: 0 2px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #666;
+    text-align: start;
+  }
+
+  &__menu-secondary {
+    display: flex;
+    width: 100%;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(228, 0, 43, 0.22);
+    background: rgba(228, 0, 43, 0.05);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--watad-brand);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      background: rgba(228, 0, 43, 0.1);
+    }
+  }
+
+  &__menu-signout {
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 16px;
+    border-radius: 12px;
+    border: 1px solid var(--watad-border);
+    background: #fff;
+    font: inherit;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #101010;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease;
+
+    &:hover {
+      background: #fafafa;
+      border-color: #ccc;
+    }
+
+    &:active {
+      background: #f3f3f3;
+    }
+  }
+
+  &--signed {
+    flex-wrap: wrap;
+  }
+
+  &__pill {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--watad-brand);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(228, 0, 43, 0.22);
+    background: rgba(228, 0, 43, 0.05);
+    white-space: nowrap;
+
+    &:hover {
+      background: rgba(228, 0, 43, 0.1);
+    }
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    max-width: 96px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &--signed.watad-account-nav--header .watad-account-nav__label {
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+
+  &__out {
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 0.8125rem;
+    color: $met-gray;
+    cursor: pointer;
+    padding: 4px 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: $met-black;
+    }
+  }
+
+  &--signed.watad-account-nav--mobile {
+    flex-direction: column;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--watad-border);
+    border-radius: 12px;
+    background: var(--watad-bg-soft);
+
+    .watad-account-nav__out {
+      width: 100%;
+      min-height: 40px;
+      text-decoration: none;
+      border: 1px solid var(--watad-border);
+      border-radius: 10px;
+      background: #fff;
+    }
+  }
+}

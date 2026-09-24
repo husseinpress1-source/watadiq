@@ -1,9 +1,48 @@
 @use '../styles/global.scss' as *;
 
 .lang-switcher {
-  &--header-wrap {
+  &--header-wrap,
+  &--auth-wrap {
     position: relative;
     flex-shrink: 0;
+  }
+
+  &--auth {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 0 12px 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    color: $met-black;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover,
+    &.is-open {
+      background: #fff;
+      border-color: #fff;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    &.is-open .lang-switcher__header-chevron {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__auth-globe {
+    flex-shrink: 0;
+    color: $met-gray;
   }
 
   &--header {
@@ -148,6 +187,73 @@
     flex-shrink: 0;
     color: $met-gray;
     margin-inline-start: auto;
+  }
+
+  &--mobile-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 100%;
+    min-height: 52px;
+    padding: 4px;
+    border-radius: 12px;
+    background: #f3f3f3;
+    border: 1px solid var(--watad-border);
+    -webkit-tap-highlight-color: transparent;
+    /* EN left · AR right — like Stripe, Shopify, Airbnb locale toggles */
+    direction: ltr;
+  }
+
+  &__menu-opt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 0;
+
+    &.is-active {
+      z-index: 1;
+    }
+  }
+
+  &__menu-pill {
+    position: absolute;
+    inset: 0;
+    border-radius: 9px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    z-index: 0;
+  }
+
+  &__menu-inner {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #666;
+    transition: color 0.15s ease;
+  }
+
+  &__menu-opt.is-active .lang-switcher__menu-inner {
+    color: #101010;
+  }
+
+  &__menu-flag svg {
+    width: 20px;
+    height: 14px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
   }
 }
 

@@ -1,21 +1,36 @@
 # نقل watadiq.com من Vercel إلى Cloudflare Pages (Workers)
 
-## 1) حساب Cloudflare الصحيح
+## 1) حساب Cloudflare الصحيح (hswttt553@gmail.com)
 
-على الجهاز:
+### الطريقة أ — OAuth (Wrangler)
+
+**مهم:** استخدم المنفذ **8976** فقط. أي منفذ آخر يعطي `redirect_uri does not match`.
 
 ```bash
 npx wrangler logout
-npx wrangler login
+npx wrangler login --callback-port 8976 --browser=false
 ```
 
-سجّل بحساب **hswttt553@gmail.com** (أو الحساب الذي فيه نطاق `watadiq.com`).
-
-تحقق:
+انسخ رابط **Visit this link** كاملاً (سطر واحد طويل) وافتحه في **Chrome/Edge على نفس الجهاز** — ليس من متصفح Cursor.  
+بعد الموافقة يظهر «Success» على `localhost:8976`.
 
 ```bash
 npx wrangler whoami
 ```
+
+### الطريقة ب — API Token (إذا OAuth يعلق)
+
+1. [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens) (مسجّل كـ hswttt553@gmail.com)
+2. **Create Token** → قالب **Edit Cloudflare Workers**
+3. في PowerShell (مرة واحدة):
+
+```powershell
+$env:CLOUDFLARE_API_TOKEN = "الصق_التوكن_هنا"
+$env:CLOUDFLARE_ACCOUNT_ID = "من Overview في Dashboard → Account ID"
+npm run deploy:cf
+```
+
+لا ترفع التوكن إلى GitHub.
 
 ## 2) نشر يدوي
 
@@ -36,9 +51,20 @@ npm run deploy:cf
 
 ## 4) ربط النطاق في Cloudflare Pages
 
-1. [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages** → مشروع **watadiq**
-2. **Custom domains** → أضف `watadiq.com` و `www.watadiq.com`
-3. إذا النطاق أصلاً على Cloudflare DNS، سجّل الـ CNAME تلقائياً
+**تم إضافة:** `watadiq.com` و `www.watadiq.com` على مشروع **watadiq** (حساب hswttt553).
+
+**هدف DNS (Pages):** `watadiq-cpk.pages.dev`
+
+النطاق حالياً يشير إلى **Vercel** (`www` → `vercel-dns`, الجذر → IPs فيرسل). لازم تغيّر DNS:
+
+| النوع | الاسم | القيمة |
+|--------|--------|--------|
+| CNAME | `www` | `watadiq-cpk.pages.dev` |
+| CNAME أو ALIAS | `@` / `watadiq.com` | `watadiq-cpk.pages.dev` |
+
+**الأفضل:** [Add a site](https://dash.cloudflare.com/add-site) → `watadiq.com` → غيّر **Nameservers** عند الم registrar → Cloudflare يضبط DNS + SSL تلقائياً.
+
+Dashboard: [Custom domains — watadiq](https://dash.cloudflare.com/9c38ce40f0f7dfe15ce00ab421a3ba86/pages/view/watadiq/domains)
 
 ## 5) إلغاء Vercel (بعد ما يشتغل الموقع على Cloudflare)
 

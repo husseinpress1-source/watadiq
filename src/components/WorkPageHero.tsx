@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { PORTFOLIO_PROJECTS } from '../data/portfolio';
-import MotionProjectDeck from './MotionProjectDeck';
 import './WorkPageHero.scss';
 
 interface WorkPageHeroProps {
@@ -12,14 +10,6 @@ interface WorkPageHeroProps {
 }
 
 export default function WorkPageHero({ eyebrow, title, intro, cta }: WorkPageHeroProps) {
-  const { t } = useTranslation();
-
-  const deckItems = PORTFOLIO_PROJECTS.map((project) => ({
-    id: project.id,
-    image: project.screenshot,
-    alt: t(`portfolio.projects.${project.i18nKey}.title`),
-  }));
-
   return (
     <section className="work-hero" aria-labelledby="work-hero-title">
       <div className="work-hero__inner">
@@ -34,8 +24,19 @@ export default function WorkPageHero({ eyebrow, title, intro, cta }: WorkPageHer
           )}
         </div>
 
-        <div className="work-hero__showcase">
-          <MotionProjectDeck items={deckItems} hint={t('portfolio.deckHint')} />
+        <div className="work-hero__previews" aria-hidden>
+          {PORTFOLIO_PROJECTS.map((project) => (
+            <a
+              key={project.id}
+              href={project.url}
+              className="work-hero__preview"
+              target="_blank"
+              rel="noreferrer"
+              tabIndex={-1}
+            >
+              <img src={project.screenshot} alt="" loading="lazy" decoding="async" />
+            </a>
+          ))}
         </div>
       </div>
     </section>

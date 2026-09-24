@@ -1,6 +1,22 @@
 name = "watadiq"
+# Account (hswttt553@gmail.com): 9c38ce40f0f7dfe15ce00ab421a3ba86 — set CLOUDFLARE_ACCOUNT_ID for CI/D1 if needed
 compatibility_date = "2025-01-01"
 pages_build_output_dir = "dist"
 
+[vars]
+BLOG_MEDIA_PUBLIC_URL = "https://media.watadiq.com"
+
 # Cloudflare Pages (Workers edge) — build: npm run build
 # Deploy: npm run deploy:cf
+# After `npx wrangler d1 create watadiq-blog`, paste database_id below and run:
+#   npm run db:migrate:remote
+
+[[d1_databases]]
+binding = "DB"
+database_name = "watadiq-blog"
+database_id = "8be3a664-31eb-4185-aec7-f1dd97169042"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "BLOG_MEDIA"
+bucket_name = "watadiq-blog-media"

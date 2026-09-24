@@ -1,2 +1,4 @@
 https://www.watadiq.com/*  https://watadiq.com/:splat  301
+http://www.watadiq.com/*  https://watadiq.com/:splat  301
+http://watadiq.com/*  https://watadiq.com/:splat  301
 /*    /index.html   200
