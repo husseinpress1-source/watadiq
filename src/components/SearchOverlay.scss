@@ -1,0 +1,79 @@
+@use '../styles/global.scss' as *;
+
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: $met-red;
+  display: flex;
+  flex-direction: column;
+
+  &__panel {
+    @include container-wide;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    color: #fff;
+    padding: 8px;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 24px;
+    padding-top: 8px;
+
+    button {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      font-weight: 600;
+      padding-bottom: 8px;
+      border-bottom: 3px solid transparent;
+
+      &.is-active {
+        color: #fff;
+        border-bottom-color: #fff;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: 0;
+    max-width: 100%;
+
+    input {
+      flex: 1;
+      padding: 16px 20px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      background: #fff;
+    }
+
+    button {
+      background: $met-black;
+      color: #fff;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .search-overlay__tabs {
+    gap: 20px;
+
+    button {
+      font-size: 14px;
+    }
+  }
+}
