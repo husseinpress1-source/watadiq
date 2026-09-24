@@ -6,6 +6,9 @@ interface LayoutContextValue {
   openMenu: () => void;
   closeMenu: () => void;
   toggleMenu: () => void;
+  searchOpen: boolean;
+  openSearch: () => void;
+  closeSearch: () => void;
 }
 
 const LayoutContext = createContext<LayoutContextValue | null>(null);
@@ -17,6 +20,7 @@ const unlockBodyScroll = () => {
 
 export function LayoutProvider({ children }: { children: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -25,6 +29,7 @@ export function LayoutProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMenuOpen(false);
+    setSearchOpen(false);
     unlockBodyScroll();
   }, [location.pathname]);
 
@@ -43,8 +48,20 @@ export function LayoutProvider({ children }: { children: ReactNode }) {
     else openMenu();
   }, [menuOpen, openMenu, closeMenu]);
 
+  const openSearch = useCallback(() => {
+    setSearchOpen(true);
+    closeMenu();
+  }, [closeMenu]);
+
+  const closeSearch = useCallback(() => {
+    setSearchOpen(false);
+    unlockBodyScroll();
+  }, []);
+
   return (
-    <LayoutContext.Provider value={{ menuOpen, openMenu, closeMenu, toggleMenu }}>
+    <LayoutContext.Provider
+      value={{ menuOpen, openMenu, closeMenu, toggleMenu, searchOpen, openSearch, closeSearch }}
+    >
       {children}
     </LayoutContext.Provider>
   );
