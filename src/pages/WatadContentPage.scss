@@ -1,0 +1,811 @@
+@use '../styles/global.scss' as *;
+
+.watad-content-page {
+  min-height: 100vh;
+  padding-top: 0;
+
+  &__main {
+    width: 100%;
+    max-width: $max-width-wide;
+    margin: 0 auto;
+    padding: 40px clamp(24px, 4vw, 64px) 80px;
+    text-align: start;
+  }
+
+  &__section {
+    margin-bottom: 48px;
+    width: 100%;
+    text-align: start;
+
+    h2 {
+      font-family: $font-serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: start;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--watad-text-muted);
+      margin-bottom: 12px;
+      max-width: 42rem;
+      margin-inline: 0;
+    }
+
+    ul {
+      list-style: disc;
+      display: block;
+      text-align: start;
+      padding-inline-start: 22px;
+      max-width: 42rem;
+      margin-inline: 0;
+
+      li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+        color: var(--watad-text-muted);
+      }
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+    justify-content: center;
+
+    &--disciplines {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--team {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(32px, 4vw, 48px);
+      width: 100%;
+      max-width: min(880px, 100%);
+      margin-inline: auto;
+      justify-content: center;
+      align-items: start;
+      margin-top: 0;
+
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        max-width: 420px;
+      }
+    }
+  }
+
+  html[dir='rtl'] &__team-head h2 {
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: clamp(18px, 2vw, 20px);
+  }
+
+  html[dir='rtl'] &__cards--team &__card--team {
+    direction: rtl;
+    text-align: start;
+
+    .watad-content-page__card-quote,
+    .watad-content-page__card-role,
+    h3 {
+      text-align: start;
+    }
+  }
+
+  &__section--core-team {
+    margin-bottom: 64px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &__team-block {
+    width: 100%;
+    max-width: min(880px, 100%);
+    margin-inline: auto;
+  }
+
+  &__team-head {
+    text-align: start;
+    margin-bottom: clamp(32px, 5vw, 48px);
+
+    h2 {
+      font-family: inherit;
+      font-size: clamp(22px, 2.8vw, 28px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      color: $met-black;
+      margin: 0;
+      padding: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &--team {
+    .watad-content-page__main {
+      padding-top: 28px;
+    }
+
+    .watad-content-page__section--core-team {
+      text-align: center;
+    }
+
+    .watad-content-page__team-head {
+      text-align: center;
+    }
+
+    .watad-content-page__cards--team {
+      margin-inline: auto;
+    }
+
+    .watad-content-page__card--team {
+      .watad-content-page__card-photo-wrap {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 4 / 5;
+        margin: 0 0 20px;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #f3f3f3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .watad-content-page__card-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center top;
+        display: block;
+      }
+
+      @media (max-width: 640px) {
+        .watad-content-page__card-photo-wrap {
+          aspect-ratio: auto;
+        }
+
+        .watad-content-page__card-photo {
+          height: auto;
+          object-fit: unset;
+        }
+      }
+    }
+
+    .watad-content-page__section--work-together {
+      width: 100%;
+      max-width: min(880px, 100%);
+      margin-inline: auto;
+      margin-bottom: 0;
+      padding-top: clamp(48px, 6vw, 64px);
+      border-top: 1px solid $met-light-gray;
+      text-align: center;
+
+      h2 {
+        font-size: clamp(22px, 2.8vw, 28px);
+        letter-spacing: -0.02em;
+        text-transform: none;
+        color: $met-black;
+        margin: 0 0 clamp(28px, 4vw, 40px);
+        text-align: center;
+      }
+    }
+
+    .watad-content-page__principles {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(20px, 3vw, 32px);
+      padding: 0;
+      margin: 0;
+      max-width: none;
+      text-align: start;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        color: #444;
+      }
+    }
+
+    .watad-content-page__principles-index {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: $met-red;
+      line-height: 1;
+    }
+
+    .watad-content-page__principles-text {
+      font-size: clamp(15px, 1.5vw, 17px);
+      line-height: 1.65;
+      color: #444;
+      letter-spacing: -0.01em;
+    }
+
+    @media (max-width: 768px) {
+      .watad-content-page__principles {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 36rem;
+        margin-inline: auto;
+        text-align: start;
+      }
+    }
+  }
+
+  &--team &__section--core-team {
+    margin-top: 0;
+  }
+
+  &__card {
+    border: 1px solid $met-light-gray;
+    padding: 24px;
+    background: #fff;
+    text-align: center;
+
+    &--team {
+      padding: 0;
+      overflow: visible;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      height: auto;
+
+      .watad-content-page__card-body {
+        padding: 0;
+        flex: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .watad-content-page__card-photo-wrap {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 clamp(20px, 3vw, 28px);
+        border-radius: clamp(12px, 2vw, 20px);
+        overflow: hidden;
+        background: #f3f3f3;
+        box-shadow: none;
+        line-height: 0;
+      }
+
+      .watad-content-page__card-photo {
+        width: 100%;
+        height: auto;
+        object-fit: unset;
+        object-position: unset;
+        transform: none;
+        display: block;
+        vertical-align: top;
+      }
+
+      .watad-content-page__card-quote {
+        margin: 0 0 clamp(18px, 2.5vw, 22px);
+        padding: 0;
+        font-family: inherit;
+        font-size: clamp(16px, 1.8vw, 19px);
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: -0.01em;
+        color: #555;
+        max-width: none;
+        text-align: start;
+      }
+
+      h3 {
+        margin: 0 0 4px;
+        font-family: inherit;
+        font-size: clamp(15px, 1.5vw, 16px);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: $met-black;
+        text-align: start;
+      }
+
+      .watad-content-page__card-role {
+        margin: 0;
+        padding: 0;
+        font-size: clamp(14px, 1.4vw, 15px);
+        font-weight: 400;
+        line-height: 1.5;
+        color: #888;
+        max-width: none;
+        text-align: start;
+      }
+    }
+
+    &--discipline {
+      padding: 28px 22px 26px;
+      border-radius: 18px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        border-color: #ccc;
+        transform: translateY(-2px);
+      }
+    }
+
+    &--link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        border-color: $met-red;
+        transform: translateY(-2px);
+
+        p {
+          color: $met-red;
+        }
+      }
+    }
+
+    &-icon-wrap {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+    }
+
+    &-photo-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #111;
+    }
+
+    &-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: transparent;
+      image-rendering: auto;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: $met-black;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+      margin: 0;
+      max-width: none;
+    }
+  }
+
+  &__card-meta {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: $met-red;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+
+  &--about {
+    .watad-content-page__main {
+      max-width: min(1440px, 100%);
+      padding: 56px clamp(24px, 4vw, 64px) 96px;
+    }
+
+    .watad-content-page__section {
+      margin-bottom: clamp(48px, 6vw, 80px);
+
+      h2 {
+        font-size: clamp(28px, 3.2vw, 42px);
+        font-weight: 700;
+        margin-bottom: clamp(16px, 2vw, 28px);
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        font-size: clamp(17px, 1.35vw, 20px);
+        line-height: 1.75;
+        max-width: min(920px, 100%);
+        margin-bottom: 16px;
+      }
+
+      ul {
+        max-width: min(920px, 100%);
+
+        li {
+          font-size: clamp(17px, 1.25vw, 19px);
+          line-height: 1.7;
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    .watad-content-page__section:has(.watad-content-page__cards--disciplines) {
+      h2 {
+        font-size: clamp(32px, 3.5vw, 48px);
+        margin-bottom: clamp(28px, 3vw, 40px);
+      }
+
+      .watad-content-page__cards--disciplines {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(20px, 2.5vw, 36px);
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .watad-content-page__card--discipline {
+        padding: clamp(32px, 3vw, 48px) clamp(24px, 2.5vw, 36px);
+        border-radius: 22px;
+        border-width: 1.5px;
+        min-height: clamp(280px, 28vw, 360px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        .watad-content-page__card-icon-wrap {
+          width: clamp(120px, 10vw, 176px);
+          height: clamp(120px, 10vw, 176px);
+          margin-bottom: clamp(24px, 2.5vw, 32px);
+        }
+
+        h3 {
+          font-size: clamp(22px, 2vw, 30px);
+          margin-bottom: 14px;
+        }
+
+        p {
+          font-size: clamp(16px, 1.2vw, 19px);
+          line-height: 1.65;
+          color: #444;
+        }
+      }
+    }
+  }
+
+  &__section--core-disciplines {
+    text-align: start;
+
+    h2 {
+      font-size: clamp(28px, 3.2vw, 42px);
+      margin-bottom: clamp(28px, 3vw, 40px);
+      letter-spacing: -0.02em;
+      text-align: start;
+    }
+
+    .watad-content-page__cards--disciplines {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(16px, 2vw, 24px);
+      max-width: 100%;
+      width: 100%;
+      margin-inline: 0;
+    }
+
+    .watad-content-page__card--discipline {
+      padding: clamp(28px, 3vw, 36px) clamp(20px, 2vw, 24px);
+      min-height: auto;
+      border-radius: 16px;
+      border-color: #ececec;
+      background: #fff;
+
+      .watad-content-page__card-icon-wrap {
+        width: clamp(88px, 11vw, 120px);
+        height: clamp(88px, 11vw, 120px);
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .watad-content-page__card-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      h3 {
+        font-size: clamp(18px, 1.8vw, 22px);
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: clamp(15px, 1.1vw, 17px);
+        line-height: 1.6;
+        color: #555;
+        max-width: none;
+        margin-inline: 0;
+      }
+    }
+  }
+
+  &--expertise {
+    .watad-content-page__main {
+      max-width: min(1180px, 100%);
+    }
+  }
+
+  &--pricing {
+    .watad-content-page__main {
+      max-width: 1280px;
+      padding: 20px 0 56px;
+      text-align: start;
+    }
+
+    .watad-content-page__section--pricing {
+      margin-bottom: 56px;
+      padding: 0;
+      width: 100%;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    .watad-content-page__section--payments {
+      max-width: 960px;
+      margin-inline: auto;
+      padding: 48px clamp(20px, 4vw, 32px) 56px;
+      margin-bottom: 0;
+      border-top: 0;
+
+      h2 {
+        font-size: clamp(24px, 3vw, 32px);
+        margin-bottom: 28px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+    }
+  }
+
+  &__section--contact-channels {
+    h2 {
+      text-align: center;
+      font-size: clamp(26px, 3vw, 34px);
+      margin-bottom: 28px;
+    }
+
+    .watad-content-page__cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 760px;
+      margin-inline: auto;
+    }
+
+    .watad-content-page__card--link {
+      padding: 32px 28px 36px;
+      border-radius: 16px;
+
+      .watad-content-page__card-icon-wrap {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        color: $met-gray;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: clamp(18px, 2.2vw, 22px);
+        font-weight: 700;
+        color: $met-black;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .watad-content-page__main {
+    padding: 48px clamp(24px, 4vw, 64px) 88px;
+  }
+
+  .page-intro__shell {
+    padding-inline: clamp(24px, 4vw, 64px);
+  }
+}
+
+@media (max-width: 768px) {
+  .watad-content-page__section--core-disciplines {
+    h2 {
+      text-align: start;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .watad-content-page__cards--disciplines {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .watad-content-page__card--discipline {
+      padding: 20px 14px;
+
+      .watad-content-page__card-icon-wrap {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .watad-content-page__section--contact-channels {
+    .watad-content-page__cards {
+      grid-template-columns: 1fr;
+      max-width: none;
+    }
+  }
+
+  .watad-content-page--about {
+    .watad-content-page__section:has(.watad-content-page__cards--disciplines) {
+      .watad-content-page__cards--disciplines {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .watad-content-page__card--discipline {
+        min-height: auto;
+        padding: 28px 22px;
+
+        .watad-content-page__card-icon-wrap {
+          width: 80px;
+          height: 80px;
+        }
+
+        h3 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .watad-content-page__main {
+    padding: 24px 16px 48px;
+    text-align: start;
+  }
+
+  .watad-content-page__section {
+    margin-bottom: 32px;
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      text-align: start;
+    }
+
+    p,
+    ul {
+      max-width: none;
+      margin-inline: 0;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    ul {
+      display: block;
+      padding-inline-start: 20px;
+
+      li {
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .watad-content-page__card {
+    padding: 20px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .watad-content-page--pricing {
+    .watad-content-page__main {
+      padding: 20px 20px 56px;
+    }
+
+    .watad-content-page__section--pricing {
+      margin-bottom: 32px;
+
+      h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .watad-content-page__section--payments {
+      padding: 36px 0 44px;
+      margin-bottom: 0;
+
+      h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .pricing-cards--mobile {
+      margin-inline: -20px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .watad-content-page--pricing {
+    .watad-content-page__section--pricing .pricing-cards {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .watad-content-page__section--core-disciplines {
+    .watad-content-page__cards--disciplines {
+      grid-template-columns: 1fr;
+    }
+  }
+}

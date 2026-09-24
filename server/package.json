@@ -1,0 +1,15 @@
+{
+  "name": "watad-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Watad API server — domain availability checker",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

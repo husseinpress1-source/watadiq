@@ -1,0 +1,93 @@
+/** Smooth white feather at hero bottom — shared by home, live, etc. */
+@mixin hero-bottom-feather {
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    height: clamp(140px, 26vh, 320px);
+
+    @media (max-width: 768px) {
+      height: 10.5rem;
+    }
+
+    background: linear-gradient(
+      180deg,
+      rgb(255 255 255 / 0) 0%,
+      rgb(255 255 255 / 0.03) 8%,
+      rgb(255 255 255 / 0.09) 18%,
+      rgb(255 255 255 / 0.18) 30%,
+      rgb(255 255 255 / 0.32) 42%,
+      rgb(255 255 255 / 0.5) 54%,
+      rgb(255 255 255 / 0.68) 66%,
+      rgb(255 255 255 / 0.84) 78%,
+      rgb(255 255 255 / 0.94) 90%,
+      #fff 100%
+    );
+  }
+}
+
+@function hero-scrim-dissolve-gradient($color: #0b0d0e) {
+  @return linear-gradient(
+    180deg,
+    rgba($color, 0.2) 0%,
+    rgba($color, 0.12) 32%,
+    rgba($color, 0.5) 62%,
+    rgba($color, 0.62) 76%,
+    rgba($color, 0.48) 84%,
+    rgba($color, 0.28) 90%,
+    rgba($color, 0.12) 95%,
+    rgba($color, 0.04) 98%,
+    transparent 100%
+  );
+}
+
+@mixin hero-scrim-dissolve($color: #0b0d0e) {
+  background: hero-scrim-dissolve-gradient($color);
+}
+
+/**
+ * iOS Safari: avoid `dvh` — toolbar show/hide resizes the hero and `object-fit: cover` looks like zoom.
+ * Lock to `lvh` (largest viewport) on phones so the image stays fixed while scrolling.
+ */
+@mixin hero-stable-mobile-full {
+  @media (max-width: 768px) {
+    min-height: var(--hero-vh, 100lvh);
+    height: var(--hero-vh, 100lvh);
+    max-height: var(--hero-vh, 100lvh);
+  }
+}
+
+@mixin hero-stable-mobile-with-header($floor: 520px) {
+  @media (max-width: 768px) {
+    min-height: max(#{$floor}, calc(var(--hero-vh, 100lvh) - var(--header-h)));
+    height: max(#{$floor}, calc(var(--hero-vh, 100lvh) - var(--header-h)));
+    max-height: max(#{$floor}, calc(var(--hero-vh, 100lvh) - var(--header-h)));
+  }
+}
+
+/** Pin hero copy to the hero box (no flex reflow on iOS scroll). */
+@mixin hero-copy-pin-mobile {
+  @media (max-width: 768px) {
+    display: block;
+    contain: layout style;
+
+    .home-hero__content,
+    .live-hero__inner {
+      position: absolute;
+      inset-inline: 0;
+      bottom: 0;
+      z-index: 3;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: none;
+      min-height: 0;
+      height: auto;
+      max-height: none;
+      margin: 0;
+    }
+  }
+}

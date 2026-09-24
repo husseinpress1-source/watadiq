@@ -1,0 +1,70 @@
+@use '../styles/global.scss' as *;
+
+.browse-art {
+  @include container-wide;
+  padding: 48px 32px 64px;
+
+  &__title {
+    font-family: $font-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px 16px;
+  }
+}
+
+.art-card {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+
+    .art-card__image {
+      opacity: 0.9;
+    }
+  }
+
+  &__image-wrap {
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: opacity 0.25s;
+    background: #f0f0f0;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 1100px) {
+  .browse-art__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .browse-art__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .browse-art__grid {
+    grid-template-columns: 1fr;
+  }
+}

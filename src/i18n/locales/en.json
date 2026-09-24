@@ -1,0 +1,1762 @@
+{
+  "meta": {
+    "title": "WATAD Software, Web, Apps & Cybersecurity | Iraq",
+    "description": "WATAD Software is an Iraqi digital agency building websites, mobile apps, and cybersecurity solutions. Official agency at watadiq.com.",
+    "keywords": "WATAD Software, web development Iraq, mobile apps, cybersecurity, digital agency Baghdad, وتد",
+    "pages": {
+      "home": {
+        "title": "WATAD Software, Web, Apps & Cybersecurity | Iraq",
+        "description": "WATAD Software builds websites, mobile apps, and cybersecurity solutions for businesses in Iraq and the region."
+      },
+      "about": {
+        "title": "About WATAD Software",
+        "description": "Learn about WATAD Software, our story, mission, and the team behind Iraq's digital agency."
+      },
+      "expertise": {
+        "title": "Expertise, Web, Apps & Security",
+        "description": "Web development, mobile apps, UI/UX, e-commerce, cloud, and cybersecurity services by WATAD Software."
+      },
+      "work": {
+        "title": "Our Work & Portfolio",
+        "description": "Selected projects and digital products built by WATAD Software for clients in Iraq and beyond."
+      },
+      "team": {
+        "title": "Our Team",
+        "description": "Meet the WATAD Software team, engineers, designers, and security specialists."
+      },
+      "pricing": {
+        "title": "Pricing & Plans",
+        "description": "Transparent pricing for web, app, and cybersecurity projects from WATAD Software."
+      },
+      "contact": {
+        "title": "Contact WATAD Software",
+        "description": "Get a quote or talk to WATAD Software about your next website, app, or security project."
+      },
+      "privacy": {
+        "title": "Privacy Policy, WATAD Software",
+        "description": "How WATAD Software collects, uses, and protects your personal data and cookies."
+      },
+      "terms": {
+        "title": "Terms of Service, WATAD Software",
+        "description": "Terms and conditions for using watadiq.com and engaging WATAD Software for digital services."
+      },
+      "security": {
+        "title": "Cybersecurity & Security Audits",
+        "description": "Security audits, penetration testing, SSL, OWASP-aligned reviews, and secure architecture by WATAD Software in Iraq."
+      },
+      "live": {
+        "title": "WATAD Live, Movies & Series Streaming",
+        "description": "WATAD Live is an Arabic streaming app by WATAD Software, movies, series, watch parties, and family profiles. Coming soon."
+      }
+    }
+  },
+  "legalCommon": {
+    "breadcrumbAria": "Breadcrumb",
+    "breadcrumbLegal": "Legal",
+    "relatedNavAria": "Related legal documents",
+    "navPrivacy": "Privacy Policy",
+    "navTerms": "Terms of Service",
+    "onThisPage": "On this page"
+  },
+  "common": {
+    "brandName": "WATAD Software",
+    "home": "Home",
+    "contact": "Contact",
+    "pricing": "Pricing",
+    "getQuote": "Get Quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "subscribe": "Subscribe",
+    "viewAll": "View all",
+    "hours": "Hours:",
+    "also": "Also:",
+    "closed": "Closed:",
+    "packages": "Packages",
+    "specialOffer": "Special Offer!",
+    "pricingCarousel": "Pricing plans carousel",
+    "swipePlans": "Swipe left or right to compare plans",
+    "english": "English",
+    "arabic": "العربية",
+    "language": "Language",
+    "chooseLanguage": "Choose your language",
+    "englishHint": "United States",
+    "arabicHint": "Iraq"
+  },
+  "pricingInquiry": {
+    "close": "Close",
+    "eyebrow": "Plan request",
+    "messagePreview": "Ready message",
+    "notesLabel": "Additional notes",
+    "notesPlaceholder": "Add project details, timeline, or any questions",
+    "notesHeading": "Additional notes:",
+    "sendEmail": "Send by email",
+    "sendInstagram": "Message on Instagram",
+    "instagramCopied": "Message copied. Paste it in your Instagram chat.",
+    "signOff": "Best regards",
+    "priceLine": "{{price}} {{currency}}{{period}}",
+    "subjects": {
+      "launch": "Launch plan inquiry, WATAD Software",
+      "business": "Business plan inquiry, WATAD Software",
+      "scale": "Scale plan upgrade request, WATAD Software",
+      "enterprise": "Enterprise plan inquiry, WATAD Software"
+    },
+    "templates": {
+      "launch": "Hello, I would like to get started with the {{planName}} plan from WATAD Software.\nPrice: {{priceLine}}",
+      "business": "Hello, I would like to inquire about the {{planName}} plan from WATAD Software.\nPrice: {{priceLine}}",
+      "scale": "Hello, I would like to upgrade my project to the {{planName}} plan from WATAD Software.\nPrice: {{priceLine}}",
+      "enterprise": "Hello, I would like to discuss a custom {{planName}} engagement with the WATAD team.\nEstimated price: {{priceLine}}"
+    }
+  },
+  "nav": {
+    "about": "About",
+    "expertise": "Expertise",
+    "security": "Security",
+    "work": "Our Work",
+    "live": "WATAD Live",
+    "domains": "Domains",
+    "account": "My Account",
+    "team": "Team",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "mobileNav": {
+    "about": "About",
+    "ourStory": "Our Story",
+    "team": "Team",
+    "contact": "Contact",
+    "expertise": "Expertise",
+    "allServices": "All Services",
+    "work": "Our Work",
+    "live": "WATAD Live",
+    "domains": "Domains",
+    "account": "My Account",
+    "webDev": "Web Development",
+    "mobileApps": "Mobile Apps",
+    "cybersecurity": "Cybersecurity",
+    "pricing": "Pricing",
+    "allPlans": "All Plans",
+    "launch": "Launch",
+    "business": "Business",
+    "enterprise": "Enterprise"
+  },
+  "hero": {
+    "eyebrow": "WATAD Software, Iraq",
+    "titleLine1": "Digital products",
+    "titleLine2": "built to endure.",
+    "services": "Web, apps, and cybersecurity",
+    "lead": "We partner with ambitious brands to design, build, and protect the digital experiences their audiences trust every day.",
+    "ourStory": "About WATAD",
+    "viewPlans": "View pricing",
+    "exploreExpertise": "Our services"
+  },
+  "pageHeroes": {
+    "home": "People walking and talking together outdoors",
+    "about": "Illustration of laptop, code blocks, and blueprint representing WATAD software agency",
+    "expertise": "Illustration of web, mobile, design, security, and cloud service objects",
+    "team": "Illustration of collaborative workspace objects, laptops and sticky notes",
+    "pricing": "Illustration of pricing cards, invoice, and payment tools",
+    "contact": "Illustration of envelope, chat bubbles, and contact communication objects",
+    "security": "Illustration of padlock, shield, and secure server infrastructure"
+  },
+  "home": {
+    "expertiseTitle": "Our Expertise",
+    "selectedWork": "Selected Work",
+    "contactHours": "Contact & Hours",
+    "featuredEyebrow": "WATAD Software",
+    "featuredTitle": "We build where technology meets ambition",
+    "featuredText": "From websites and mobile apps to cybersecurity, we design and engineer products that help Iraq's most ambitious brands grow with clarity, speed, and confidence.",
+    "featuredCta": "Our story",
+    "exhibitions": [
+      {
+        "title": "Web Development",
+        "overlay": "WEB",
+        "subtitle": "Sites, Dashboards, Platforms"
+      },
+      {
+        "title": "Mobile Applications",
+        "overlay": "APPS",
+        "subtitle": "iOS, Android, and cross platform"
+      },
+      {
+        "title": "Cybersecurity",
+        "overlay": "SECURITY",
+        "subtitle": "Audits, Hardening, Pentesting"
+      },
+      {
+        "title": "UI/UX Design",
+        "overlay": "DESIGN",
+        "subtitle": "Brand, Product, Interfaces"
+      },
+      {
+        "title": "Ecommerce",
+        "overlay": "COMMERCE",
+        "subtitle": "Stores, Payments, Bilingual"
+      },
+      {
+        "title": "Cloud & DevOps",
+        "overlay": "CLOUD",
+        "subtitle": "Hosting, CI/CD, Scale"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "WATAD Platform",
+        "subtitle": "Full stack web"
+      },
+      {
+        "title": "Mobile MVP Launch",
+        "subtitle": "iOS & Android"
+      },
+      {
+        "title": "Security Audit",
+        "subtitle": "Cybersecurity"
+      },
+      {
+        "title": "Ecommerce Store",
+        "subtitle": "IQD payments"
+      },
+      {
+        "title": "Brand Dashboard",
+        "subtitle": "UI/UX + React"
+      }
+    ],
+    "locations": [
+      {
+        "name": "WATAD, Iraq HQ",
+        "hours": "Based in Iraq, serving clients nationwide",
+        "extendedHours": "",
+        "closed": "",
+        "note": "On-site meetings by appointment"
+      },
+      {
+        "name": "Business hours",
+        "hours": "Sunday to Thursday: 9 am to 6 pm",
+        "extendedHours": "Friday: 10 am to 2 pm",
+        "closed": "Saturday",
+        "note": "Iraqi business hours"
+      },
+      {
+        "name": "Email",
+        "hours": "info@watadiq.com",
+        "extendedHours": "",
+        "closed": "",
+        "note": "Reply within one Iraqi business day"
+      },
+      {
+        "name": "Instagram",
+        "hours": "@watd_iq",
+        "extendedHours": "",
+        "closed": "",
+        "note": "DM us for quick questions"
+      }
+    ],
+    "promos": [
+      {
+        "title": "Build with WATAD",
+        "text": "Strategy, design, engineering, and security in one disciplined team. We turn ambitious ideas into products that perform in the real world.",
+        "cta": "Our story"
+      },
+      {
+        "title": "View plans",
+        "text": "Clear packages for websites, apps, and security. Built for Iraqi brands and priced transparently in IQD.",
+        "cta": "See pricing"
+      }
+    ]
+  },
+  "footer": {
+    "bannerLabel": "WATAD Software",
+    "techLabel": "Technologies we work with",
+    "bannerTitle": "Integrated digital platforms for Iraq's most ambitious brands",
+    "bannerText": "WATAD is your end to end technology partner. Strategy, design, engineering, and cybersecurity in one team, from first workshop to launch and long term support.",
+    "aboutWatad": "About WATAD",
+    "services": "Services",
+    "expertise": "Expertise",
+    "webDev": "Web Development",
+    "mobileApps": "Mobile Apps",
+    "cybersecurity": "Cybersecurity",
+    "hqTitle": "WATAD, Iraq",
+    "serving": "Serving clients nationwide",
+    "hoursTitle": "Business hours",
+    "hours1": "Sunday to Thursday: 9 am to 6 pm",
+    "hours2": "Friday: 10 am to 2 pm",
+    "hours3": "Reply within one business day",
+    "copyright": "© 2020 to 2026 WATAD Software. All rights reserved.",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "securityBadgesLabel": "Security and protection platforms",
+    "securityCloudflare": "Cloudflare, WAF and CDN protection",
+    "securityGoogleTrust": "Google Trust Services, SSL certificates",
+    "securityLetsEncrypt": "Let's Encrypt, SSL/TLS encryption",
+    "securityDigiCert": "DigiCert, trusted security certificates",
+    "securitySucuri": "Sucuri, website firewall and protection",
+    "securityAws": "AWS, cloud security and protection",
+    "securityMicrosoft": "Microsoft, Azure and cybersecurity protection",
+    "securitySymantec": "Symantec, Norton and enterprise security",
+    "securityFortinet": "Fortinet, network firewall and security",
+    "securityPaloAlto": "Palo Alto Networks, advanced network security",
+    "securityMcAfee": "McAfee, cyber threat protection",
+    "securityOwasp": "OWASP, web application security standards",
+    "watadSslSeal": "WATAD Software SSL Secured trust seal"
+  },
+  "pricingUi": {
+    "title": "Packages",
+    "description": "Transparent packages for websites, apps, and security.\nBuilt for Iraqi brands and priced clearly in IQD.",
+    "fullPaymentLabel": "Full payment",
+    "splitPaymentLabel": "50-50 split",
+    "splitBadge": "(2 milestones)",
+    "billedFullLabel": "total project fee",
+    "billedSplitLabel": "per milestone (50%)",
+    "splitTotalLabel": "Total",
+    "popularLabel": "Popular",
+    "currencyLabel": "IQD",
+    "perProjectLabel": "per project",
+    "toggleHint": "50-50 split: pay 50% to start and 50% before launch. Same total price.",
+    "toggleAriaLabel": "Choose payment method"
+  },
+  "pricingCompare": {
+    "title": "Compare plans",
+    "searchPlaceholder": "Search features…",
+    "featureColumn": "Features",
+    "selectPlanLabel": "Select a plan to compare",
+    "emptyResults": "No features match your search.",
+    "categories": [
+      {
+        "id": "website",
+        "title": "Website & pages",
+        "features": [
+          {
+            "id": "responsive",
+            "label": "Responsive design (mobile & desktop)",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pages",
+            "label": "Pages included",
+            "launch": "1 page",
+            "business": "Up to 8",
+            "scale": "Up to 15",
+            "enterprise": "Custom"
+          },
+          {
+            "id": "singlePage",
+            "label": "Single-page landing site",
+            "launch": true,
+            "business": false,
+            "scale": false,
+            "enterprise": false
+          },
+          {
+            "id": "multiPage",
+            "label": "Multi-page website",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "contactForm",
+            "label": "Contact form",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Content & CMS",
+        "features": [
+          {
+            "id": "cms",
+            "label": "CMS admin panel",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "blog",
+            "label": "Blog section",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "bilingual",
+            "label": "Bilingual site (AR / EN)",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "contentMigration",
+            "label": "Content migration assistance",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "commerce",
+        "title": "Commerce & apps",
+        "features": [
+          {
+            "id": "ecommerce",
+            "label": "E-commerce store",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "payments",
+            "label": "Payment gateway integration",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pwa",
+            "label": "PWA (installable web app)",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "mobileApp",
+            "label": "Native mobile app",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          },
+          {
+            "id": "apiCloud",
+            "label": "API & cloud architecture",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "seo",
+        "title": "SEO & analytics",
+        "features": [
+          {
+            "id": "ssl",
+            "label": "SSL certificate",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "seoSetup",
+            "label": "SEO setup",
+            "launch": "Basic",
+            "business": true,
+            "scale": true,
+            "enterprise": "Advanced"
+          },
+          {
+            "id": "analytics",
+            "label": "Analytics integration",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "performance",
+            "label": "Performance optimization",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security & support",
+        "features": [
+          {
+            "id": "securityAudit",
+            "label": "Security audit",
+            "launch": false,
+            "business": false,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "pentest",
+            "label": "Penetration test report",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          },
+          {
+            "id": "support",
+            "label": "Post-launch support",
+            "launch": "1 month",
+            "business": "3 months",
+            "scale": "6 months",
+            "enterprise": "12 month SLA"
+          },
+          {
+            "id": "dedicatedPm",
+            "label": "Dedicated project manager",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      },
+      {
+        "id": "delivery",
+        "title": "Delivery & billing",
+        "features": [
+          {
+            "id": "revisions",
+            "label": "Revision rounds",
+            "launch": "2",
+            "business": "4",
+            "scale": "6",
+            "enterprise": "Unlimited"
+          },
+          {
+            "id": "timeline",
+            "label": "Delivery timeline",
+            "launch": "10–14 days",
+            "business": "3–4 weeks",
+            "scale": "Priority",
+            "enterprise": "Custom"
+          },
+          {
+            "id": "hosting",
+            "label": "1 year hosting included",
+            "launch": true,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "splitPayment",
+            "label": "50-50 split payment",
+            "launch": false,
+            "business": true,
+            "scale": true,
+            "enterprise": true
+          },
+          {
+            "id": "milestoneBilling",
+            "label": "Custom milestone billing",
+            "launch": false,
+            "business": false,
+            "scale": false,
+            "enterprise": true
+          }
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "ariaLabel": "Cookie consent notice",
+    "title": "We use cookies",
+    "description": "We use essential cookies to run this site, and optional cookies for analytics and a better experience, just like global websites. Accept all, reject non-essential, or customize your choice.",
+    "learnMore": "For more details see our",
+    "privacyLink": "privacy policy",
+    "termsLink": "terms of service",
+    "and": "and",
+    "acceptAll": "Accept all",
+    "customize": "Customize",
+    "rejectOptional": "Reject non-essential",
+    "settingsTitle": "Cookie settings",
+    "settingsLead": "Choose which cookies you allow. Essential cookies are always required for the site to work.",
+    "alwaysOn": "Always on",
+    "savePreferences": "Save preferences",
+    "back": "Back",
+    "closeSettings": "Close settings",
+    "manageLink": "Cookie settings",
+    "categories": {
+      "necessary": {
+        "title": "Essential",
+        "desc": "Required for security, sign-in, language, and core site functionality."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "desc": "Help us understand how the site is used so we can improve performance and content."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Used to show more relevant content or offers based on your interests (if enabled)."
+      }
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "eyebrow": "WATAD Legal",
+    "lead": "This policy explains how WATAD Software («WATAD», «we») collects, uses, stores, shares, and protects personal data when you visit watadiq.com, communicate with us, or engage our web, mobile, and cybersecurity services.",
+    "lastUpdated": "Last updated: July 2026",
+    "tocTitle": "Contents",
+    "cookieColType": "Category",
+    "cookieColPurpose": "Purpose",
+    "cookieColDuration": "Duration",
+    "contactForm": "Contact form",
+    "manageCookiesTitle": "Manage cookie preferences",
+    "manageCookiesHint": "You can reopen the cookie banner and change your choices at any time.",
+    "cookieRows": [
+      {
+        "type": "Essential",
+        "purpose": "Site security, language, session, cookie consent storage.",
+        "duration": "Session to 12 months"
+      },
+      {
+        "type": "Analytics",
+        "purpose": "Understand traffic and improve pages (only if you allow).",
+        "duration": "Up to 13 months"
+      },
+      {
+        "type": "Marketing",
+        "purpose": "Measure campaigns and show relevant offers (only if you allow).",
+        "duration": "Up to 13 months"
+      }
+    ],
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "paragraphs": [
+          "We respect your privacy and aim to be transparent about the data we process. This Privacy Policy («Policy») describes how WATAD Software («WATAD», «we», «us») handles personal information when you visit https://www.watadiq.com, use our contact forms, communicate with us, or engage our professional services.",
+          "This Policy applies to visitors, prospective clients, active clients, and anyone who interacts with our website, email, or project delivery channels. It does not replace a signed data processing agreement where one is required for a specific project.",
+          "By using our website or services, you acknowledge that you have read this Policy. Where the law requires consent—for example for non-essential cookies or certain marketing—we ask for your choice before enabling those features.",
+          "We design our products with security and privacy in mind, but no online service can guarantee absolute security. We encourage you to use strong passwords, keep your devices updated, and contact us if you notice suspicious activity related to your account or project.",
+          "If you do not agree with this Policy, please discontinue use of our website and services, except where we must retain certain records for legal or contractual reasons.",
+          "This Policy is designed to meet expectations of international clients while reflecting how we operate from Iraq. It should be read together with our Terms of Service and any project-specific data addendum.",
+          "We publish this document in Arabic and English. If translations differ, we work in good faith to align them; contact us if you need clarification for compliance reviews."
+        ]
+      },
+      "controller": {
+        "title": "Data controller",
+        "paragraphs": [
+          "WATAD Software is the data controller for personal data described in this Policy, unless we explicitly state that we act as a processor on behalf of a client.",
+          "For general privacy inquiries, contact: info@watadiq.com. Website: https://www.watadiq.com",
+          "When we deliver websites, apps, or infrastructure for clients, those clients may be controllers of their end users' data. In those cases, their privacy policy governs end-user relationships, and we process data according to our contract with the client.",
+          "We may appoint internal owners for privacy and security matters and work with legal counsel when updating this Policy or responding to regulatory requests."
+        ]
+      },
+      "collect": {
+        "title": "Information we collect",
+        "lead": "We collect only what we need to operate watadiq.com, respond to you, deliver services, and improve our work. Categories include:",
+        "bullets": [
+          "Identity & contact: name, email, phone, company name, job title, and messages you send via forms or email.",
+          "Usage data: pages viewed, time on page, scroll depth (aggregated), referral URL, and general device/browser information.",
+          "Technical data: IP address (often truncated or processed via CDN), user agent, language preference, and approximate region derived from network data.",
+          "Cookie & consent records: your cookie banner choices stored in local storage or similar technologies on your device.",
+          "Project & billing data: statements of work, invoices, payment references, and communication history related to active engagements.",
+          "Support content: files, screenshots, or credentials you voluntarily share so we can troubleshoot or deliver work (handled under confidentiality terms).",
+          "Marketing preferences: whether you opted in to newsletters or promotional messages, and proof of consent where required.",
+          "Security logs: failed login attempts, rate-limit events, and abuse signals used to protect our infrastructure.",
+          "Aggregated analytics: statistics that do not identify you personally, used to improve performance and content.",
+          "Social & campaign parameters: UTM tags or similar parameters when you arrive from ads or social links (if analytics cookies are allowed)."
+        ],
+        "paragraphs": [
+          "We do not intentionally collect sensitive categories such as health, biometric, or government ID data through the public website. If a project requires such data, we address it in a separate agreement.",
+          "You may choose not to provide certain information, but we may be unable to respond to inquiries or deliver services without sufficient contact and project details.",
+          "We minimize collection: we do not ask for government ID on the marketing site, and we discourage sending passwords in plain email—use agreed secure channels for credentials during projects."
+        ]
+      },
+      "cookies": {
+        "title": "Cookies & similar technologies",
+        "lead": "We use cookies, local storage, and similar technologies to run the site, remember language, keep you signed in where applicable, and—only with permission—measure analytics or marketing performance.",
+        "paragraphs": [
+          "Essential technologies are always active because core features (security, language, consent storage) cannot work without them.",
+          "Optional analytics help us understand which pages are useful and where visitors drop off. Optional marketing cookies may help measure campaigns; we enable them only if you consent.",
+          "You can change preferences anytime via the cookie banner or the manage-cookies control at the bottom of this page. Browser settings may also block cookies, though some features may stop working.",
+          "Third-party embeds (for example video players or maps) may set their own cookies if you interact with them; their policies apply to that processing.",
+          "You may use browser controls to block cookies; essential site features may degrade. We honor Global Privacy Control (GPC) signals where technically feasible for optional analytics."
+        ]
+      },
+      "legal": {
+        "title": "Legal bases for processing",
+        "lead": "Depending on your location and the activity, we rely on one or more of the following bases:",
+        "bullets": [
+          "Contract: delivering proposals, projects, hosting, maintenance, and support you request.",
+          "Legitimate interests: securing platforms, preventing fraud and abuse, improving products, and understanding aggregated usage.",
+          "Consent: non-essential cookies, optional newsletters, and certain marketing communications.",
+          "Legal obligation: tax, accounting, responding to lawful requests, and regulatory compliance.",
+          "Vital interests: rare situations where processing is necessary to protect someone's safety.",
+          "Pre-contract steps: responding to quotes and preparing agreements at your request."
+        ],
+        "paragraphs": [
+          "Where we rely on legitimate interests, we balance our needs against your rights and implement safeguards such as minimization and access controls.",
+          "You may withdraw consent at any time for processing that depends on it; withdrawal does not affect processing that occurred before withdrawal where it was lawful."
+        ]
+      },
+      "use": {
+        "title": "How we use your information",
+        "bullets": [
+          "Provide, operate, and maintain watadiq.com and related tools.",
+          "Respond to contact, sales, and support requests.",
+          "Prepare proposals, statements of work, and project documentation.",
+          "Deliver design, development, security, and hosting services under contract.",
+          "Process payments and send invoices or receipts.",
+          "Send service-related notices (for example maintenance windows or policy updates).",
+          "Analyze aggregated traffic to improve speed, accessibility, and content (with consent where required).",
+          "Detect, investigate, and prevent security incidents and abuse.",
+          "Enforce our Terms of Service and protect our rights and users.",
+          "Comply with applicable laws and respond to valid legal process."
+        ],
+        "paragraphs": [
+          "We do not use your personal data for automated decision-making that produces legal or similarly significant effects without appropriate safeguards and notice where required.",
+          "Marketing emails are sent only when permitted by law and your preferences; every marketing message includes a way to opt out where applicable."
+        ]
+      },
+      "sharing": {
+        "title": "Sharing & processors",
+        "paragraphs": [
+          "We do not sell your personal data. We do not share it for third-party advertising lists.",
+          "We disclose data to service providers («processors») who help us operate—for example cloud hosting, CDN/WAF, email delivery, analytics (if consented), payment processors, and collaboration tools—under contracts that require confidentiality and appropriate security.",
+          "We may disclose information if required by law, court order, or governmental request, or when we believe disclosure is necessary to protect rights, safety, or investigate fraud.",
+          "If WATAD undergoes a merger, acquisition, or asset sale, personal data may transfer as part of that transaction with notice where required by law."
+        ],
+        "bullets": [
+          "Hosting & CDN partners in regions we select for performance and security.",
+          "Email and transactional messaging providers.",
+          "Analytics providers only when you allow analytics cookies.",
+          "Professional advisers (lawyers, accountants) under confidentiality.",
+          "Subcontractors assisting on your project, bound by confidentiality and need-to-know access."
+        ]
+      },
+      "retention": {
+        "title": "Data retention",
+        "lead": "We keep personal data only as long as needed for the purposes described in this Policy:",
+        "bullets": [
+          "Contact form and sales inquiries: typically up to 24 months unless a project starts or law requires longer.",
+          "Active client project files: for the project duration plus a reasonable archive period (often 3–7 years for business records).",
+          "Invoices and payment records: as required by tax and accounting rules.",
+          "Cookie consent choices: stored on your device until you clear storage or change preferences.",
+          "Security logs: generally 30–365 days depending on severity and investigation needs.",
+          "Marketing lists: until you unsubscribe or we retire the campaign, plus a suppression record to honor opt-out.",
+          "Backups: may persist for a limited period after deletion from live systems before being overwritten.",
+          "Legal holds: longer retention when disputes, audits, or investigations require it."
+        ],
+        "paragraphs": [
+          "When data is no longer needed, we delete or anonymize it where feasible. Anonymized statistics may be retained indefinitely."
+        ]
+      },
+      "security": {
+        "title": "Security",
+        "paragraphs": [
+          "We use HTTPS/TLS encryption in transit, hardened hosting, access controls, rate limiting, and monitoring appropriate to our size and risk profile.",
+          "Project credentials and secrets you share are stored with least-privilege access and are not used beyond delivering your engagement.",
+          "We review dependencies and apply patches on a reasonable schedule; client production environments may follow separate maintenance agreements.",
+          "No method of transmission or storage is 100% secure. If we become aware of a breach affecting your personal data, we will notify you and regulators as required by law.",
+          "We maintain incident response playbooks, restrict production access, and review vendor security periodically. Clients may request a summary of controls relevant to their project under NDA."
+        ]
+      },
+      "rights": {
+        "title": "Your rights",
+        "lead": "Depending on applicable law (including GDPR-style rights where relevant), you may have the following:",
+        "bullets": [
+          "Access: request a copy of personal data we hold about you.",
+          "Correction: ask us to fix inaccurate or incomplete data.",
+          "Deletion: request erasure where no overriding legal basis requires retention.",
+          "Restriction: ask us to limit processing in certain circumstances.",
+          "Objection: object to processing based on legitimate interests or direct marketing.",
+          "Portability: receive data you provided in a structured, commonly used format where technically feasible.",
+          "Withdraw consent: for processing that relies on consent, without affecting prior lawful processing.",
+          "Complaint: lodge a complaint with a supervisory authority in your country or region.",
+          "Opt out of marketing: use unsubscribe links or contact us directly.",
+          "Cookie controls: change optional cookie categories at any time."
+        ],
+        "note": "To exercise rights, email info@watadiq.com with enough detail for us to verify your identity and locate your records. We respond within timelines required by applicable law.",
+        "paragraphs": [
+          "We may decline requests that are manifestly unfounded, repetitive, or would impair others' rights. We may charge a reasonable fee where permitted for excessive requests.",
+          "For EU/UK visitors, we aim to respect applicable GDPR-style rights even when Iraq is our primary jurisdiction. Response times follow reasonable industry practice unless law sets a shorter deadline."
+        ]
+      },
+      "children": {
+        "title": "Children",
+        "paragraphs": [
+          "Our website and agency services are directed at businesses and adults. They are not directed at children under 16.",
+          "We do not knowingly collect personal data from children. If you believe a child provided data to us, contact info@watadiq.com and we will take appropriate steps to delete it.",
+          "Clients who build products for children must comply with applicable child privacy laws in their jurisdictions; that compliance is the client's responsibility unless agreed otherwise in writing."
+        ]
+      },
+      "changes": {
+        "title": "Changes to this policy",
+        "paragraphs": [
+          "We may update this Policy when our practices, technologies, or legal requirements change. The «Last updated» date at the top of this page indicates the latest revision.",
+          "Material changes may be highlighted on our website or communicated to active clients where appropriate.",
+          "Continued use of the website after changes become effective means you accept the updated Policy, except where further consent is required by law."
+        ]
+      },
+      "contact": {
+        "title": "Contact us",
+        "paragraphs": [
+          "Questions about this Policy, cookies, or your personal data:",
+          "We aim to respond to privacy requests within a reasonable time and in any event within deadlines required by applicable law."
+        ]
+      },
+      "definitions": {
+        "title": "Definitions",
+        "bullets": [
+          "«Personal data»: information relating to an identified or identifiable individual.",
+          "«Processing»: any operation on personal data (collection, storage, use, disclosure, deletion).",
+          "«Controller»: entity that decides why and how personal data is processed (usually WATAD for watadiq.com operations).",
+          "«Processor»: entity processing data on behalf of a controller (hosting, email, analytics vendors).",
+          "«Cookies»: small text files stored on your device; «local storage» includes similar browser storage APIs."
+        ],
+        "paragraphs": [
+          "Project-specific definitions may appear in your statement of work or data processing addendum."
+        ]
+      },
+      "international": {
+        "title": "International transfers",
+        "paragraphs": [
+          "Our infrastructure and subprocessors may process data in countries other than your own (for example cloud regions in Europe, the United States, or the Middle East).",
+          "When we transfer personal data internationally, we use appropriate safeguards such as standard contractual clauses, vendor certifications, or your written instructions in project contracts.",
+          "You may request information about primary processing locations for your project by contacting info@watadiq.com."
+        ]
+      },
+      "marketing": {
+        "title": "Marketing communications",
+        "paragraphs": [
+          "We may send newsletters or service updates if you opt in or if we have another lawful basis under applicable law.",
+          "Every marketing email includes an unsubscribe link or instructions. Transactional messages (invoices, project updates you requested) are not marketing.",
+          "We do not sell your email address to list brokers."
+        ]
+      }
+    }
+  },
+  "termsPage": {
+    "title": "Terms of Service",
+    "eyebrow": "WATAD Legal",
+    "lead": "These terms govern your use of watadiq.com and all professional services offered by WATAD Software. They describe eligibility, project delivery, fees, intellectual property, liability, and how we resolve disputes.",
+    "lastUpdated": "Last updated: August 2026",
+    "tocTitle": "Contents",
+    "contactForm": "Contact form",
+    "relatedTitle": "Related policies",
+    "relatedHint": "How we handle personal data, cookies, and your privacy rights.",
+    "relatedPrivacy": "Read privacy policy",
+    "sections": {
+      "intro": {
+        "title": "Agreement to terms",
+        "paragraphs": [
+          "These Terms of Service («Terms») govern your access to https://www.watadiq.com and your use of websites, products, and professional services provided by WATAD Software («WATAD», «we», «us»).",
+          "By visiting our website, submitting an inquiry, creating an account where offered, or entering into a project agreement, you agree to these Terms. If you do not agree, do not use our website or services.",
+          "These Terms form a binding agreement between you (or the organization you represent) and WATAD. You represent that you have authority to bind that organization when acting on its behalf.",
+          "Where a signed statement of work, master services agreement, proposal, or invoice terms conflict with these Terms, the signed or written project agreement prevails for that specific engagement.",
+          "We may provide translations of these Terms for convenience; the English version controls if there is a conflict unless local law requires otherwise.",
+          "These Terms are a general framework. Enterprise clients may negotiate master service agreements with additional security, insurance, or SLA commitments."
+        ]
+      },
+      "services": {
+        "title": "Our services",
+        "lead": "WATAD is an Iraqi digital agency. Services include, without limitation:",
+        "bullets": [
+          "Custom website design and development (marketing sites, dashboards, e-commerce, web apps).",
+          "Mobile application design and development for iOS and Android.",
+          "UI/UX design, design systems, and brand-aligned product interfaces.",
+          "Cybersecurity assessments, hardening guidance, secure architecture reviews, and related consulting.",
+          "Cloud deployment, DevOps support, hosting setup, and ongoing maintenance retainers.",
+          "API integrations, third-party service wiring, and performance optimization.",
+          "Training, documentation, and handover sessions for client teams where agreed.",
+          "Emergency support or remediation when contracted separately."
+        ],
+        "paragraphs": [
+          "Detailed scope, milestones, acceptance criteria, and fees appear in your proposal, invoice, or signed agreement. We may update public service descriptions on watadiq.com without altering active contracts.",
+          "Beta features, internal tools, or experimental offerings may be labeled as such and provided without the same warranties as paid deliverables unless agreed in writing."
+        ]
+      },
+      "eligibility": {
+        "title": "Eligibility & accounts",
+        "bullets": [
+          "You must be at least 18 years old or have legal authority to enter contracts for your organization.",
+          "Information you provide must be accurate and kept up to date.",
+          "You are responsible for credentials, API keys, domains, and access you share with us.",
+          "You may not use our services for unlawful, fraudulent, harassing, or harmful activity.",
+          "You may not attempt to probe, scan, or test vulnerabilities of our systems except under a written security test agreement.",
+          "Automated scraping of watadiq.com beyond normal browsing is prohibited unless we give written permission.",
+          "If we offer client portals or project accounts, you must notify us immediately of unauthorized access."
+        ],
+        "paragraphs": [
+          "We may refuse or terminate service to anyone who violates these Terms or poses a risk to our team, infrastructure, or other clients."
+        ]
+      },
+      "projects": {
+        "title": "Projects & deliverables",
+        "bullets": [
+          "Timelines depend on agreed scope, your timely feedback, and materials you supply (copy, brand assets, approvals).",
+          "Change requests outside scope may require a change order, revised fees, or new delivery dates.",
+          "We may use vetted subcontractors under confidentiality and need-to-know access.",
+          "You will designate a primary contact with authority to approve scope and deliverables.",
+          "Review periods for designs, staging sites, or builds are defined in your agreement; silence after the review window may count as acceptance where stated.",
+          "Third-party licenses (fonts, stock media, plugins, SaaS) may require your separate acceptance or payment.",
+          "Launch dates may depend on DNS, app store review, payment gateways, or other third parties outside our control."
+        ],
+        "note": "Delays caused by missing content, unavailable stakeholders, third-party outages, or force majeure extend schedules without penalty to WATAD.",
+        "paragraphs": [
+          "We document major decisions in writing (email or project tools) to keep a clear record for both parties.",
+          "Post-launch warranty periods for bug fixes—if any—are defined in your agreement; new features are out of scope unless quoted."
+        ]
+      },
+      "payment": {
+        "title": "Fees & payment",
+        "bullets": [
+          "Quotes are typically in Iraqi Dinar (IQD) unless another currency is stated in writing.",
+          "Accepted methods may include bank transfer, Zain Cash, or other channels published on our pricing page.",
+          "Deposits and milestone invoices are due on the dates shown; work may pause when accounts are overdue.",
+          "Late payments may incur reminders, suspension of work, or interest where permitted by law and stated on invoices.",
+          "Deposits and completed milestone work are generally non-refundable once work has started, except where law or your agreement says otherwise.",
+          "You are responsible for bank fees, currency conversion, and transfer charges on your side unless we agree otherwise.",
+          "Disputed invoices must be raised in writing within 14 days of receipt with specific reasons; undisputed portions remain due."
+        ],
+        "paragraphs": [
+          "Excluded unless explicitly included: government fees, domain renewals, SSL where billed separately, ad spend, stock licenses, app store fees, SMS/voice costs, and pass-through SaaS subscriptions.",
+          "Taxes: you are responsible for applicable taxes unless we state we collect them on invoices.",
+          "Recurring retainers renew monthly or annually as stated on your invoice until cancelled per agreement notice periods."
+        ]
+      },
+      "ip": {
+        "title": "Intellectual property",
+        "bullets": [
+          "Upon full payment of agreed fees, you receive the license or ownership rights specified in your project contract to final deliverables created specifically for you.",
+          "WATAD retains ownership of pre-existing code libraries, internal tools, boilerplate, methodologies, and general know-how used to perform the work.",
+          "We grant you a license to any WATAD background IP embedded in deliverables as needed to use the deliverables as intended.",
+          "You may not resell our proprietary tools or reuse our internal templates outside the licensed deliverables without permission.",
+          "Portfolio: unless you object in writing before public launch, we may display non-confidential visuals and project descriptions in our portfolio and marketing.",
+          "You warrant that content you supply does not infringe trademarks, copyrights, privacy, or publicity rights of third parties.",
+          "Open-source components in deliverables remain subject to their licenses; we will flag major OSS dependencies when practical."
+        ],
+        "paragraphs": [
+          "If you terminate early, rights to incomplete work are handled as stated in your agreement; otherwise WATAD may retain unfinished materials until outstanding fees are settled."
+        ]
+      },
+      "client": {
+        "title": "Your responsibilities",
+        "bullets": [
+          "Provide timely feedback, approvals, and required content in agreed formats.",
+          "Ensure legal rights to logos, fonts, product data, user lists, and media you provide.",
+          "Maintain backups of live environments when we are not under a maintenance contract.",
+          "Comply with data protection laws for your end users; publish your own privacy policy where required.",
+          "Configure DNS, app store accounts, and merchant accounts promptly when those are on your side.",
+          "Do not ask us to implement deceptive patterns, illegal tracking, or malware.",
+          "Inform us of accessibility, language, or regulatory requirements before build starts when they affect architecture."
+        ],
+        "paragraphs": [
+          "You indemnify WATAD against third-party claims arising from materials you supply or unlawful use of deliverables, except to the extent caused by our gross negligence or willful misconduct."
+        ]
+      },
+      "confidentiality": {
+        "title": "Confidentiality",
+        "paragraphs": [
+          "Each party agrees to protect non-public business, technical, pricing, and roadmap information received from the other party.",
+          "Confidential information excludes data that is public without breach, independently developed, or rightfully received from a third party without duty of confidentiality.",
+          "We may disclose confidential information to employees, contractors, and advisers who need it to perform services, under matching confidentiality obligations.",
+          "If required by law, a party may disclose confidential information after giving notice when legally permitted so the other party may seek protective measures."
+        ]
+      },
+      "warranties": {
+        "title": "Warranties & disclaimers",
+        "paragraphs": [
+          "We will perform services with reasonable skill and care consistent with professional digital agencies in our category.",
+          "Except as expressly written in your signed agreement, watadiq.com and our services are provided «as is» and «as available» without warranties of uninterrupted uptime, error-free operation, or fitness for a particular business outcome.",
+          "We do not guarantee search rankings, revenue, conversion rates, viral growth, or specific security outcomes unless explicitly stated in a security services scope.",
+          "Third-party platforms (hosting, app stores, payment gateways) have their own terms and outages; we are not liable for their failures beyond our reasonable integration efforts."
+        ]
+      },
+      "liability": {
+        "title": "Limitation of liability",
+        "paragraphs": [
+          "To the fullest extent permitted by law, neither party is liable for indirect, incidental, special, consequential, or punitive damages, including lost profits, lost data, or business interruption.",
+          "WATAD's total aggregate liability for claims relating to a project or these Terms is limited to the fees you paid WATAD for that project in the twelve (12) months before the event giving rise to the claim, unless a higher cap is signed in your agreement.",
+          "These limits apply regardless of theory of liability (contract, tort, negligence, strict liability, or otherwise).",
+          "You acknowledge that pricing reflects these limitations and that WATAD would not provide services at current rates without them.",
+          "Client acknowledges that software and security involve inherent risk; no vendor can guarantee zero vulnerabilities."
+        ],
+        "note": "Nothing limits liability that cannot be limited under applicable law, including fraud, willful misconduct, or death/personal injury caused by negligence where non-waivable."
+      },
+      "suspension": {
+        "title": "Suspension & termination",
+        "bullets": [
+          "We may suspend website access, project work, or hosted environments if you breach these Terms, fail to pay, or misuse systems.",
+          "You may terminate according to cancellation terms in your signed agreement; otherwise written notice may be required with fees for work completed.",
+          "Upon termination, you pay for work performed, non-cancellable third-party costs, and any wind-down agreed in writing.",
+          "We may delete staging data after a reasonable period post-termination unless you purchase archive export.",
+          "Provisions that by nature should survive (payment, IP, confidentiality, liability limits, dispute resolution) remain in effect."
+        ],
+        "paragraphs": [
+          "If you migrate away from WATAD-managed hosting, we will provide reasonable transition assistance when contracted; emergency handover may require additional fees."
+        ]
+      },
+      "governing": {
+        "title": "Governing law & disputes",
+        "paragraphs": [
+          "These Terms are governed by the laws of the Republic of Iraq, without regard to conflict-of-law rules that would apply another jurisdiction's laws.",
+          "Parties will first attempt good-faith resolution through direct negotiation. If unresolved within 30 days, disputes may be submitted to the competent courts in Iraq unless your signed agreement specifies arbitration or another forum.",
+          "You agree to bring claims only in your individual capacity unless we agree otherwise in writing.",
+          "Nothing prevents either party from seeking injunctive relief for misuse of IP or confidentiality breaches in any court with jurisdiction."
+        ]
+      },
+      "changes": {
+        "title": "Changes to these terms",
+        "paragraphs": [
+          "We may update these Terms when services, regulations, or business practices change. The updated version will be posted here with a revised «Last updated» date.",
+          "Material changes affecting active clients will be handled through project agreements or direct notice where appropriate.",
+          "Continued use of watadiq.com after changes take effect constitutes acceptance unless further consent is required by law."
+        ]
+      },
+      "contact": {
+        "title": "Contact us",
+        "paragraphs": [
+          "Questions about these Terms, billing, or an active project:",
+          "Legal & contracts: info@watadiq.com — we route your message to the appropriate team member."
+        ]
+      },
+      "acceptable": {
+        "title": "Acceptable use",
+        "bullets": [
+          "Do not use deliverables to distribute malware, spam, or unlawful content.",
+          "Do not attempt unauthorized access to WATAD or client systems.",
+          "Do not misrepresent WATAD as the publisher of your end-user content.",
+          "Respect third-party platform rules (app stores, ad networks, payment providers)."
+        ],
+        "paragraphs": [
+          "We may report credible illegal activity to authorities when required or when necessary to protect victims."
+        ]
+      },
+      "sla": {
+        "title": "Support & SLA",
+        "paragraphs": [
+          "Response times for bugs and incidents depend on your support tier in the signed agreement (business hours vs 24/7).",
+          "Unless an SLA is explicitly purchased, we do not guarantee specific uptime percentages for staging or internal tools.",
+          "Emergency security patches for WATAD-managed hosting are prioritized according to severity and contract."
+        ]
+      },
+      "forceMajeure": {
+        "title": "Force majeure",
+        "paragraphs": [
+          "Neither party is liable for delay or failure caused by events beyond reasonable control (natural disasters, war, widespread outages, government actions, pandemics, major internet failures).",
+          "The affected party will notify the other and resume performance as soon as practicable."
+        ]
+      }
+    }
+  },
+  "pages": {
+    "about": {
+      "title": "About WATAD",
+      "eyebrow": "WATAD Software",
+      "intro": "WATAD is an official Iraqi software agency focused on web development, mobile applications, cybersecurity, and digital products that help ambitious brands scale with confidence.",
+      "cta": {
+        "label": "View expertise",
+        "href": "/expertise"
+      },
+      "sections": [
+        {
+          "title": "Our story",
+          "paragraphs": [
+            "WATAD was founded so Iraqi businesses and creators could access the same standard of digital craft found in leading global tech hubs. We unite precise design, dependable engineering, and security led thinking so every product we ship feels premium and holds up under real world pressure.",
+            "From startups launching a first app to established brands renewing their web presence, we stay close to clients and translate bold ideas into software that ships on schedule."
+          ]
+        },
+        {
+          "title": "Mission",
+          "paragraphs": [
+            "Enable generations of Iraqi entrepreneurs, artists, and organizations to succeed, influence culture, and shape a stronger digital future, one product at a time."
+          ],
+          "list": [
+            "Build fast, accessible, and beautiful digital experiences.",
+            "Protect what matters with modern cybersecurity practices.",
+            "Stay close to clients from strategy through launch and beyond."
+          ]
+        },
+        {
+          "id": "what-we-do",
+          "title": "What we do",
+          "cards": [
+            {
+              "icon": "web",
+              "title": "Web Development",
+              "text": "Marketing sites, dashboards, and full-stack platforms, responsive, fast, and built to convert."
+            },
+            {
+              "icon": "mobile",
+              "title": "Mobile Apps",
+              "text": "Native feel experiences for iOS and Android, from MVPs to production ready releases."
+            },
+            {
+              "icon": "security",
+              "title": "Cybersecurity",
+              "text": "Audits, hardening, and secure architecture so your users and data stay protected."
+            }
+          ]
+        }
+      ]
+    },
+    "expertise": {
+      "title": "Expertise",
+      "eyebrow": "WATAD Services",
+      "intro": "Explore our core disciplines: web, apps, design, security, and the full stack of services we deliver for Iraqi brands.",
+      "cta": {
+        "label": "See pricing",
+        "href": "/pricing"
+      },
+      "sections": [
+        {
+          "id": "core-disciplines",
+          "title": "Core disciplines",
+          "cards": [
+            {
+              "icon": "web",
+              "title": "Web Development",
+              "text": "React, Node, dashboards, and marketing sites tuned for speed and conversion."
+            },
+            {
+              "icon": "mobile",
+              "title": "Mobile Applications",
+              "text": "Cross platform and native apps with polished UX and reliable backends."
+            },
+            {
+              "icon": "design",
+              "title": "UI/UX Design",
+              "text": "Brand aligned interfaces that feel premium on every screen size."
+            },
+            {
+              "icon": "security",
+              "title": "Cybersecurity",
+              "text": "Audits, penetration testing, and secure architecture from day one."
+            },
+            {
+              "icon": "commerce",
+              "title": "Ecommerce",
+              "text": "Stores, payments, and bilingual storefronts for the Iraqi market."
+            },
+            {
+              "icon": "cloud",
+              "title": "DevOps & Cloud",
+              "text": "Hosting, CI/CD, monitoring, and scalable infrastructure."
+            }
+          ]
+        },
+        {
+          "title": "How we work",
+          "list": [
+            "Discover goals, audience, and constraints before a line of code is written.",
+            "Design wireframes and visuals that reflect your brand with precision.",
+            "Build in iterative releases with milestones you can see and approve.",
+            "Launch with deployment, monitoring, and support after go live."
+          ]
+        }
+      ]
+    },
+    "team": {
+      "title": "Team",
+      "eyebrow": "WATAD identity",
+      "intro": "Designers, developers, and security specialists working under one WATAD identity. Built in Iraq and delivered with pride.",
+      "cta": {
+        "label": "Work with us",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "id": "core-team",
+          "title": "Core team",
+          "cards": [
+            {
+              "title": "Hussein Saad",
+              "photo": "/images/team/hussein-saad.jpg",
+              "text": "Founder and apps & web developer, expert in multiple programming languages.",
+              "meta": "Founder Developer"
+            },
+            {
+              "title": "Mohamed Adel",
+              "photo": "/images/team/mohamed-adel.jpg",
+              "text": "Co-founder and marketing lead, growing WATAD's reach and client relationships.",
+              "meta": "Founder Marketing"
+            }
+          ]
+        },
+        {
+          "id": "work-together",
+          "title": "How we work together",
+          "list": [
+            "Small team, direct communication, no unnecessary layers or delays.",
+            "Design and engineering in the same room from day one.",
+            "Security reviewed before launch, every single time."
+          ]
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Pricing",
+      "eyebrow": "WATAD Plans",
+      "intro": "Transparent packages for websites, apps, and security. Built for Iraqi brands, priced in IQD.",
+      "cta": {
+        "label": "Request a quote",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "title": "Packages",
+          "pricingPlans": [
+            {
+              "name": "Launch",
+              "price": "300,000",
+              "currency": "IQD",
+              "period": "project",
+              "description": "Your first professional website, fast, responsive, and ready to launch.",
+              "features": [
+                "1-page responsive site",
+                "Contact form + SSL",
+                "1 year hosting included",
+                "2 revision rounds",
+                "10 to 14 days delivery"
+              ],
+              "cta": {
+                "label": "Get Started",
+                "href": "/contact"
+              }
+            },
+            {
+              "name": "Business",
+              "price": "600,000",
+              "currency": "IQD",
+              "period": "project",
+              "description": "A full multi page website built for growing Iraqi brands.",
+              "features": [
+                "Up to 8 pages + CMS admin",
+                "SEO setup + blog section",
+                "Analytics integration",
+                "4 revisions, 3 months support",
+                "Mobile first responsive design"
+              ],
+              "cta": {
+                "label": "Get Started",
+                "href": "/contact"
+              }
+            },
+            {
+              "name": "Scale",
+              "price": "1,000,000",
+              "currency": "IQD",
+              "period": "project",
+              "description": "Sell online with e-commerce, bilingual support, and security built in.",
+              "featured": true,
+              "badge": "Special Offer!",
+              "note": "Most chosen plan by Iraqi brands.",
+              "features": [
+                "Ecommerce / PWA + payments",
+                "Bilingual site (AR / EN)",
+                "Security audit included",
+                "6 months support",
+                "Priority delivery timeline"
+              ],
+              "cta": {
+                "label": "Upgrade",
+                "href": "/contact"
+              }
+            },
+            {
+              "name": "Enterprise",
+              "price": "2,500,000+",
+              "currency": "IQD",
+              "period": "project",
+              "description": "Custom web and mobile platform for ambitious organizations.",
+              "features": [
+                "Web + mobile app",
+                "API & cloud architecture",
+                "Dedicated PM + pentest report",
+                "12 month SLA",
+                "Custom milestone billing"
+              ],
+              "cta": {
+                "label": "Contact Us",
+                "href": "/contact"
+              }
+            }
+          ]
+        },
+        {
+          "title": "Payment options",
+          "paymentOptions": [
+            {
+              "icon": "bank",
+              "title": "Bank transfer",
+              "summary": "Secure IQD payments through local banking",
+              "description": "Pay in Iraqi Dinar via secure local bank transfer. We share verified account details after onboarding and confirm receipt before project kickoff."
+            },
+            {
+              "icon": "wallet",
+              "title": "Zain Cash",
+              "summary": "Fast deposits for retainers and down payments",
+              "description": "Use Zain Cash for quick deposits, retainers, and down payments. Ideal when you need to start immediately while formal invoicing is processed."
+            },
+            {
+              "icon": "split",
+              "title": "50 50 split",
+              "summary": "Balanced payment schedule for growing teams",
+              "description": "Split your investment across two milestones: 50% to start and 50% before launch. Available on Business plans and above for predictable cash flow."
+            },
+            {
+              "icon": "milestone",
+              "title": "Milestone billing",
+              "summary": "Enterprise grade phased invoicing",
+              "description": "Custom milestone billing aligned with delivery phases, approvals, and enterprise procurement workflows for large scale WATAD engagements."
+            }
+          ]
+        }
+      ]
+    },
+    "work": {
+      "title": "Our Work",
+      "eyebrow": "WATAD Portfolio",
+      "intro": "Websites and digital experiences crafted by WATAD for Iraqi brands. Each project pairs refined design, fast performance, and UX that respects your users' time.",
+      "cta": {
+        "label": "Start your project",
+        "href": "/contact"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "eyebrow": "WATAD Contact",
+      "intro": "Tell us about your website, app, or security initiative. We respond during Iraqi business hours with clear next steps.",
+      "cta": {
+        "label": "View plans",
+        "href": "/pricing"
+      },
+      "sections": [
+        {
+          "id": "contact-channels",
+          "title": "Reach the team",
+          "cards": [
+            {
+              "icon": "email",
+              "title": "Email",
+              "text": "info@watadiq.com",
+              "href": "mailto:info@watadiq.com"
+            },
+            {
+              "icon": "instagram",
+              "title": "Instagram",
+              "text": "@watd_iq",
+              "href": "https://instagram.com/watd_iq"
+            }
+          ]
+        },
+        {
+          "id": "contact-next",
+          "title": "What happens next",
+          "list": [
+            "Most messages get a reply within one Iraqi business day.",
+            "Share a brief, budget range, or deadline, no formal doc required.",
+            "We confirm scope and timeline before work starts."
+          ]
+        }
+      ]
+    }
+  },
+  "portfolio": {
+    "sectionLabel": "Portfolio showcase",
+    "featuredLabel": "Featured projects",
+    "viewDetails": "View details",
+    "visitSite": "Visit site",
+    "close": "Close",
+    "swipeHint": "Swipe left or right",
+    "deckHint": "Swipe to browse projects in 3D",
+    "paperHint": "Swipe the paper sheet from the stack",
+    "restoreHint": "Pull to return the paper to the stack",
+    "projects": {
+      "victorian": {
+        "title": "Victorian Iraq",
+        "category": "E-commerce",
+        "summary": "An Iraqi store for classic notebooks and gifts with an elegant design and full Arabic shopping experience.",
+        "description": "Victorian Iraq is an online store specializing in classic notebooks and gifts. We built an elegant Arabic storefront, compelling product presentation, and a smooth checkout flow tailored for Iraqi customers.",
+        "features": [
+          "Responsive Arabic UI with a premium classic look",
+          "Full product catalog, cart, and shopping flow",
+          "Fast performance and mobile-first optimization",
+          "Consistent visual identity for the Victorian brand"
+        ]
+      },
+      "crazy": {
+        "title": "CRAZYSTORE",
+        "category": "Fashion E-commerce",
+        "summary": "A bold Iraqi denim and fashion store with rich catalog browsing and bilingual UX.",
+        "description": "CRAZYSTORE is an e-commerce platform for denim and fashion in Iraq. We delivered a modern storefront with large product imagery, clear categories, and a fast path to purchase.",
+        "features": [
+          "Modern product-led design with strong imagery",
+          "Categories, offers, and smooth browsing flow",
+          "Arabic and English support for local audiences",
+          "Scalable architecture ready for online sales growth"
+        ]
+      }
+    }
+  },
+  "domains": {
+    "eyebrow": "Watad live service",
+    "title": "Find your perfect domain",
+    "intro": "Check domain availability instantly across the most popular global and Iraqi extensions. Found your name? Contact us and we will register it with your website.",
+    "placeholder": "example.com or just a name",
+    "check": "Check now",
+    "checking": "Checking",
+    "note": "Live check from global registries, com, net, org, io, dev, iq and more",
+    "resultsTitle": "Results for \"{{name}}\"",
+    "availableCount": "{{count}} extensions available",
+    "noneAvailable": "All extensions are taken, try another name",
+    "claim": "Claim with Watad",
+    "error": "Could not check right now. Check your connection and try again.",
+    "retry": "Retry",
+    "disclaimer": "Results are indicative from public RDAP and DNS records. Final availability is confirmed at official registration with us.",
+    "status": {
+      "available": "Available",
+      "likely-available": "Likely available",
+      "taken": "Taken",
+      "unknown": "Uncertain"
+    }
+  },
+  "domainFlow": {
+    "registerEyebrow": "Watad ONE, Domain registration",
+    "registerTitle": "Register your domain",
+    "registerIntro": "Complete your details and we will register the domain in your name and prepare it for your website.",
+    "domainSection": "Domain",
+    "contactSection": "Contact details",
+    "domain": "Domain",
+    "years": "Period (years)",
+    "yearUnit": "yr",
+    "pricePerYear": "Price / year",
+    "total": "Total",
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "notes": "Notes",
+    "optional": "optional",
+    "agree": "I agree that Watad registers this domain in my name and contacts me to complete payment and activation.",
+    "submit": "Submit registration",
+    "submitting": "Submitting",
+    "registerHint": "After submitting you will receive an order number, keep it to track your domain.",
+    "successTitle": "Order received!",
+    "successLead": "We received your order and the Watad team will start registration immediately.",
+    "orderNumber": "Order number",
+    "statusLabel": "Status",
+    "successNote": "We will contact you within 24 hours to complete payment and activate your domain. Keep your order number to track it anytime.",
+    "trackOrder": "Track your order",
+    "newSearch": "New search",
+    "trackEyebrow": "Watad ONE, Order tracking",
+    "trackTitle": "Track your order",
+    "trackIntro": "Enter the order number you received at registration to see your domain status.",
+    "trackButton": "Track",
+    "searching": "Searching",
+    "trackHelp": "Need help with your order?",
+    "contactUs": "Contact us",
+    "cancelledNote": "This order was cancelled. Contact us if you have questions.",
+    "status": {
+      "pending": "Under review",
+      "processing": "Registering",
+      "registered": "Registered",
+      "cancelled": "Cancelled"
+    },
+    "errors": {
+      "invalid-domain": "Invalid domain format",
+      "invalid-years": "Invalid registration period",
+      "invalid-name": "Name is required",
+      "invalid-email": "Invalid email address",
+      "invalid-phone": "Invalid phone number",
+      "unsupported-tld": "This extension is not supported yet",
+      "domain-taken": "Sorry, this domain was just taken",
+      "order-not-found": "No order found with this number",
+      "rate-limited": "Too many requests, wait a minute",
+      "generic": "Something went wrong. Try again or contact us"
+    }
+  },
+  "one": {
+    "eyebrow": "Watad ONE, Your account",
+    "createTitle": "Create your Watad ONE account",
+    "createIntro": "One account for your domains, orders and services, control everything from one place.",
+    "loginTitle": "Sign in",
+    "loginIntro": "Sign in to Watad ONE to manage your domains and orders.",
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "optional": "optional",
+    "password": "Password",
+    "passwordHint": "At least 8 characters",
+    "createButton": "Create account",
+    "loginButton": "Sign in",
+    "haveAccount": "Already have an account?",
+    "noAccount": "No account yet?",
+    "wait": "One moment",
+    "dashboardEyebrow": "Watad ONE, Dashboard",
+    "welcome": "Welcome {{name}}",
+    "logout": "Sign out",
+    "myOrders": "My orders",
+    "orderNew": "Register new domain",
+    "noOrders": "No orders yet, start by finding your first domain.",
+    "startSearch": "Find a domain",
+    "accountInfo": "Account info",
+    "memberSince": "Member since",
+    "stats": {
+      "orders": "Total orders",
+      "domains": "Registered domains",
+      "pending": "In progress"
+    },
+    "status": {
+      "pending": "Under review",
+      "processing": "Registering",
+      "registered": "Registered",
+      "cancelled": "Cancelled"
+    },
+    "errors": {
+      "invalid-name": "Name is required",
+      "invalid-email": "Invalid email address",
+      "weak-password": "Password too short, at least 8 characters",
+      "email-exists": "This email is already registered, sign in",
+      "wrong-credentials": "Wrong email or password",
+      "rate-limited": "Too many attempts, wait a minute",
+      "generic": "Something went wrong. Try again"
+    }
+  },
+  "admin": {
+    "eyebrow": "Watad admin panel",
+    "loginTitle": "Admin sign in",
+    "password": "Admin password",
+    "loginButton": "Sign in",
+    "wait": "One moment",
+    "title": "Domain orders",
+    "refresh": "Refresh",
+    "logout": "Sign out",
+    "loading": "Loading",
+    "noOrders": "No orders yet",
+    "cols": {
+      "order": "Order #",
+      "domain": "Domain",
+      "customer": "Customer",
+      "contact": "Contact",
+      "total": "Total",
+      "date": "Date",
+      "status": "Status"
+    },
+    "errors": {
+      "wrong-password": "Wrong password",
+      "unauthorized": "Session expired, sign in again",
+      "generic": "Something went wrong. Try again"
+    }
+  },
+  "securityPage": {
+    "eyebrow": "Cybersecurity",
+    "title": "Security woven into every layer",
+    "lead": "WATAD Software provides security audits, penetration testing, and resilient architecture for websites and apps. Our work follows OWASP guidance and is tailored to Iraqi businesses that need trust, compliance, and calm at launch.",
+    "heroImageAlt": "Illustration of a security specialist with shield and secure infrastructure, WATAD Software",
+    "ctaPrimary": "Request a security review",
+    "ctaSecondary": "View pricing",
+    "statsAria": "Security highlights",
+    "stats": [
+      {
+        "value": "SSL",
+        "label": "Certificate on every launch"
+      },
+      {
+        "value": "OWASP",
+        "label": "Aligned app reviews"
+      },
+      {
+        "value": "IQD",
+        "label": "Local billing & support"
+      }
+    ],
+    "pillarsTitle": "What we secure",
+    "pillarsLead": "From code review to production monitoring, we protect the full stack your customers depend on.",
+    "pillars": [
+      {
+        "id": "audit",
+        "title": "Audits & penetration testing",
+        "text": "We test the way attackers would, before they can. Manual and automated reviews across your web app, APIs, and admin surfaces.",
+        "image": "/images/security/security-audit.webp",
+        "bullets": [
+          "OWASP Top 10 checklist",
+          "Authentication & session review",
+          "Written findings with severity levels",
+          "Remediation guidance for your team"
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Secure architecture",
+        "text": "Security decisions made at design time cost less than fixes after launch. We design roles, secrets, and data flows correctly from day one.",
+        "image": "/images/security/security-architecture.webp",
+        "bullets": [
+          "Least-privilege access models",
+          "Encrypted data in transit & at rest",
+          "Backup & recovery planning",
+          "Cloud and hosting hardening"
+        ]
+      },
+      {
+        "id": "monitoring",
+        "title": "Monitoring & response",
+        "text": "Launch is not the finish line. We help you watch traffic, logs, and alerts so issues are caught early.",
+        "image": "/images/security/security-monitoring.webp",
+        "bullets": [
+          "Uptime & error monitoring setup",
+          "Security header configuration",
+          "Incident response playbook",
+          "Optional ongoing retainer"
+        ]
+      }
+    ],
+    "processTitle": "Our security process",
+    "processLead": "A clear, repeatable workflow with documented steps at every stage.",
+    "process": [
+      {
+        "title": "Scope",
+        "text": "Define assets, threats, and compliance needs with your team."
+      },
+      {
+        "title": "Assess",
+        "text": "Run automated scans and manual tests on staging or production."
+      },
+      {
+        "title": "Report",
+        "text": "Deliver prioritized findings, evidence, and fix recommendations."
+      },
+      {
+        "title": "Harden",
+        "text": "Support fixes, re-test critical items, and sign off before launch."
+      }
+    ],
+    "standardsTitle": "Standards & ecosystem",
+    "standardsLead": "We work with the same tools and standards trusted by global security teams.",
+    "deliverablesTitle": "What you receive",
+    "deliverablesLead": "Concrete deliverables you can share with leadership, investors, and technical teams.",
+    "deliverables": [
+      "Executive summary for decision makers",
+      "Technical report with reproduction steps",
+      "Prioritized remediation checklist",
+      "Re-test confirmation after fixes",
+      "Security headers & SSL verification",
+      "Optional employee security briefing"
+    ],
+    "ctaTitle": "Ready to harden your product?",
+    "ctaText": "Share your website or app with us. We will recommend the right depth of review and a realistic timeline for your team."
+  },
+  "live": {
+    "heroEyebrow": "WATAD Software",
+    "byWatad": "by WATAD Software",
+    "heroTitle": "WATAD Live",
+    "heroTitlePrefix": "WATAD",
+    "heroTitleRotate": [
+      "Live",
+      "Movies",
+      "Series",
+      "Together"
+    ],
+    "heroTagline": "Arabic movies and series",
+    "heroLead": "Family profiles and watch parties",
+    "heroImageAlt": "People in a cinema and at home watching movies with popcorn",
+    "heroIllustrationAlt": "Flat 2D illustration for WATAD Live streaming app",
+    "heroScreenshotAlt": "WATAD Live home screen",
+    "statusBadge": "Public launch",
+    "versionLabel": "v0.5.13",
+    "ctaSubscribe": "Get a subscription",
+    "ctaExplore": "Explore features",
+    "featuresEyebrow": "Features",
+    "featuresTitle": "Everything you need to watch",
+    "featuresIntro": "A modern viewing experience built from scratch, Android first, with Android TV support.",
+    "features": [
+      {
+        "title": "Huge library",
+        "text": "Movies, series, programs, and collections, search and filter by genre, year, and quality."
+      },
+      {
+        "title": "Personal profiles",
+        "text": "Multiple profiles on one device, like Netflix, with PIN locks for kids."
+      },
+      {
+        "title": "Watch Party",
+        "text": "Watch with friends in one room, chat, reactions, and voice, all in sync."
+      },
+      {
+        "title": "Learn English",
+        "text": "Learn mode: pick up English sentence by sentence while watching, pronunciation, translation, and AI help."
+      },
+      {
+        "title": "Smart family filter",
+        "text": "On-device scene detection, blur or skip automatically, no internet required."
+      },
+      {
+        "title": "Content alerts",
+        "text": "Push notifications when new movies and series are added, never miss a release."
+      }
+    ],
+    "spotlights": [
+      {
+        "title": "Watch with friends",
+        "text": "Open a movie or series and invite friends with a room code. Live chat, reactions, and voice, everything stays in sync.",
+        "image": "/images/live/screen-party.png",
+        "imageAlt": "Watch Party screen in WATAD Live"
+      },
+      {
+        "title": "A profile for everyone",
+        "text": "Who's watching? Pick your profile, enable a PIN lock, and set up kids profiles, a tailored experience for every member.",
+        "image": "/images/live/screen-profiles.png",
+        "imageAlt": "Profile picker in WATAD Live"
+      }
+    ],
+    "platformsEyebrow": "Platforms",
+    "platformsTitle": "Where WATAD Live works",
+    "platforms": [
+      {
+        "name": "Android",
+        "status": "Version 0.5.13, public launch coming soon"
+      },
+      {
+        "name": "Android TV",
+        "status": "Available, activate with remote and subscription key"
+      }
+    ],
+    "launchEyebrow": "Launch",
+    "launchTitle": "When is the app launching?",
+    "launchIntro": "Three stages from infrastructure to public release",
+    "launchFootnote": "Updated with each release milestone",
+    "progressLabel": "Launch progress",
+    "timelineStatus": {
+      "done": "Done",
+      "active": "In progress",
+      "upcoming": "Coming soon"
+    },
+    "timeline": [
+      {
+        "phase": "Infrastructure",
+        "status": "done",
+        "detail": "Backend and database ready. Fast, secure, and built to scale."
+      },
+      {
+        "phase": "Android app",
+        "status": "active",
+        "detail": "Version 0.5.13 ready, final stage before public launch within weeks."
+      },
+      {
+        "phase": "Public launch",
+        "status": "upcoming",
+        "detail": "Official app release, coming soon. Contact us for early access."
+      }
+    ],
+    "ctaTitle": "Ready to subscribe?",
+    "ctaText": "Plans are activated with a subscription key. Contact us via the site or Instagram @watd_iq to get yours.",
+    "ctaNote": "A product by WATAD Software, Iraq."
+  }
+}

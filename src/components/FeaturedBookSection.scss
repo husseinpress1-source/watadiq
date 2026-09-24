@@ -1,0 +1,123 @@
+@use '../styles/global.scss' as *;
+
+.featured-book {
+  background: #fff;
+  padding: 64px 0 72px;
+  overflow: hidden;
+
+  &__inner {
+    @include container-wide;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(40px, 5vw, 72px);
+    align-items: center;
+  }
+
+  &__media {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f3f3f3;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  &__content {
+    max-width: 440px;
+  }
+
+  &__eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $met-red;
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    font-family: $font-serif;
+    font-size: clamp(32px, 3.8vw, 44px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    color: $met-black;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 28px;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: $met-black;
+    padding-bottom: 2px;
+    border-bottom: 2px solid $met-red;
+
+    &:hover {
+      color: $met-red;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .featured-book {
+    padding: 48px 0 56px;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding-inline: 20px;
+    }
+
+    &__media {
+      border-radius: 14px;
+      order: -1;
+
+      img {
+        aspect-ratio: 16 / 10;
+      }
+    }
+
+    &__content {
+      max-width: none;
+      text-align: start;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-book {
+    padding: 40px 0 48px;
+
+    &__inner {
+      gap: 24px;
+      padding-inline: 16px;
+    }
+
+    &__media {
+      border-radius: 12px;
+
+      img {
+        aspect-ratio: 4 / 3;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 22px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+Home hero — Pexels (free license: https://www.pexels.com/license/)
+
+Desktop 16:9 — “friends laughing and walking” (photo 4880339)
+  https://www.pexels.com/photo/4880339/
+
+Mobile 9:16 — two friends talking on a walk in the park (photo 12886718)
+  https://www.pexels.com/photo/12886718/
+
+Regenerate: node scripts/fetch-hero-photos.mjs
+
+More free sources for similar shots: Pexels, Unsplash, Pixabay.

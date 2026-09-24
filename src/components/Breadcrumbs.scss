@@ -1,0 +1,76 @@
+@use '../styles/global.scss' as *;
+
+.breadcrumbs {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 18px 32px 20px;
+
+  ol {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    font-size: 16px;
+    color: $met-gray;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    color: $met-gray;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  a:hover {
+    color: $met-black;
+  }
+
+  li[aria-hidden='true'] {
+    font-size: 18px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1;
+  }
+
+  span {
+    color: $met-black;
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 1025px) {
+  .breadcrumbs {
+    padding: 20px 48px 22px 32px;
+
+    ol {
+      font-size: 17px;
+      gap: 12px;
+    }
+
+    li[aria-hidden='true'] {
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 18px;
+    }
+
+    a svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

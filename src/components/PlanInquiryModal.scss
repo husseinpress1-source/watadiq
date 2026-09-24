@@ -1,0 +1,431 @@
+@use '../styles/global.scss' as *;
+
+.plan-inquiry-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+
+  &.is-open {
+    pointer-events: auto;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    border: none;
+    padding: 0;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0);
+    transition: background 0.32s ease, backdrop-filter 0.32s ease;
+    cursor: pointer;
+  }
+
+  &.is-open &__backdrop {
+    background: rgba(0, 0, 0, 0.52);
+    backdrop-filter: blur(4px);
+  }
+
+  &__panel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: min(560px, 100%);
+    max-height: min(90vh, 860px);
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    transition:
+      transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.28s ease;
+  }
+
+  &.is-open &__panel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  &__handle {
+    display: none;
+  }
+
+  &__drag-zone {
+    display: none;
+  }
+
+  &--sheet {
+    align-items: flex-end;
+    justify-content: stretch;
+    padding: 0;
+
+    .plan-inquiry-modal__panel {
+      width: 100%;
+      max-height: min(92vh, 900px);
+      border: none;
+      border-radius: 24px 24px 0 0;
+      box-shadow: 0 -16px 48px rgba(0, 0, 0, 0.18);
+      opacity: 1;
+      transform: none;
+    }
+
+    .plan-inquiry-modal__drag-zone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 100%;
+      padding: 10px 20px 6px;
+      touch-action: none;
+      cursor: grab;
+      user-select: none;
+    }
+
+    &.is-dragging .plan-inquiry-modal__drag-zone {
+      cursor: grabbing;
+    }
+
+    .plan-inquiry-modal__handle {
+      display: block;
+      width: 44px;
+      height: 5px;
+      border-radius: 999px;
+      background: #cfcfcf;
+      transition: width 0.2s ease, background 0.2s ease;
+    }
+
+    &.is-full .plan-inquiry-modal__handle {
+      width: 52px;
+      background: #bdbdbd;
+    }
+
+    .plan-inquiry-modal__close {
+      top: 12px;
+      inset-inline-end: 12px;
+      background: #f5f5f5;
+    }
+
+    .plan-inquiry-modal__scroll {
+      padding: 8px 20px 12px;
+      overscroll-behavior: contain;
+    }
+
+    .plan-inquiry-modal__footer {
+      padding: 12px 20px calc(16px + env(safe-area-inset-bottom, 0px));
+      border-top: 1px solid #efefef;
+      background: #fff;
+    }
+
+    .plan-inquiry-modal__header {
+      padding-inline-end: 40px;
+      margin-bottom: 16px;
+    }
+
+    .plan-inquiry-modal__title {
+      font-size: 26px;
+    }
+
+    .plan-inquiry-modal__price span:first-child {
+      font-size: 30px;
+    }
+
+    .plan-inquiry-modal__preview {
+      margin-bottom: 14px;
+    }
+
+    .plan-inquiry-modal__actions {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .plan-inquiry-modal__btn {
+      min-height: 52px;
+      font-size: 15px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    inset-inline-end: 16px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #666;
+    transition: background 0.16s ease, color 0.16s ease;
+
+    &:hover {
+      background: #f3f3f3;
+      color: #111;
+    }
+  }
+
+  &__scroll {
+    flex: 1;
+    overflow: auto;
+    padding: 28px 28px 16px;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+    padding: 0 28px 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 24%);
+  }
+
+  &__header {
+    padding-inline-end: 36px;
+    margin-bottom: 18px;
+  }
+
+  &__eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $met-red;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: clamp(24px, 4vw, 30px);
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 8px;
+    line-height: 1.15;
+  }
+
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 8px;
+    margin-bottom: 10px;
+    color: $met-red;
+    font-weight: 800;
+    line-height: 1;
+
+    span:first-child {
+      font-size: clamp(28px, 4vw, 34px);
+      letter-spacing: -0.03em;
+    }
+
+    span:last-child {
+      font-size: 15px;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    max-width: 46ch;
+  }
+
+  &__preview {
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #f8f8f8;
+    border: 1px solid #ececec;
+  }
+
+  &__label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 10px;
+  }
+
+  &__message {
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #222;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+
+    span {
+      font-size: 13px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 108px;
+      padding: 12px 14px;
+      border: 1px solid #d8d8d8;
+      border-radius: 12px;
+      font: inherit;
+      font-size: 14px;
+      line-height: 1.55;
+      color: #222;
+      resize: vertical;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $met-red;
+        box-shadow: 0 0 0 3px rgba(228, 0, 43, 0.12);
+      }
+    }
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    &--email {
+      border: 1px solid #b8001f;
+      background: linear-gradient(180deg, #ff3d5c 0%, $met-red 52%, #c40024 100%);
+      color: #fff;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+
+    &--instagram {
+      border: 1.5px solid transparent;
+      background:
+        linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(135deg, #f58529 0%, #dd2a7b 38%, #8134af 72%, #515bd4 100%) border-box;
+      color: #111;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+      &:hover {
+        background:
+          linear-gradient(#fffaf8, #fff5fa) padding-box,
+          linear-gradient(135deg, #f58529 0%, #dd2a7b 38%, #8134af 72%, #515bd4 100%) border-box;
+        box-shadow: 0 4px 14px rgba(221, 42, 123, 0.12);
+      }
+    }
+  }
+
+  &__btn-text {
+    text-align: start;
+  }
+
+  &__btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    &--email {
+      color: #fff;
+    }
+
+    &--instagram {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__status {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #16703a;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .plan-inquiry-modal:not(.plan-inquiry-modal--sheet) {
+    align-items: flex-end;
+    justify-content: stretch;
+    padding: 0;
+
+    .plan-inquiry-modal__panel {
+      width: 100%;
+      max-height: min(92vh, 900px);
+      border: none;
+      border-radius: 24px 24px 0 0;
+      box-shadow: 0 -16px 48px rgba(0, 0, 0, 0.18);
+      transform: translateY(100%);
+    }
+
+    &.is-open .plan-inquiry-modal__panel {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plan-inquiry-modal {
+    &__backdrop,
+    &__panel {
+      transition: none;
+    }
+
+    &__panel {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .plan-inquiry-modal {
+    &__eyebrow {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    &__label {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+  }
+}

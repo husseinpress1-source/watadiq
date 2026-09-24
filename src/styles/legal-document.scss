@@ -1,0 +1,323 @@
+@use './global.scss' as *;
+
+$legal-link: #1a73e8;
+$legal-link-hover: #1558b0;
+$legal-text: #3c4043;
+$legal-heading: #202124;
+$legal-muted: #5f6368;
+$legal-accent-soft: #e8f0fe;
+
+.legal-page {
+  --legal-link: #{$legal-link};
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+  color: $legal-heading;
+
+  &__main {
+    flex: 1;
+  }
+
+  &__body {
+    padding: 0 0 4rem;
+    background: #fff;
+
+    @media (max-width: 1023px) {
+      padding-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
+    }
+
+    @media (max-width: 768px) {
+      padding-bottom: calc(6.25rem + env(safe-area-inset-bottom, 0px));
+    }
+  }
+
+  &__shell {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: var(--legal-shell-pad, clamp(1rem, 3vw, 2.75rem));
+  }
+
+  &__layout {
+    display: grid;
+    gap: 1.25rem;
+    align-items: start;
+    padding-top: 1rem;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: minmax(13rem, 17.5rem) minmax(0, 1fr);
+      gap: clamp(2rem, 4vw, 4.5rem);
+      padding-top: 1.5rem;
+    }
+
+    @media (max-width: 1023px) {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+      padding-top: 0.75rem;
+    }
+  }
+
+  &__toc-title {
+    margin: 0 0 0.625rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $legal-muted;
+
+    @media (max-width: 1023px) {
+      margin-bottom: 0.375rem;
+      padding-inline-start: 0.375rem;
+      font-size: 0.625rem;
+      letter-spacing: 0.04em;
+      line-height: 1.3;
+    }
+  }
+
+  &__toc {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      position: sticky;
+      top: calc(var(--header-offset, var(--header-h)) + 1.25rem);
+      align-self: start;
+      max-height: calc(100vh - var(--header-offset, var(--header-h)) - 2rem);
+      overflow-y: auto;
+      padding-inline-end: 0.5rem;
+      scrollbar-width: thin;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.125rem;
+    }
+
+    a {
+      display: block;
+      padding: 0.375rem 0;
+      padding-inline-start: 0.625rem;
+      border-inline-start: 2px solid transparent;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.35;
+      color: $legal-muted;
+      text-decoration: none;
+      transition:
+        color 0.12s ease,
+        background 0.12s ease,
+        border-color 0.12s ease;
+
+      &:hover {
+        color: $legal-link;
+      }
+
+      &.is-active {
+        color: $legal-link;
+        font-weight: 600;
+        border-inline-start-color: $legal-link;
+        background: rgba(26, 115, 232, 0.07);
+      }
+    }
+  }
+
+  &__content {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  &__section {
+    scroll-margin-top: calc(var(--header-offset, var(--header-h)) + var(--legal-sticky-meta, 0px) + 0.5rem);
+
+    @media (min-width: 1024px) {
+      scroll-margin-top: calc(var(--header-offset, var(--header-h)) + 1.5rem);
+    }
+
+    padding: 0;
+    margin: 0 0 2rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 1.75rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-family: $font-sans;
+      font-size: clamp(1.0625rem, 2vw, 1.25rem);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+      color: $legal-link;
+
+      @media (max-width: 1023px) {
+        font-size: clamp(0.9375rem, 3.6vw, 1.0625rem);
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &__lead {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $legal-text;
+  }
+
+  &__p {
+    margin: 0 0 0.875rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $legal-text;
+
+    @media (max-width: 768px) {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+  }
+
+  &__list {
+    margin: 0 0 0.875rem;
+    padding-inline-start: 1.25rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: $legal-text;
+
+      @media (max-width: 768px) {
+        font-size: 0.9375rem;
+      }
+
+      &::marker {
+        color: $legal-link;
+      }
+    }
+  }
+
+  &__term,
+  &__emphasis {
+    color: $legal-link;
+    font-weight: 600;
+  }
+
+  &__inline-link {
+    color: $legal-link;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(26, 115, 232, 0.35);
+    text-underline-offset: 2px;
+    word-break: break-word;
+
+    &:hover {
+      color: $legal-link-hover;
+      text-decoration-color: currentColor;
+    }
+  }
+
+  &__note {
+    margin: 0.875rem 0 0;
+    padding: 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: $legal-muted;
+
+    .legal-page__term,
+    .legal-page__emphasis,
+    .legal-page__inline-link {
+      color: $legal-link;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    a {
+      color: $legal-link;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+
+  &__contact-sep {
+    color: #dadce0;
+  }
+
+  &__footer-block {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #f1f3f4;
+
+    h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: $legal-link;
+    }
+  }
+
+  &__footer-hint {
+    margin: 0 0 0.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: $legal-text;
+  }
+
+  &__footer-link,
+  &__footer-btn {
+    display: inline;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: $legal-link;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: $legal-link-hover;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .met-footer {
+      margin-bottom: calc(5.25rem + env(safe-area-inset-bottom, 0px));
+    }
+  }
+}
+
+html[dir='rtl'] .legal-page {
+  &__toc-title {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  &__section h2 {
+    letter-spacing: 0;
+    line-height: 1.45;
+  }
+
+  &__lead,
+  &__p,
+  &__list li {
+    line-height: 1.8;
+  }
+}

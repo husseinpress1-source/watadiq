@@ -1,0 +1,203 @@
+{
+  "intro": {
+    "title": "Agreement to terms",
+    "paragraphs": [
+      "These Terms of Service («Terms») govern your access to https://www.watadiq.com and your use of websites, products, and professional services provided by WATAD Software («WATAD», «we», «us»).",
+      "By visiting our website, submitting an inquiry, creating an account where offered, or entering into a project agreement, you agree to these Terms. If you do not agree, do not use our website or services.",
+      "These Terms form a binding agreement between you (or the organization you represent) and WATAD. You represent that you have authority to bind that organization when acting on its behalf.",
+      "Where a signed statement of work, master services agreement, proposal, or invoice terms conflict with these Terms, the signed or written project agreement prevails for that specific engagement.",
+      "We may provide translations of these Terms for convenience; the English version controls if there is a conflict unless local law requires otherwise.",
+      "These Terms are a general framework. Enterprise clients may negotiate master service agreements with additional security, insurance, or SLA commitments."
+    ]
+  },
+  "services": {
+    "title": "Our services",
+    "lead": "WATAD is an Iraqi digital agency. Services include, without limitation:",
+    "bullets": [
+      "Custom website design and development (marketing sites, dashboards, e-commerce, web apps).",
+      "Mobile application design and development for iOS and Android.",
+      "UI/UX design, design systems, and brand-aligned product interfaces.",
+      "Cybersecurity assessments, hardening guidance, secure architecture reviews, and related consulting.",
+      "Cloud deployment, DevOps support, hosting setup, and ongoing maintenance retainers.",
+      "API integrations, third-party service wiring, and performance optimization.",
+      "Training, documentation, and handover sessions for client teams where agreed.",
+      "Emergency support or remediation when contracted separately."
+    ],
+    "paragraphs": [
+      "Detailed scope, milestones, acceptance criteria, and fees appear in your proposal, invoice, or signed agreement. We may update public service descriptions on watadiq.com without altering active contracts.",
+      "Beta features, internal tools, or experimental offerings may be labeled as such and provided without the same warranties as paid deliverables unless agreed in writing."
+    ]
+  },
+  "eligibility": {
+    "title": "Eligibility & accounts",
+    "bullets": [
+      "You must be at least 18 years old or have legal authority to enter contracts for your organization.",
+      "Information you provide must be accurate and kept up to date.",
+      "You are responsible for credentials, API keys, domains, and access you share with us.",
+      "You may not use our services for unlawful, fraudulent, harassing, or harmful activity.",
+      "You may not attempt to probe, scan, or test vulnerabilities of our systems except under a written security test agreement.",
+      "Automated scraping of watadiq.com beyond normal browsing is prohibited unless we give written permission.",
+      "If we offer client portals or project accounts, you must notify us immediately of unauthorized access."
+    ],
+    "paragraphs": [
+      "We may refuse or terminate service to anyone who violates these Terms or poses a risk to our team, infrastructure, or other clients."
+    ]
+  },
+  "projects": {
+    "title": "Projects & deliverables",
+    "bullets": [
+      "Timelines depend on agreed scope, your timely feedback, and materials you supply (copy, brand assets, approvals).",
+      "Change requests outside scope may require a change order, revised fees, or new delivery dates.",
+      "We may use vetted subcontractors under confidentiality and need-to-know access.",
+      "You will designate a primary contact with authority to approve scope and deliverables.",
+      "Review periods for designs, staging sites, or builds are defined in your agreement; silence after the review window may count as acceptance where stated.",
+      "Third-party licenses (fonts, stock media, plugins, SaaS) may require your separate acceptance or payment.",
+      "Launch dates may depend on DNS, app store review, payment gateways, or other third parties outside our control."
+    ],
+    "note": "Delays caused by missing content, unavailable stakeholders, third-party outages, or force majeure extend schedules without penalty to WATAD.",
+    "paragraphs": [
+      "We document major decisions in writing (email or project tools) to keep a clear record for both parties.",
+      "Post-launch warranty periods for bug fixes—if any—are defined in your agreement; new features are out of scope unless quoted."
+    ]
+  },
+  "payment": {
+    "title": "Fees & payment",
+    "bullets": [
+      "Quotes are typically in Iraqi Dinar (IQD) unless another currency is stated in writing.",
+      "Accepted methods may include bank transfer, Zain Cash, or other channels published on our pricing page.",
+      "Deposits and milestone invoices are due on the dates shown; work may pause when accounts are overdue.",
+      "Late payments may incur reminders, suspension of work, or interest where permitted by law and stated on invoices.",
+      "Deposits and completed milestone work are generally non-refundable once work has started, except where law or your agreement says otherwise.",
+      "You are responsible for bank fees, currency conversion, and transfer charges on your side unless we agree otherwise.",
+      "Disputed invoices must be raised in writing within 14 days of receipt with specific reasons; undisputed portions remain due."
+    ],
+    "paragraphs": [
+      "Excluded unless explicitly included: government fees, domain renewals, SSL where billed separately, ad spend, stock licenses, app store fees, SMS/voice costs, and pass-through SaaS subscriptions.",
+      "Taxes: you are responsible for applicable taxes unless we state we collect them on invoices.",
+      "Recurring retainers renew monthly or annually as stated on your invoice until cancelled per agreement notice periods."
+    ]
+  },
+  "ip": {
+    "title": "Intellectual property",
+    "bullets": [
+      "Upon full payment of agreed fees, you receive the license or ownership rights specified in your project contract to final deliverables created specifically for you.",
+      "WATAD retains ownership of pre-existing code libraries, internal tools, boilerplate, methodologies, and general know-how used to perform the work.",
+      "We grant you a license to any WATAD background IP embedded in deliverables as needed to use the deliverables as intended.",
+      "You may not resell our proprietary tools or reuse our internal templates outside the licensed deliverables without permission.",
+      "Portfolio: unless you object in writing before public launch, we may display non-confidential visuals and project descriptions in our portfolio and marketing.",
+      "You warrant that content you supply does not infringe trademarks, copyrights, privacy, or publicity rights of third parties.",
+      "Open-source components in deliverables remain subject to their licenses; we will flag major OSS dependencies when practical."
+    ],
+    "paragraphs": [
+      "If you terminate early, rights to incomplete work are handled as stated in your agreement; otherwise WATAD may retain unfinished materials until outstanding fees are settled."
+    ]
+  },
+  "client": {
+    "title": "Your responsibilities",
+    "bullets": [
+      "Provide timely feedback, approvals, and required content in agreed formats.",
+      "Ensure legal rights to logos, fonts, product data, user lists, and media you provide.",
+      "Maintain backups of live environments when we are not under a maintenance contract.",
+      "Comply with data protection laws for your end users; publish your own privacy policy where required.",
+      "Configure DNS, app store accounts, and merchant accounts promptly when those are on your side.",
+      "Do not ask us to implement deceptive patterns, illegal tracking, or malware.",
+      "Inform us of accessibility, language, or regulatory requirements before build starts when they affect architecture."
+    ],
+    "paragraphs": [
+      "You indemnify WATAD against third-party claims arising from materials you supply or unlawful use of deliverables, except to the extent caused by our gross negligence or willful misconduct."
+    ]
+  },
+  "confidentiality": {
+    "title": "Confidentiality",
+    "paragraphs": [
+      "Each party agrees to protect non-public business, technical, pricing, and roadmap information received from the other party.",
+      "Confidential information excludes data that is public without breach, independently developed, or rightfully received from a third party without duty of confidentiality.",
+      "We may disclose confidential information to employees, contractors, and advisers who need it to perform services, under matching confidentiality obligations.",
+      "If required by law, a party may disclose confidential information after giving notice when legally permitted so the other party may seek protective measures."
+    ]
+  },
+  "warranties": {
+    "title": "Warranties & disclaimers",
+    "paragraphs": [
+      "We will perform services with reasonable skill and care consistent with professional digital agencies in our category.",
+      "Except as expressly written in your signed agreement, watadiq.com and our services are provided «as is» and «as available» without warranties of uninterrupted uptime, error-free operation, or fitness for a particular business outcome.",
+      "We do not guarantee search rankings, revenue, conversion rates, viral growth, or specific security outcomes unless explicitly stated in a security services scope.",
+      "Third-party platforms (hosting, app stores, payment gateways) have their own terms and outages; we are not liable for their failures beyond our reasonable integration efforts."
+    ]
+  },
+  "liability": {
+    "title": "Limitation of liability",
+    "paragraphs": [
+      "To the fullest extent permitted by law, neither party is liable for indirect, incidental, special, consequential, or punitive damages, including lost profits, lost data, or business interruption.",
+      "WATAD's total aggregate liability for claims relating to a project or these Terms is limited to the fees you paid WATAD for that project in the twelve (12) months before the event giving rise to the claim, unless a higher cap is signed in your agreement.",
+      "These limits apply regardless of theory of liability (contract, tort, negligence, strict liability, or otherwise).",
+      "You acknowledge that pricing reflects these limitations and that WATAD would not provide services at current rates without them.",
+      "Client acknowledges that software and security involve inherent risk; no vendor can guarantee zero vulnerabilities."
+    ],
+    "note": "Nothing limits liability that cannot be limited under applicable law, including fraud, willful misconduct, or death/personal injury caused by negligence where non-waivable."
+  },
+  "suspension": {
+    "title": "Suspension & termination",
+    "bullets": [
+      "We may suspend website access, project work, or hosted environments if you breach these Terms, fail to pay, or misuse systems.",
+      "You may terminate according to cancellation terms in your signed agreement; otherwise written notice may be required with fees for work completed.",
+      "Upon termination, you pay for work performed, non-cancellable third-party costs, and any wind-down agreed in writing.",
+      "We may delete staging data after a reasonable period post-termination unless you purchase archive export.",
+      "Provisions that by nature should survive (payment, IP, confidentiality, liability limits, dispute resolution) remain in effect."
+    ],
+    "paragraphs": [
+      "If you migrate away from WATAD-managed hosting, we will provide reasonable transition assistance when contracted; emergency handover may require additional fees."
+    ]
+  },
+  "governing": {
+    "title": "Governing law & disputes",
+    "paragraphs": [
+      "These Terms are governed by the laws of the Republic of Iraq, without regard to conflict-of-law rules that would apply another jurisdiction's laws.",
+      "Parties will first attempt good-faith resolution through direct negotiation. If unresolved within 30 days, disputes may be submitted to the competent courts in Iraq unless your signed agreement specifies arbitration or another forum.",
+      "You agree to bring claims only in your individual capacity unless we agree otherwise in writing.",
+      "Nothing prevents either party from seeking injunctive relief for misuse of IP or confidentiality breaches in any court with jurisdiction."
+    ]
+  },
+  "changes": {
+    "title": "Changes to these terms",
+    "paragraphs": [
+      "We may update these Terms when services, regulations, or business practices change. The updated version will be posted here with a revised «Last updated» date.",
+      "Material changes affecting active clients will be handled through project agreements or direct notice where appropriate.",
+      "Continued use of watadiq.com after changes take effect constitutes acceptance unless further consent is required by law."
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "paragraphs": [
+      "Questions about these Terms, billing, or an active project:",
+      "Legal & contracts: info@watadiq.com — we route your message to the appropriate team member."
+    ]
+  },
+  "acceptable": {
+    "title": "Acceptable use",
+    "bullets": [
+      "Do not use deliverables to distribute malware, spam, or unlawful content.",
+      "Do not attempt unauthorized access to WATAD or client systems.",
+      "Do not misrepresent WATAD as the publisher of your end-user content.",
+      "Respect third-party platform rules (app stores, ad networks, payment providers)."
+    ],
+    "paragraphs": [
+      "We may report credible illegal activity to authorities when required or when necessary to protect victims."
+    ]
+  },
+  "sla": {
+    "title": "Support & SLA",
+    "paragraphs": [
+      "Response times for bugs and incidents depend on your support tier in the signed agreement (business hours vs 24/7).",
+      "Unless an SLA is explicitly purchased, we do not guarantee specific uptime percentages for staging or internal tools.",
+      "Emergency security patches for WATAD-managed hosting are prioritized according to severity and contract."
+    ]
+  },
+  "forceMajeure": {
+    "title": "Force majeure",
+    "paragraphs": [
+      "Neither party is liable for delay or failure caused by events beyond reasonable control (natural disasters, war, widespread outages, government actions, pandemics, major internet failures).",
+      "The affected party will notify the other and resume performance as soon as practicable."
+    ]
+  }
+}

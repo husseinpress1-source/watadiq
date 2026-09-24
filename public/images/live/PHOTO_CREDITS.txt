@@ -1,0 +1,13 @@
+WATAD Live hero — free stock licenses
+
+Desktop (4K + 1080p) — Pexels 7991136
+  People watching a film in a cinema with popcorn
+  https://www.pexels.com/photo/7991136/
+  License: https://www.pexels.com/license/
+
+Mobile — Pexels 7594055
+  Woman eating popcorn while watching a movie at home
+  https://www.pexels.com/photo/7594055/
+  License: https://www.pexels.com/license/
+
+Regenerate: node scripts/fetch-live-hero-photos.mjs

@@ -1,0 +1,57 @@
+@use '../styles/global.scss' as *;
+
+.research {
+  @include container-wide;
+  padding: 0 32px 80px;
+
+  &__title {
+    font-family: $font-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border: 1px solid $met-light-gray;
+    border-radius: 4px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      border-color: #ccc;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  &__card-title {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__card-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: $met-black;
+    color: #fff;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .research__grid {
+    grid-template-columns: 1fr;
+  }
+}

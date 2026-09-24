@@ -1,0 +1,206 @@
+{
+  "intro": {
+    "title": "Introduction",
+    "paragraphs": [
+      "We respect your privacy and aim to be transparent about the data we process. This Privacy Policy («Policy») describes how WATAD Software («WATAD», «we», «us») handles personal information when you visit https://www.watadiq.com, use our contact forms, communicate with us, or engage our professional services.",
+      "This Policy applies to visitors, prospective clients, active clients, and anyone who interacts with our website, email, or project delivery channels. It does not replace a signed data processing agreement where one is required for a specific project.",
+      "By using our website or services, you acknowledge that you have read this Policy. Where the law requires consent—for example for non-essential cookies or certain marketing—we ask for your choice before enabling those features.",
+      "We design our products with security and privacy in mind, but no online service can guarantee absolute security. We encourage you to use strong passwords, keep your devices updated, and contact us if you notice suspicious activity related to your account or project.",
+      "If you do not agree with this Policy, please discontinue use of our website and services, except where we must retain certain records for legal or contractual reasons.",
+      "This Policy is designed to meet expectations of international clients while reflecting how we operate from Iraq. It should be read together with our Terms of Service and any project-specific data addendum.",
+      "We publish this document in Arabic and English. If translations differ, we work in good faith to align them; contact us if you need clarification for compliance reviews."
+    ]
+  },
+  "controller": {
+    "title": "Data controller",
+    "paragraphs": [
+      "WATAD Software is the data controller for personal data described in this Policy, unless we explicitly state that we act as a processor on behalf of a client.",
+      "For general privacy inquiries, contact: info@watadiq.com. Website: https://www.watadiq.com",
+      "When we deliver websites, apps, or infrastructure for clients, those clients may be controllers of their end users' data. In those cases, their privacy policy governs end-user relationships, and we process data according to our contract with the client.",
+      "We may appoint internal owners for privacy and security matters and work with legal counsel when updating this Policy or responding to regulatory requests."
+    ]
+  },
+  "collect": {
+    "title": "Information we collect",
+    "lead": "We collect only what we need to operate watadiq.com, respond to you, deliver services, and improve our work. Categories include:",
+    "bullets": [
+      "Identity & contact: name, email, phone, company name, job title, and messages you send via forms or email.",
+      "Usage data: pages viewed, time on page, scroll depth (aggregated), referral URL, and general device/browser information.",
+      "Technical data: IP address (often truncated or processed via CDN), user agent, language preference, and approximate region derived from network data.",
+      "Cookie & consent records: your cookie banner choices stored in local storage or similar technologies on your device.",
+      "Project & billing data: statements of work, invoices, payment references, and communication history related to active engagements.",
+      "Support content: files, screenshots, or credentials you voluntarily share so we can troubleshoot or deliver work (handled under confidentiality terms).",
+      "Marketing preferences: whether you opted in to newsletters or promotional messages, and proof of consent where required.",
+      "Security logs: failed login attempts, rate-limit events, and abuse signals used to protect our infrastructure.",
+      "Aggregated analytics: statistics that do not identify you personally, used to improve performance and content.",
+      "Social & campaign parameters: UTM tags or similar parameters when you arrive from ads or social links (if analytics cookies are allowed)."
+    ],
+    "paragraphs": [
+      "We do not intentionally collect sensitive categories such as health, biometric, or government ID data through the public website. If a project requires such data, we address it in a separate agreement.",
+      "You may choose not to provide certain information, but we may be unable to respond to inquiries or deliver services without sufficient contact and project details.",
+      "We minimize collection: we do not ask for government ID on the marketing site, and we discourage sending passwords in plain email—use agreed secure channels for credentials during projects."
+    ]
+  },
+  "cookies": {
+    "title": "Cookies & similar technologies",
+    "lead": "We use cookies, local storage, and similar technologies to run the site, remember language, keep you signed in where applicable, and—only with permission—measure analytics or marketing performance.",
+    "paragraphs": [
+      "Essential technologies are always active because core features (security, language, consent storage) cannot work without them.",
+      "Optional analytics help us understand which pages are useful and where visitors drop off. Optional marketing cookies may help measure campaigns; we enable them only if you consent.",
+      "You can change preferences anytime via the cookie banner or the manage-cookies control at the bottom of this page. Browser settings may also block cookies, though some features may stop working.",
+      "Third-party embeds (for example video players or maps) may set their own cookies if you interact with them; their policies apply to that processing.",
+      "You may use browser controls to block cookies; essential site features may degrade. We honor Global Privacy Control (GPC) signals where technically feasible for optional analytics."
+    ]
+  },
+  "legal": {
+    "title": "Legal bases for processing",
+    "lead": "Depending on your location and the activity, we rely on one or more of the following bases:",
+    "bullets": [
+      "Contract: delivering proposals, projects, hosting, maintenance, and support you request.",
+      "Legitimate interests: securing platforms, preventing fraud and abuse, improving products, and understanding aggregated usage.",
+      "Consent: non-essential cookies, optional newsletters, and certain marketing communications.",
+      "Legal obligation: tax, accounting, responding to lawful requests, and regulatory compliance.",
+      "Vital interests: rare situations where processing is necessary to protect someone's safety.",
+      "Pre-contract steps: responding to quotes and preparing agreements at your request."
+    ],
+    "paragraphs": [
+      "Where we rely on legitimate interests, we balance our needs against your rights and implement safeguards such as minimization and access controls.",
+      "You may withdraw consent at any time for processing that depends on it; withdrawal does not affect processing that occurred before withdrawal where it was lawful."
+    ]
+  },
+  "use": {
+    "title": "How we use your information",
+    "bullets": [
+      "Provide, operate, and maintain watadiq.com and related tools.",
+      "Respond to contact, sales, and support requests.",
+      "Prepare proposals, statements of work, and project documentation.",
+      "Deliver design, development, security, and hosting services under contract.",
+      "Process payments and send invoices or receipts.",
+      "Send service-related notices (for example maintenance windows or policy updates).",
+      "Analyze aggregated traffic to improve speed, accessibility, and content (with consent where required).",
+      "Detect, investigate, and prevent security incidents and abuse.",
+      "Enforce our Terms of Service and protect our rights and users.",
+      "Comply with applicable laws and respond to valid legal process."
+    ],
+    "paragraphs": [
+      "We do not use your personal data for automated decision-making that produces legal or similarly significant effects without appropriate safeguards and notice where required.",
+      "Marketing emails are sent only when permitted by law and your preferences; every marketing message includes a way to opt out where applicable."
+    ]
+  },
+  "sharing": {
+    "title": "Sharing & processors",
+    "paragraphs": [
+      "We do not sell your personal data. We do not share it for third-party advertising lists.",
+      "We disclose data to service providers («processors») who help us operate—for example cloud hosting, CDN/WAF, email delivery, analytics (if consented), payment processors, and collaboration tools—under contracts that require confidentiality and appropriate security.",
+      "We may disclose information if required by law, court order, or governmental request, or when we believe disclosure is necessary to protect rights, safety, or investigate fraud.",
+      "If WATAD undergoes a merger, acquisition, or asset sale, personal data may transfer as part of that transaction with notice where required by law."
+    ],
+    "bullets": [
+      "Hosting & CDN partners in regions we select for performance and security.",
+      "Email and transactional messaging providers.",
+      "Analytics providers only when you allow analytics cookies.",
+      "Professional advisers (lawyers, accountants) under confidentiality.",
+      "Subcontractors assisting on your project, bound by confidentiality and need-to-know access."
+    ]
+  },
+  "retention": {
+    "title": "Data retention",
+    "lead": "We keep personal data only as long as needed for the purposes described in this Policy:",
+    "bullets": [
+      "Contact form and sales inquiries: typically up to 24 months unless a project starts or law requires longer.",
+      "Active client project files: for the project duration plus a reasonable archive period (often 3–7 years for business records).",
+      "Invoices and payment records: as required by tax and accounting rules.",
+      "Cookie consent choices: stored on your device until you clear storage or change preferences.",
+      "Security logs: generally 30–365 days depending on severity and investigation needs.",
+      "Marketing lists: until you unsubscribe or we retire the campaign, plus a suppression record to honor opt-out.",
+      "Backups: may persist for a limited period after deletion from live systems before being overwritten.",
+      "Legal holds: longer retention when disputes, audits, or investigations require it."
+    ],
+    "paragraphs": [
+      "When data is no longer needed, we delete or anonymize it where feasible. Anonymized statistics may be retained indefinitely."
+    ]
+  },
+  "security": {
+    "title": "Security",
+    "paragraphs": [
+      "We use HTTPS/TLS encryption in transit, hardened hosting, access controls, rate limiting, and monitoring appropriate to our size and risk profile.",
+      "Project credentials and secrets you share are stored with least-privilege access and are not used beyond delivering your engagement.",
+      "We review dependencies and apply patches on a reasonable schedule; client production environments may follow separate maintenance agreements.",
+      "No method of transmission or storage is 100% secure. If we become aware of a breach affecting your personal data, we will notify you and regulators as required by law.",
+      "We maintain incident response playbooks, restrict production access, and review vendor security periodically. Clients may request a summary of controls relevant to their project under NDA."
+    ]
+  },
+  "rights": {
+    "title": "Your rights",
+    "lead": "Depending on applicable law (including GDPR-style rights where relevant), you may have the following:",
+    "bullets": [
+      "Access: request a copy of personal data we hold about you.",
+      "Correction: ask us to fix inaccurate or incomplete data.",
+      "Deletion: request erasure where no overriding legal basis requires retention.",
+      "Restriction: ask us to limit processing in certain circumstances.",
+      "Objection: object to processing based on legitimate interests or direct marketing.",
+      "Portability: receive data you provided in a structured, commonly used format where technically feasible.",
+      "Withdraw consent: for processing that relies on consent, without affecting prior lawful processing.",
+      "Complaint: lodge a complaint with a supervisory authority in your country or region.",
+      "Opt out of marketing: use unsubscribe links or contact us directly.",
+      "Cookie controls: change optional cookie categories at any time."
+    ],
+    "note": "To exercise rights, email info@watadiq.com with enough detail for us to verify your identity and locate your records. We respond within timelines required by applicable law.",
+    "paragraphs": [
+      "We may decline requests that are manifestly unfounded, repetitive, or would impair others' rights. We may charge a reasonable fee where permitted for excessive requests.",
+      "For EU/UK visitors, we aim to respect applicable GDPR-style rights even when Iraq is our primary jurisdiction. Response times follow reasonable industry practice unless law sets a shorter deadline."
+    ]
+  },
+  "children": {
+    "title": "Children",
+    "paragraphs": [
+      "Our website and agency services are directed at businesses and adults. They are not directed at children under 16.",
+      "We do not knowingly collect personal data from children. If you believe a child provided data to us, contact info@watadiq.com and we will take appropriate steps to delete it.",
+      "Clients who build products for children must comply with applicable child privacy laws in their jurisdictions; that compliance is the client's responsibility unless agreed otherwise in writing."
+    ]
+  },
+  "changes": {
+    "title": "Changes to this policy",
+    "paragraphs": [
+      "We may update this Policy when our practices, technologies, or legal requirements change. The «Last updated» date at the top of this page indicates the latest revision.",
+      "Material changes may be highlighted on our website or communicated to active clients where appropriate.",
+      "Continued use of the website after changes become effective means you accept the updated Policy, except where further consent is required by law."
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "paragraphs": [
+      "Questions about this Policy, cookies, or your personal data:",
+      "We aim to respond to privacy requests within a reasonable time and in any event within deadlines required by applicable law."
+    ]
+  },
+  "definitions": {
+    "title": "Definitions",
+    "bullets": [
+      "«Personal data»: information relating to an identified or identifiable individual.",
+      "«Processing»: any operation on personal data (collection, storage, use, disclosure, deletion).",
+      "«Controller»: entity that decides why and how personal data is processed (usually WATAD for watadiq.com operations).",
+      "«Processor»: entity processing data on behalf of a controller (hosting, email, analytics vendors).",
+      "«Cookies»: small text files stored on your device; «local storage» includes similar browser storage APIs."
+    ],
+    "paragraphs": [
+      "Project-specific definitions may appear in your statement of work or data processing addendum."
+    ]
+  },
+  "international": {
+    "title": "International transfers",
+    "paragraphs": [
+      "Our infrastructure and subprocessors may process data in countries other than your own (for example cloud regions in Europe, the United States, or the Middle East).",
+      "When we transfer personal data internationally, we use appropriate safeguards such as standard contractual clauses, vendor certifications, or your written instructions in project contracts.",
+      "You may request information about primary processing locations for your project by contacting info@watadiq.com."
+    ]
+  },
+  "marketing": {
+    "title": "Marketing communications",
+    "paragraphs": [
+      "We may send newsletters or service updates if you opt in or if we have another lawful basis under applicable law.",
+      "Every marketing email includes an unsubscribe link or instructions. Transactional messages (invoices, project updates you requested) are not marketing.",
+      "We do not sell your email address to list brokers."
+    ]
+  }
+}
